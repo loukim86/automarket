@@ -1,11 +1,43 @@
 @font-face {
-  font-family: 'Tahoma';
-  src: local('Tahoma'), url('./assets/fonts/tahoma.ttf') format('truetype')
+  font-family: "Tahoma";
+  src: local("Tahoma"), url("./assets/fonts/tahoma.ttf") format("truetype");
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Tahoma', sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+:root {
+  --footer-color: #89959d;
+  --button-color: #d33030;
+  --gradient: linear-gradient(#89959d, #babec1);
+  --main-color: #ffffff;
+  --menu-text: #89959d;
+  --text: #ffffff;
+  --heading-text: #363636;
+}
+
+.container {
+  width: 100vw;
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+a:hover {
+  color: unset;
+}
+
+ul {
+  margin: 0;
+  list-style: none;
 }

@@ -1,0 +1,23 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 2rem;
+  background-color: var(--footer-color);
+  color: var(--text);
+  height: 233px;
+  font-family: "Tahoma", sans-serif;
+  font-weight: 400;
+}
+
+.footer-logo {
+   margin-right: 20px;
+}
+
+.footer-menu {
+  display: flex;
+  align-items: center;
+  column-gap: 60px;
+  margin-left: 20px;
+  font-size: 18px;
+}

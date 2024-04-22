@@ -1,0 +1,31 @@
+.heading {
+  font-family: "Tahoma", sans-serif;
+  font-weight: 400;
+  line-height: 83.2px;
+  width: 599px;
+  height: 291.68px;
+  color: var(--heading-text);
+  position: absolute;
+  top: 130px;
+  left: 255px;
+}
+
+.main-text {
+    width: 599px;
+    height: 166px;
+    margin-bottom: 20px;
+}
+
+.main-text p {
+  font-size: 64px;
+}
+
+.text {
+    width: 250px;
+    height: 96px;
+}
+
+.text p {
+  font-size: 20px;
+  line-height: 32px;
+}
