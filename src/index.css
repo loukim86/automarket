@@ -11,6 +11,8 @@
 
 body {
   overflow-x: hidden;
+  position: relative;
+  
 }
 
 :root {
@@ -21,6 +23,7 @@ body {
   --menu-text: #89959d;
   --text: #ffffff;
   --heading-text: #363636;
+  --about-text: #101010;
 }
 
 .container {

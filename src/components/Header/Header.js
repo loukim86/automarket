@@ -93,8 +93,8 @@ const Header = () => {
           </div>
         </div>
       </Container>
-    <BannerHeading/> 
-    <SearchCar/>
+      <BannerHeading />
+      <SearchCar />
     </div>
   );
 };
