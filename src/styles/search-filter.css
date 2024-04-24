@@ -1,0 +1,59 @@
+.filter {
+    display: flex;
+    
+  }
+  
+  .sidebar {
+    width: 1139px;
+    height: 303.47px;
+    background: var(--main-color);
+    margin: 0 auto;
+  }
+  
+  .filter-buttons {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .filter-buttons button {
+    font-family: "Tahoma", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: var(--text);
+    background: var(--bg-gradient);
+    width: 231.09px;
+    height: 100.61px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 24.54px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+  }
+  
+  .sidebar-section {
+    margin-bottom: 20px;
+  }
+  
+  .sidebar-section h2 {
+    margin-top: 0;
+  }
+  
+  .brand-list,
+  .model-list,
+  .price-list {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .brand-item,
+  .model-item,
+  .price-item {
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  .brand-item:hover,
+  .model-item:hover,
+  .price-item:hover {
+    background-color: #ddd;
+  }
+  

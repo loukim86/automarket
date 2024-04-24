@@ -11,23 +11,25 @@
 
 body {
   overflow-x: hidden;
-  position: relative;
-  
 }
 
 :root {
   --footer-color: #89959d;
   --button-color: #d33030;
-  --gradient: linear-gradient(#89959d, #babec1);
+  --bg-gradient: linear-gradient(#89959d, #babec1);
   --main-color: #ffffff;
   --menu-text: #89959d;
   --text: #ffffff;
   --heading-text: #363636;
   --about-text: #101010;
+  --input-placeholder: rgba(255, 255, 255, 0.5);
+  --textarea-placeholder: rgba(137, 149, 157, 0.5);
 }
 
 .container {
-  width: 100vw;
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
   min-height: 100vh;
 }
 
