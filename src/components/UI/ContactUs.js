@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import phone from "../../assets/img/device-phone.svg";
 import email from "../../assets/img/email.svg";
 import pin from "../../assets/img/pin.svg";
@@ -6,6 +6,7 @@ import instagram from "../../assets/img/instagram.svg";
 import twitter from "../../assets/img/arcticons_twitter.svg";
 import facebook from "../../assets/img/facebook.svg";
 import youtube from "../../assets/img/youtube.svg";
+import closeButton from "../../assets/img/popup-close.svg";
 
 import "../../styles/contact-us.css";
 
@@ -18,6 +19,10 @@ const ContactUs = () => {
     additionalComment: "",
   });
 
+  const [isFormSubmitted, setIsFormSubmitted] = useState(false);
+  const [showSuccessPopup, setShowSuccessPopup] = useState(false);
+  const [showErrorPopup, setShowErrorPopup] = useState(false);
+
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData({
@@ -28,9 +33,36 @@ const ContactUs = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    console.log(formData);
+    setIsFormSubmitted(true);
   };
+
+  const closeSuccessPopup = () => {
+    setShowSuccessPopup(false);
+    setIsFormSubmitted(false);
+  };
+
+  const closeErrorPopup = () => {
+    setShowErrorPopup(false);
+    setIsFormSubmitted(false);
+  };
+
+  useEffect(() => {
+    if (isFormSubmitted) {
+      setTimeout(() => {
+        setShowSuccessPopup(true);
+      }, 2000);
+    }
+  }, [isFormSubmitted]);
+
+  useEffect(() => {
+    if (showErrorPopup) {
+      const errorPopupTimeout = setTimeout(() => {
+        setShowErrorPopup(false);
+      }, 5000);
+
+      return () => clearTimeout(errorPopupTimeout);
+    }
+  }, [showErrorPopup]);
 
   return (
     <div className="contact-us-container">
@@ -53,12 +85,13 @@ const ContactUs = () => {
           </p>
           <div className="media-icons">
             <img src={instagram} alt="Instagram icon" className="intagram" />
-            <img src={twitter} alt="Twitter icon" className="twitter"/>
-            <img src={facebook} alt="Facebook icon" className="facebook"/>
-            <img src={youtube} alt="Youtube icon" className="youtube"/>
+            <img src={twitter} alt="Twitter icon" className="twitter" />
+            <img src={facebook} alt="Facebook icon" className="facebook" />
+            <img src={youtube} alt="Youtube icon" className="youtube" />
           </div>
         </div>
       </div>
+
       <form onSubmit={handleSubmit}>
         <input
           type="text"
@@ -96,6 +129,30 @@ const ContactUs = () => {
         ></textarea>
         <button type="submit">Apply</button>
       </form>
+
+      {showSuccessPopup && (
+        <div className="popup success">
+          <div className="popup-content">
+            <div className="popup-close-button">
+              <img src={closeButton} onClick={closeSuccessPopup} alt="Close button"/>
+            </div>
+
+            <div className="popup-title">Thank you!</div>
+            <div className="popup-text">
+              Your application is accepted. <br /> We will contact you shortly.
+            </div>
+          </div>
+        </div>
+      )}
+
+      {showErrorPopup && (
+        <div className="popup error">
+          <div className="popup-content">
+            <p>Error... Something went wrong. Please, try again.</p>
+            <button onClick={closeErrorPopup}>Close</button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

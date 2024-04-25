@@ -1,7 +1,7 @@
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import Routers from "../../routers/Routers";
-import WhyUs from "../UI/WhyUs";
+// import WhyUs from "../UI/WhyUs";
 import ContactUs from "../UI/ContactUs";
 import SearchFilter from "../UI/SearchFilter";
 
@@ -13,7 +13,7 @@ const Layout = () => {
         <Routers />
       </div>
       <SearchFilter/>
-      <WhyUs/>
+      {/* <WhyUs/> */}
       <ContactUs/>
       <Footer />
     </>

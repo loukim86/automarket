@@ -1,61 +1,128 @@
-import "../../styles/search-filter.css";
 import { useState } from "react";
+import hyundai from "../../assets/img/hyundai.svg";
+import genesis from "../../assets/img/genesis.svg";
+import kia from "../../assets/img/kia.svg";
+import samsung from "../../assets/img/samsung.svg";
+import toyota from "../../assets/img/toyota.svg";
+import ford from "../../assets/img/ford.svg";
+import chevrolet from "../../assets/img/chevrolet.svg";
+import volkswagen from "../../assets/img/volkswagen.svg";
+import bmw from "../../assets/img/bmw.svg";
+import mercedes from "../../assets/img/mercedes.svg";
+import audi from "../../assets/img/audi.svg";
+import volvo from "../../assets/img/volvo.svg";
+import lexus from "../../assets/img/lexus.svg";
+import porsche from "../../assets/img/porsche.svg";
+import landrover from "../../assets/img/landrover.svg";
+import jaguar from "../../assets/img/jaguar.svg";
+import subcompact from "../../assets/img/subcompact-car.png";
+import compact from "../../assets/img/compact-car.png";
+import midsize from "../../assets/img/midsize-car.png";
+import sport from "../../assets/img/sports-car.png";
+import minivan from "../../assets/img/minivans.png";
+import suv from "../../assets/img/SUVs.png";
+import "../../styles/search-filter.css";
 
 const SearchFilter = () => {
-    const [showBrand, setShowBrand] = useState(false);
-    const [showModel, setShowModel] = useState(false);
-    const [showPrice, setShowPrice] = useState(false);
+  const [showBrand, setShowBrand] = useState(false);
+  const [showModel, setShowModel] = useState(false);
+  const [showPrice, setShowPrice] = useState(false);
 
-    return (
-        <div className="filter">
-        <div className="sidebar">
-          <div className="filter-buttons">
-            <button onClick={() => setShowBrand(!showBrand)}>By brand</button>
-            <button onClick={() => setShowModel(!showModel)}>By model</button>
-            <button onClick={() => setShowPrice(!showPrice)}>By price</button>
-          </div>
+  return (
+    <div className="filter">
+      <div className="sidebar">
+        <div className="filter-buttons">
+          <button
+            onClick={() => setShowBrand(!showBrand)}
+            className={`brand-button${showBrand ? " clicked" : ""}`}
+          >
+            By brand
+          </button>
+          <button
+            onClick={() => setShowModel(!showModel)}
+            className={`model-button${showModel ? " clicked" : ""}`}
+          >
+            By model
+          </button>
+          <button
+            onClick={() => setShowPrice(!showPrice)}
+            className={`price-button${showPrice ? " clicked" : ""}`}
+          >
+            By price
+          </button>
+        </div>
+        <div className="sidebar-section">
           {showBrand && (
-            <div className="sidebar-section">
-              <h2>By brand</h2>
-              <div className="brand-list">
-                 <span>Hyundai</span>
-                 <span>Genesis</span>
-                 <span>KIA</span>
-                 <span>Samsung</span>
+            <div className="brand-list">
+              <div className="list-top">
+                <img src={hyundai} alt="Hyundai logo" />
+                <img src={genesis} alt="Genesis logo" />
+                <img src={kia} alt="Kia logo" />
+                <img src={samsung} alt="Samsung logo" />
+              </div>
+              <div className="vertical-line"></div>
+              <div className="list-middle">
+                <img src={toyota} alt="Toyota logo" />
+                <img src={ford} alt="Ford logo" />
+                <img src={chevrolet} alt="Chevrolet logo" />
+                <img src={volkswagen} alt="Volkswagen logo" />
+                <img src={bmw} alt="BMW logo" />
+                <img src={mercedes} alt="Mercedes Benz logo" />
+                <img src={audi} alt="Audi logo" />
+                <img src={volvo} alt="Volvo logo" />
+              </div>
+              <div className="list-bottom">
+                <img src={lexus} alt="Lexus logo" />
+                <img src={porsche} alt="Porsche logo" />
+                <img src={landrover} alt="Land Rover logo" />
+                <img src={jaguar} alt="Jaguar logo" />
               </div>
             </div>
           )}
           {showModel && (
-            <div className="sidebar-section">
-              <h2>By model</h2>
-              <div className="model-list">
-                 <span>Toyota</span>
-                 <span>Ford</span>
-                 <span>Chevrolet</span>
-                 <span>Volkswagen</span>
-                 <span>BMW</span>
-                 <span>Mercedes-Benz</span>
-                 <span>Audi</span>
-                 <span>Volvo</span>
+            <div className="model-list">
+              <div className="top-section">
+                <img src={subcompact} alt="Subcompact car" />
+                <img src={compact} alt="Compact car" />
+                <img src={midsize} alt="Midsize car" />
+              </div>
+
+              <div className="bottom-section">
+                <img src={sport} alt="Sports car" />
+                <img src={minivan} alt="Minivans" />
+                <img src={suv} alt="SUVs" />
               </div>
             </div>
           )}
           {showPrice && (
-            <div className="sidebar-section">
-              <h2>By price</h2>
-              <div className="price-list">
-                 <span>Lexus</span>
-                 <span>Porsche</span>
-                 <span>Land Rover</span>
-                 <span>Jaguar</span>
+            <div className="price-list">
+              <div className="price-top">
+                <p>0-2M</p>
+                <p>2-4M</p>
+                <p>4-6M</p>
+                <p>6-10M</p>
+                <p>10-15M</p>
+              </div>
+              <div className="price-middle">
+                <p>0-2M</p>
+                <p>2-4M</p>
+                <p>4-6M</p>
+                <p>6-10M</p>
+                <p>10-15M</p>
+              </div>
+              <div className="price-bottom">
+                <p>0-2M</p>
+                <p>2-4M</p>
+                <p>4-6M</p>
+                <p>6-10M</p>
+                <p>10-15M</p>
               </div>
             </div>
           )}
         </div>
-   
       </div>
-    );
-  }
-  
+    </div>
+  );
+};
 
 export default SearchFilter;

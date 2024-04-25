@@ -22,6 +22,8 @@ body {
   --text: #ffffff;
   --heading-text: #363636;
   --about-text: #101010;
+  --price-text: #000000;
+  --border: #6A6A6A;
   --input-placeholder: rgba(255, 255, 255, 0.5);
   --textarea-placeholder: rgba(137, 149, 157, 0.5);
 }
