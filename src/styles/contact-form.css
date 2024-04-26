@@ -1,0 +1,59 @@
+form {
+    flex: 1;
+    width: 563.12px;
+    height: 501.36px;
+    margin-top: 90px;
+  }
+  
+  form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-bottom: 0.85px solid #ffffff;
+    border-radius: 0;
+    background-color: transparent;
+  }
+  
+  input::placeholder {
+    color: var(--input-placeholder);
+    font-family: "Tahoma", sans-serif;
+    font-size: 14px;
+    line-height: 2;
+  }
+  
+  form textarea {
+    width: 558.44px;
+    height: 200.74px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    border-radius: 8.54px;
+    background-color: #fff;
+  }
+  
+  textarea::placeholder {
+    color: var(--textarea-placeholder);
+    font-family: "Tahoma", sans-serif;
+    font-size: 14px;
+  }
+  
+  form button {
+    width: 363.03px;
+    height: 62.36px;
+    font-family: "Tahoma", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    background: var(--button-color);
+    color: var(--text);
+    border: none;
+    border-radius: 8.94px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  form button:hover {
+    background-color: #cc0000;
+  }
+  

@@ -23,9 +23,10 @@ body {
   --heading-text: #363636;
   --about-text: #101010;
   --price-text: #000000;
-  --border: #6A6A6A;
+  --border: #6a6a6a;
   --input-placeholder: rgba(255, 255, 255, 0.5);
   --textarea-placeholder: rgba(137, 149, 157, 0.5);
+  --divider: rgba(225, 225, 225, 0.42);
 }
 
 .container {

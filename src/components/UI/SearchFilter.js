@@ -27,26 +27,49 @@ const SearchFilter = () => {
   const [showBrand, setShowBrand] = useState(false);
   const [showModel, setShowModel] = useState(false);
   const [showPrice, setShowPrice] = useState(false);
+  const [activeButton, setActiveButton] = useState(null);
+
+  const handleBrandClick = () => {
+    setShowBrand(!showBrand);
+    setShowModel(false); 
+    setShowPrice(false); 
+  };
+
+  const handleModelClick = () => {
+    setShowBrand(false); 
+    setShowModel(!showModel);
+    setShowPrice(false); 
+  };
+
+  const handlePriceClick = () => {
+    setShowBrand(false); 
+    setShowModel(false); 
+    setShowPrice(!showPrice);
+  };
+
+  const handleButtonClick = (buttonName) => {
+    setActiveButton(buttonName === activeButton ? null : buttonName);
+  };
 
   return (
     <div className="filter">
       <div className="sidebar">
         <div className="filter-buttons">
-          <button
-            onClick={() => setShowBrand(!showBrand)}
-            className={`brand-button${showBrand ? " clicked" : ""}`}
+        <button
+            onClick={handleBrandClick}
+            className={`brand-button ${showBrand ? 'active' : ''}`}
           >
             By brand
           </button>
           <button
-            onClick={() => setShowModel(!showModel)}
-            className={`model-button${showModel ? " clicked" : ""}`}
+            onClick={handleModelClick}
+            className={`brand-button ${showModel ? 'active' : ''}`}
           >
             By model
           </button>
           <button
-            onClick={() => setShowPrice(!showPrice)}
-            className={`price-button${showPrice ? " clicked" : ""}`}
+            onClick={handlePriceClick}
+            className={`brand-button ${showPrice ? 'active' : ''}`}
           >
             By price
           </button>
@@ -60,7 +83,7 @@ const SearchFilter = () => {
                 <img src={kia} alt="Kia logo" />
                 <img src={samsung} alt="Samsung logo" />
               </div>
-              <div className="vertical-line"></div>
+              <div className="horizontal-line"></div>
               <div className="list-middle">
                 <img src={toyota} alt="Toyota logo" />
                 <img src={ford} alt="Ford logo" />

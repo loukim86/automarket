@@ -1,0 +1,41 @@
+.popup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--bg-gradient);
+  width: 421.59px;
+  height: 165.33px;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+}
+
+.success-title,
+.success-text {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.success-title {
+  font-size: 32px;
+  font-weight: 400;
+  color: var(--text);
+  line-height: 46.82px;
+}
+
+.success-text {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--text);
+  line-height: 23.41px;
+  margin-top: 10px;
+}
+
+.close-button {
+  float: inline-end;
+}

@@ -1,7 +1,7 @@
 .heading {
   font-family: "Tahoma", sans-serif;
   font-weight: 400;
-  line-height: 83.2px;
+  line-height: 5.2rem;
   width: 599px;
   height: 291.68px;
   color: var(--heading-text);
@@ -11,21 +11,21 @@
 }
 
 .main-text {
-    width: 599px;
-    height: 166px;
-    margin-bottom: 20px;
+  width: 37.44rem;
+  height: 166px;
+  margin-bottom: 20px;
 }
 
 .main-text p {
-  font-size: 64px;
+  font-size: 4rem;
 }
 
 .text {
-    width: 250px;
-    height: 96px;
+  width: 250px;
+  height: 96px;
 }
 
 .text p {
-  font-size: 20px;
+  font-size: 1.25rem;
   line-height: 32px;
 }
