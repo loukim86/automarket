@@ -1,4 +1,4 @@
-import { Container } from "reactstrap";
+
 import FeatureCard from "./FeatureCard";
 import thumbUp from "../../assets/img/thumbUp.svg";
 import check from "../../assets/img/check-circle.svg";
@@ -9,7 +9,7 @@ import "../../styles/why-us.css";
 
 function WhyUs() {
   return (
-    <Container>
+    <>
       <div className="feature-cards">
         <FeatureCard
           icon={thumbUp}
@@ -32,7 +32,7 @@ function WhyUs() {
           title="Lorem ipsum dolor sit amet consectetur. Cras tortor eget ac interdum."
         />
       </div>
-    </Container>
+    </>
   );
 }
 
