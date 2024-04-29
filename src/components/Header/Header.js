@@ -1,15 +1,13 @@
-import { useRef } from "react";
-import { Container } from "reactstrap";
+import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
-import SearchCar from "../UI/SearchCar";
-import BannerHeading from "../UI/BannerHeading";
+import { GrClose } from "react-icons/gr";
 import logo from "../../assets/img/logo.png";
 import burger from "../../assets/img/burger.png";
-import favorite from "../../assets/img/heart.png";
-import cart from "../../assets/img/cart.png";
+import favorite from "../../assets/img/Vector.svg";
+import cart from "../../assets/img/cart1.svg";
 import user from "../../assets/img/user.png";
 
-import "./Header.css";
+import "./header.css";
 
 const navLinks = [
   {
@@ -38,64 +36,81 @@ const navLinks = [
 const extraLinks = [
   {
     path: "/favorite",
-    display: <img src={favorite} alt="Favorite" />,
+    display: <img src={favorite} alt="Favorite" className="heart" />,
   },
   {
     path: "/cart",
-    display: <img src={cart} alt="Cart" />,
+    display: <img src={cart} alt="Cart" className="cart" />,
   },
   {
     path: "/user",
-    display: <img src={user} alt="User" />,
+    display: <img src={user} alt="User" className="user" />,
   },
 ];
 const Header = () => {
-  const menuRef = useRef(null);
+  const [active, setActive] = useState("navbar");
+  const [transparent, setTransparent] = useState("header");
 
-  const toggleMenu = () => menuRef.current.classList.toggle("menu__active");
+  useEffect(() => {
+    const addBg = () => {
+      if (window.scrollY >= 10) {
+        setTransparent("header active-header");
+      } else {
+        setTransparent("header");
+      }
+    };
+
+    window.addEventListener("scroll", addBg);
+
+    return () => {
+      window.removeEventListener("scroll", addBg);
+    };
+  }, []);
+
+  const showNav = () => {
+    setActive("navbar active-navbar");
+  };
+
+  const removeNav = () => {
+    setActive("navbar");
+  };
 
   return (
-    <div className="main-navbar">
-      <Container>
-        <div className="navigation__wrapper d-flex align-items-center justify-content-between">
-          <span className="mobile__menu">
-            <img src={burger} alt="burger menu" onClick={toggleMenu} />
-          </span>
-
-          <div className="navigation" ref={menuRef} onClick={toggleMenu}>
-            <div className="menu">
-              <div className="logo">
-                <img src={logo} alt="Logo" />
-              </div>
-              <div className="navbar">
-                {navLinks.map((item, index) => (
-                  <NavLink
-                    to={item.path}
-                    className={(navClass) =>
-                      navClass.isActive ? "nav__active nav__item" : "nav__item"
-                    }
-                    key={index}
-                  >
-                    {item.display}
-                  </NavLink>
-                ))}
-              </div>
-              <div className="extra-links">
-                {extraLinks.map((item, index) => (
-                  <div key={index}>
-                    <NavLink to={item.path} className="logo__items">
-                      {item.display}
-                    </NavLink>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
+    <section className="navbar-section">
+      <header className={transparent}>
+        <div className="logo-div">
+          <img src={logo} alt="Logo" className="logo" />
         </div>
-      </Container>
-      <BannerHeading />
-      <SearchCar />
-    </div>
+        <div className={active}>
+          <ul onClick={removeNav} className="nav-lists flex">
+            {navLinks.map((item, index) => (
+              <li key={index} className="nav-item">
+                <NavLink to={item.path} className="nav-link">
+                  {item.display}
+                </NavLink>
+              </li>
+            ))}
+          </ul>
+          <div className="header-icon flex">
+            {extraLinks.map((item, index) => (
+              <div key={index}>
+                <NavLink to={item.path} className="icon icon-item">
+                  {item.display}
+                </NavLink>
+              </div>
+            ))}
+          </div>
+          <div onClick={showNav} className="toggle-navbar">
+            <img src={burger} alt="Burger menu" className="burger-menu" />
+          </div>
+          
+          
+        </div>
+        <div onClick={removeNav} className="close-navbar">
+            <GrClose className="close-icon" />
+          </div>
+      </header>
+    </section>
   );
 };
 

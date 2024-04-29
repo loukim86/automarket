@@ -6,10 +6,12 @@ import ContactUs from "../UI/ContactUs";
 import SearchFilter from "../UI/SearchFilter";
 import PopularCar from "../UI/PopularCar";
 
+
 const Layout = () => {
   return (
     <>
       <Header />
+
       <div>
         <Routers />
       </div>
@@ -18,6 +20,8 @@ const Layout = () => {
       <PopularCar />
       <ContactUs />
       <Footer />
+      
+
     </>
   );
 };

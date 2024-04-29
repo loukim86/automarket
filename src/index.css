@@ -3,6 +3,7 @@
   src: local("Tahoma"), url("./assets/fonts/tahoma.ttf") format("truetype");
 }
 
+
 * {
   margin: 0;
   padding: 0;
@@ -32,12 +33,21 @@ body {
   --grid: #9dc0d7;
 }
 
-.container {
-  width: 100%;
-  max-width: 1920px;
-  margin: 0 auto;
-  min-height: 100vh;
+.section{
+  padding: 4rem 0 2rem;
 }
+
+
+.icon{
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.flex{ 
+  display: flex;
+  align-items: center;
+}
+
 
 a {
   text-decoration: none;

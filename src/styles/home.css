@@ -1,0 +1,35 @@
+.home {
+  height: 100vh;
+  background: url("../assets/img/main-image.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  color: var(--heading-text);
+  margin: auto;
+  position: relative;
+  font-family: "Tahoma", sans-serif;
+  font-weight: 400;
+ 
+  /* width: 1920px; */
+}
+
+.home-text {
+  position: absolute;
+  top: 130px;
+  left: 255px;
+  /* width: 31.20%;
+  height: 31.88%; */
+}
+
+.title {
+  margin-bottom: 20px; 
+  font-size: 4rem;
+  line-height: 5.2rem;
+}
+
+.sub-title {
+  font-size: 1.25rem;
+  line-height: 2rem;
+  margin: auto;
+}
