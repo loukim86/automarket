@@ -1,20 +1,69 @@
-.header {
-  position: fixed;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: transparent;
-  width: 60.3%;
-  height: 3.8%;
-  z-index: 1000;
-  top: 2.25rem;
-  left: 23rem;
+.header-container {
+  position: relative;
+  width: 1960px;
+  height: 915px;
+}
+
+.header-background {
+  width: 100%;
+  height: 100%;
+}
+
+.navbar {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   font-family: "Titillium Web", sans-serif;
   font-weight: 600;
-  font-style: normal;
-  column-gap: 0.3rem;
   font-size: 1.2rem;
   color: var(--menu-text);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 60%;
+  max-width: 100%;
+}
+
+.logo {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.logo-image {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+.nav-links {
+  flex: 3;
+  display: flex;
+  margin-left: 133px;
+ 
+  
+}
+
+.nav-links.open {
+  display: block;
+}
+
+.nav-links li {
+  margin-bottom: 10px;
+  
+}
+
+.icons {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 8px;
+}
+
+.icons img {
+  margin-left: 10px;
 }
 
 .heart {
@@ -32,55 +81,48 @@
   height: 38px;
 }
 
-.header .logo {
+.menu-icon {
+  display: none;
   cursor: pointer;
-  width: 16.2rem;
-  /* align-items: center; */
 }
 
-@media screen and (max-width: 768px) {
-  /* .toggle-navbar,
-  .close-navbar {
+.close-icon {
+  display: none;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
+
+  
+
+  .nav-links {
     display: none;
-  } */
-
-  .navbar {
+    
+    background-color: #fff;
+    color: black;
+    padding: 10px;
     position: absolute;
-    height: -webkit-max-content;
-    height: -moz-max-content;
-    height: max-content;
+    top: 60px;
+    left: 0;
     width: 100%;
-    padding: 1rem;
-    top: 0;
-    left: -500%;
-    z-index: 2000;
-    box-shadow: 0 2px 4px rgba(209, 209, 209, 0.904);
-    transition: 0.5s ease-in-out;
-    background: var(--text);
+    z-index: 1;
   }
-  .nav-lists {
-    display: flex;
+
+  .nav-links.open {
+    display: flex; 
     flex-direction: column;
-    justify-content: center;
-    width: 100%;
-    align-items: center;
-    margin: auto;
-    padding: 0.5rem 0;
-  }
-  .nav-item {
-    padding: 0.5rem 0;
-  }
-  .nav-link {
-    font-size: 0.9rem;
-    font-weight: 400;
-  }
-.close-navbar {
-    position: absolute;
-    top: 1rem;
-    right: 1.5rem;
   }
 
-.active-navbar {
-    left: 0%;
+  .nav-links li {
+    margin-right: 0;
+    margin-bottom: 10px;
   }
 }
+

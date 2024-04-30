@@ -1,116 +1,88 @@
+
 import { useState, useEffect } from "react";
-import { NavLink } from "react-router-dom";
-import { GrClose } from "react-icons/gr";
+import { Link} from "react-router-dom";
+import bgImage from "../../assets/img/main-image.jpg";
 import logo from "../../assets/img/logo.png";
-import burger from "../../assets/img/burger.png";
-import favorite from "../../assets/img/Vector.svg";
+import logoMob from "../../assets/img/mobile-logo.png";
+import closeButton from "../../assets/img/popup-close.svg";
+import heart from "../../assets/img/heart.svg";
 import cart from "../../assets/img/cart1.svg";
 import user from "../../assets/img/user.png";
+import burgerMenu from "../../assets/img/burger.png";
 
 import "./header.css";
 
-const navLinks = [
-  {
-    path: "/home",
-    display: "Home",
-  },
-  {
-    path: "/catalog",
-    display: "Catalog",
-  },
-  {
-    path: "/application",
-    display: "Application",
-  },
-  {
-    path: "/about",
-    display: "About us",
-  },
-
-  {
-    path: "/contacts",
-    display: "Contacts",
-  },
-];
-
-const extraLinks = [
-  {
-    path: "/favorite",
-    display: <img src={favorite} alt="Favorite" className="heart" />,
-  },
-  {
-    path: "/cart",
-    display: <img src={cart} alt="Cart" className="cart" />,
-  },
-  {
-    path: "/user",
-    display: <img src={user} alt="User" className="user" />,
-  },
-];
 const Header = () => {
-  const [active, setActive] = useState("navbar");
-  const [transparent, setTransparent] = useState("header");
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
   useEffect(() => {
-    const addBg = () => {
-      if (window.scrollY >= 10) {
-        setTransparent("header active-header");
-      } else {
-        setTransparent("header");
-      }
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
     };
 
-    window.addEventListener("scroll", addBg);
+    window.addEventListener('resize', handleResize);
 
     return () => {
-      window.removeEventListener("scroll", addBg);
+      window.removeEventListener('resize', handleResize);
     };
   }, []);
 
-  const showNav = () => {
-    setActive("navbar active-navbar");
-  };
 
-  const removeNav = () => {
-    setActive("navbar");
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
   };
 
   return (
-    <section className="navbar-section">
-      <header className={transparent}>
-        <div className="logo-div">
-          <img src={logo} alt="Logo" className="logo" />
+    <div className="header-container">
+      <img src={bgImage} alt="Automarket" className="header-background" />
+      <nav className="navbar">
+        <div className="menu-icon" onClick={toggleMenu}>
+          {menuOpen ? (
+            <img src={closeButton} alt="Close icon" />
+          ) : (
+            <img src={burgerMenu} alt="Mobile menu" />
+          )}
         </div>
-        <div className={active}>
-          <ul onClick={removeNav} className="nav-lists flex">
-            {navLinks.map((item, index) => (
-              <li key={index} className="nav-item">
-                <NavLink to={item.path} className="nav-link">
-                  {item.display}
-                </NavLink>
-              </li>
-            ))}
+        <div className="logo">
+          <Link to="/"><img src={isMobile ? logoMob : logo} alt="Logo" className="logo-image" /></Link>
+        </div>
+        <div className={`nav-links ${menuOpen ? "open" : ""}`}>
+        
+          <ul>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/catalog">Catalog</Link>
+            </li>
+            <li>
+              <Link to="/application">Application</Link>
+            </li>
+            <li>
+              <Link to="/about">About us</Link>
+            </li>
+            <li>
+              <Link to="/contacts">Contacts</Link>
+            </li>
           </ul>
-          <div className="header-icon flex">
-            {extraLinks.map((item, index) => (
-              <div key={index}>
-                <NavLink to={item.path} className="icon icon-item">
-                  {item.display}
-                </NavLink>
-              </div>
-            ))}
+          <div className="close-icon" onClick={toggleMenu}>
+            <img src={closeButton} alt="Close button" />
           </div>
-          <div onClick={showNav} className="toggle-navbar">
-            <img src={burger} alt="Burger menu" className="burger-menu" />
-          </div>
-          
-          
         </div>
-        <div onClick={removeNav} className="close-navbar">
-            <GrClose className="close-icon" />
-          </div>
-      </header>
-    </section>
+        <div className="icons">
+          <Link to="/favorite">
+            <img src={heart} alt="Heart icon" className="heart" />
+          </Link>
+          <Link to="/cart">
+            <img src={cart} alt="Cart icon" className="cart" />
+          </Link>
+          <Link to="/user">
+            <img src={user} alt="User icon" className="user" />
+          </Link>
+        </div>
+      </nav>
+    </div>
   );
 };
 

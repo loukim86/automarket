@@ -12,6 +12,7 @@
 
 body {
   overflow-x: hidden;
+ 
 }
 
 :root {
@@ -33,10 +34,10 @@ body {
   --grid: #9dc0d7;
 }
 
-.section{
-  padding: 4rem 0 2rem;
+/* .app {
+  width: 100%;
+  margin: auto;
 }
-
 
 .icon{
   font-size: 2rem;
@@ -46,7 +47,7 @@ body {
 .flex{ 
   display: flex;
   align-items: center;
-}
+} */
 
 
 a {
