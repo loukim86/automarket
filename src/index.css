@@ -34,21 +34,11 @@ body {
   --grid: #9dc0d7;
 }
 
-/* .app {
-  width: 100%;
-  margin: auto;
+.app {
+  max-width: 120rem !important;
+  margin: 0 auto !important;
+
 }
-
-.icon{
-  font-size: 2rem;
-  cursor: pointer;
-}
-
-.flex{ 
-  display: flex;
-  align-items: center;
-} */
-
 
 a {
   text-decoration: none;

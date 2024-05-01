@@ -1,20 +1,12 @@
-import '../styles/home.css'
+import Hero from "../components/UI/Hero";
+import SearchCar from "../components/UI/SearchCar";
 
 const Home = () => {
   return (
-    <section className="home">
-      <div className="second-container container">
-        <div className="home-text">
-        <p className="title">
-          Buy, Sell, and <br /> Trade cars with us
-        </p>
-        <p className="sub-title">
-          We offer a wide selection of <br /> cars for every need. Find <br />
-          your ideal car now.
-        </p>
-        </div>
-      </div>
-    </section>
+    <>
+    <Hero/>
+    <SearchCar/>
+    </>
   );
 };
 
