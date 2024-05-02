@@ -2,7 +2,7 @@ import Layout from "./components/Layout/Layout";
 
 const App = () => {
   return (
-    <div className="app">
+    <div className="container">
       <Layout />
     </div>
   );

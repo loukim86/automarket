@@ -3,7 +3,7 @@ import Footer from "../Footer/Footer";
 import Routers from "../../routers/Routers";
 import WhyUs from "../UI/WhyUs";
 import ContactUs from "../UI/ContactUs";
-import SearchFilter from "../UI/SearchFilter";
+import Testimonials from "../UI/Testimonials";
 import PopularCar from "../UI/PopularCar";
 
 
@@ -15,9 +15,10 @@ const Layout = () => {
       <div>
         <Routers />
       </div>
-      <SearchFilter />
+      
       <WhyUs />
       <PopularCar />
+      <Testimonials/>
       <ContactUs />
       <Footer />
       

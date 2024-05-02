@@ -34,7 +34,7 @@ body {
   --grid: #9dc0d7;
 }
 
-.app {
+.container {
   max-width: 120rem !important;
   margin: 0 auto !important;
 

@@ -23,7 +23,7 @@ import minivan from "../../assets/img/minivans.png";
 import suv from "../../assets/img/SUVs.png";
 import "../../styles/search-filter.css";
 
-const SearchFilter = () => {
+const SearchFilter = ({ isVisible }) => {
   const [showBrand, setShowBrand] = useState(false);
   const [showModel, setShowModel] = useState(false);
   const [showPrice, setShowPrice] = useState(false);
@@ -52,7 +52,7 @@ const SearchFilter = () => {
   };
 
   return (
-    <div className="filter">
+    <div className={`filter ${isVisible ? 'visible' : ''}`}>
       <div className="sidebar">
         <div className="filter-buttons">
         <button
