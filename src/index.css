@@ -32,6 +32,7 @@ body {
   --bg-image: linear-gradient(to bottom, #ededed 100%, #d2d6db 0%, #9dc0d7 20%);
   --bg-grid: linear-gradient(#9dc0d7, #9f9e9e 20%);
   --grid: #9dc0d7;
+  --testimonial: linear-gradient(to right, #9DC0D7 0%, #9DC0D7 80%);
 }
 
 .container {

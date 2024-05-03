@@ -82,12 +82,13 @@
   font-weight: 400;
 }
 
-.input-group input {
+.input-group select {
   padding: .5rem;
   width: 12.5rem;
   font-size: 1.1rem;
   font-weight: 400;
   color: var(--about-text);
+  border: none;
 }
 
 .btn-search {

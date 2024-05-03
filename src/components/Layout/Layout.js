@@ -3,7 +3,9 @@ import Footer from "../Footer/Footer";
 import Routers from "../../routers/Routers";
 import WhyUs from "../UI/WhyUs";
 import ContactUs from "../UI/ContactUs";
-import Testimonials from "../UI/Testimonials";
+// import CustomerCard from "../UI/CustomerCard";
+// import Testimonials from "../UI/Testimonials";
+import TestimonialsCarousel from "../UI/TestimonialsCarousel";
 import PopularCar from "../UI/PopularCar";
 
 
@@ -18,7 +20,9 @@ const Layout = () => {
       
       <WhyUs />
       <PopularCar />
-      <Testimonials/>
+      <TestimonialsCarousel/>
+      {/* <CustomerCard/> */}
+      {/* <Testimonials/> */}
       <ContactUs />
       <Footer />
       

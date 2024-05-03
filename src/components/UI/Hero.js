@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import bgImage from "../../assets/img/main-image.jpg";
 import SearchCar from "./SearchCar";
 import "../../styles/hero.css";
 
@@ -29,7 +28,6 @@ const Hero = () => {
     <>
       <section id="home" className="hero-section">
         <div className="container">
-          {/* <img src={bgImage} alt="Background image" className="bg-image" /> */}
           <div className="hero-content">
             <div className="hero-content__text">
               <p className="title">

@@ -1,0 +1,55 @@
+.card-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.card-image {
+  width: 38.67rem;
+  height: 28.39rem;
+}
+
+.card-info {
+  background: var(--testimonial);
+  padding: 10px;
+  border-radius: 0 0.37rem 0.37rem 0;
+}
+
+.card {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 2rem 0rem 1.25rem;
+}
+
+.card h3 {
+  font-size: 1.81rem;
+  color: var(--about-text);
+}
+
+.card-date {
+  font-size: 1.0575rem;
+  color: var(--about-text);
+  text-align: center;
+}
+
+.card-stars {
+  margin-left: 10px;
+  padding: 0 10px;
+}
+
+.card-text {
+  width: 28.09rem;
+  height: 14.72rem;
+  font-size: 1.3594rem;
+  color: var(--text);
+  line-height: 1.64rem;
+}
+
+.card-text p {
+  padding: 2rem 2rem 1rem 1.25rem;
+  align-items: center;
+}
+
+
+
