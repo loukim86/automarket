@@ -33,6 +33,7 @@ body {
   --bg-grid: linear-gradient(#9dc0d7, #9f9e9e 20%);
   --grid: #9dc0d7;
   --testimonial: linear-gradient(to right, #9DC0D7 0%, #9DC0D7 80%);
+  --toggle-button: #1E1E1E;
 }
 
 .container {

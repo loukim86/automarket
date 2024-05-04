@@ -1,0 +1,26 @@
+.arrival-container {
+  width: 72.43rem;
+  height: auto;
+  margin: 0 auto;
+  min-height: 30rem;
+  font-family: "Tahoma", sans-serif;
+  font-weight: 400;
+  margin-top: 100px; /*temporary*/
+}
+
+.arrival-title {
+  font-size: 3rem;
+  margin-bottom: 3.625rem;
+  line-height: 3.62rem;
+}
+
+.card-car__container {
+  display: flex;
+  justify-content: space-between;
+  align-self: flex-end;
+}
+
+.card-car__container > :first-child,
+.card-car__container > :last-child {
+  margin: 0;
+}
