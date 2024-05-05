@@ -8,14 +8,8 @@
 }
 
 .hero-content {
-  /* width: 100%;
-  display: flex;
-  align-items: center;*/
-  
   position: absolute;
-  bottom: 15rem;  
-  
- 
+  top: 4%;
 }
 
 .hero-content__text {
@@ -69,7 +63,7 @@
 }
 
 @media (max-width: 768px) {
-  .bg-image {
+  .hero-section {
     background-position: right;
   }
   .hero-content {

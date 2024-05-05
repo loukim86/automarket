@@ -11,11 +11,31 @@ const SearchCar = () => {
   }
 
   const [brand, setBrand] = useState("");
-  const [serie, setSerie] = useState("");
+  const [seria, setSeria] = useState("");
   const [year, setYear] = useState("");
+  const [model, setModel] = useState("");
+  const [price, setPrice] = useState("");
   const [showFilters, setShowFilters] = useState(false);
   const [findBrand, setFindBrand] = useState([]);
   const [findYear, setFindYear] = useState([]);
+
+  const modelOptions = [
+    "Subcompact cars",
+    "Compact car",
+    "Midsize car",
+    "Sports car",
+    "Minivans",
+    "SUV's",
+  ];
+  const priceOptions = [
+    "0-2M",
+    "2-4M",
+    "4-6M",
+    "6-10M",
+    "10-15M",
+    "15-2OM",
+    "20-25M",
+  ];
 
   useEffect(() => {
     const newBrandOptions = carsData.cars.map((car) => {
@@ -35,7 +55,7 @@ const SearchCar = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log("Searching for:", { brand, serie, year });
+    console.log("Searching for:", { brand, seria, year });
   };
 
   const toggleFilters = () => {
@@ -46,30 +66,51 @@ const SearchCar = () => {
     <div className="form-container">
       <form className="search-panel" onSubmit={handleSubmit}>
         <div className="input-group">
-          <label>Brand</label>
+          {/* <label>Brand</label> */}
           <select value={brand} onChange={(e) => setBrand(e.target.value)}>
             {findBrand.map((option, index) => (
               <option key={index} value={option}>
                 {option}
+        
               </option>
             ))}
           </select>
         </div>
         <div className="divider"></div>
 
-        <div className="input-group">
+        <div className="input-group desktop-only">
           <label>Seria</label>
           <input
             type="text"
-            value={serie}
-            onChange={(e) => setSerie(e.target.value)}
+            value={seria}
+            onChange={(e) => setSeria(e.target.value)}
           />
         </div>
         <div className="divider"></div>
-        <div className="input-group">
+
+        <div className="input-group desktop-only">
           <label>Year</label>
           <select value={year} onChange={(e) => setYear(e.target.value)}>
             {findYear.map((option, index) => (
+              <option key={index} value={option}>
+                {option}
+              </option>
+            ))}
+          </select>
+        </div>
+        <div className="input-group mobile-only">
+          <select value={model} onChange={(e) => setModel(e.target.value)}>
+            {modelOptions.map((option, index) => (
+              <option key={index} value={option}>
+                {option}
+              </option>
+            ))}
+          </select>
+        </div>
+
+        <div className="input-group mobile-only">
+          <select value={price} onChange={(e) => setPrice(e.target.value)}>
+            {priceOptions.map((option, index) => (
               <option key={index} value={option}>
                 {option}
               </option>
@@ -83,46 +124,6 @@ const SearchCar = () => {
         <SearchFilter isVisible={showFilters} />
       </form>
     </div>
-
-    // <section className="search-section">
-    //   <div className="container">
-    //     <div className="search-content">
-    //       <div className="search-content__box">
-    //         <form className="search-form">
-    //           <div className="search-form__car-type">
-    //             <select>
-    //               <option>Brand</option>
-    //               <option value="Hyundai">Hyundai</option>
-    //               <option value="KIA">KIA</option>
-    //               <option value="BMW">BMW</option>
-    //             </select>
-    //           </div>
-
-    //           <div className="search-form__car-type">
-    //             <select>
-    //               <option>Seria</option>
-    //               <option value="Ioniq5">Ioniq5</option>
-    //               <option value="Morning">Morning</option>
-    //               <option value="Series7">Series7</option>
-    //             </select>
-    //           </div>
-
-    //           <div className="search-form__car-type">
-    //             <select>
-    //               <option>Year</option>
-    //               <option value="2023">2023</option>
-    //               <option value="2020">2020</option>
-    //               <option value="2022">2022</option>
-    //             </select>
-    //           </div>
-    //         </form>
-    //         <div>
-    //           <button className="search-button">Search</button>
-    //         </div>
-    //       </div>
-    //     </div>
-    //   </div>
-    // </section>
   );
 };
 
