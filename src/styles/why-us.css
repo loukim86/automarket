@@ -4,9 +4,19 @@
   align-items: center;
   font-family: "Tahoma", sans-serif;
   height: 174px;
-  width: 1160px;
+  max-width: 1160px;
+  width: 100%;
   margin: 0 auto;
-  margin-top: 350px; /* temporary style*/
+ /* margin-top: 350px; /* temporary style*/
 }
 
-
+@media (max-width: 768px) {
+  .feature-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: auto;
+    grid-gap: 1.25rem;
+    margin: 0 auto;
+    margin-top: 100px;
+  }
+}

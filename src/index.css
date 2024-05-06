@@ -3,16 +3,23 @@
   src: local("Tahoma"), url("./assets/fonts/tahoma.ttf") format("truetype");
 }
 
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+html, body{
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
 body {
-  overflow-x: hidden;
- 
+  overflow-y: scroll;
+  position: relative;
 }
 
 :root {
@@ -32,14 +39,14 @@ body {
   --bg-image: linear-gradient(to bottom, #ededed 100%, #d2d6db 0%, #9dc0d7 20%);
   --bg-grid: linear-gradient(#9dc0d7, #9f9e9e 20%);
   --grid: #9dc0d7;
-  --testimonial: linear-gradient(to right, #9DC0D7 0%, #9DC0D7 80%);
-  --toggle-button: #1E1E1E;
+  --testimonial: linear-gradient(to right, #9dc0d7 0%, #9dc0d7 80%);
+  --toggle-button: #1e1e1e;
 }
 
-.container {
+.app {
   max-width: 120rem !important;
   margin: 0 auto !important;
-
+  width: 100%;
 }
 
 a {

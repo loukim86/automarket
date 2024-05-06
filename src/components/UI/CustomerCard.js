@@ -1,4 +1,5 @@
 import clientImg from "../../assets/img/testimonials.png";
+import { IoMdStarOutline } from "react-icons/io";
 import "../../styles/customer-card.css";
 
 const CustomerCard = () => {
@@ -10,7 +11,13 @@ const CustomerCard = () => {
           <h3>Ivan Ivanov</h3>
           <span className="card-date">2023.01.01</span>
         </div>
-        <div className="card-stars">⭐⭐⭐⭐⭐</div>
+        <div className="card-stars">
+          <IoMdStarOutline />
+          <IoMdStarOutline />
+          <IoMdStarOutline />
+          <IoMdStarOutline />
+          <IoMdStarOutline />
+        </div>
 
         <div className="card-text">
           <p>

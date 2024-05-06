@@ -1,6 +1,7 @@
 .testimonial-container {
-  width: 72.5rem;
+  max-width: 72.5rem;
   height: 40.93rem;
+  width: 100%;
   margin: 0 auto;
   font-family: "Tahoma", sans-serif;
   font-weight: 400;
@@ -34,4 +35,35 @@
   font-size: 1.125rem;
   border: none;
   cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .testimonial-container {
+    max-width: 21.4375rem;
+    max-height: 15.6506rem;
+    width: 100%;
+  }
+
+  .testimonial-title {
+    font-size: 1.25rem;
+    margin-bottom: 1.625rem;
+    line-height: 1.5088rem;
+    max-width: 15.625rem;
+  }
+
+  .testimonial-container__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  .testimonial-button {
+    max-width: 10.5625rem;
+    max-height: 2.125rem;
+    font-size: 0.75rem;
+  }
 }

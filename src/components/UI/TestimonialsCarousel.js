@@ -2,7 +2,7 @@ import Slider from "react-slick";
 import CustomerCard from "./CustomerCard";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import '../../styles/testimonials-carousel.css';
+import "../../styles/testimonials-carousel.css";
 
 const TestimonialsCarousel = () => {
   const settings = {
@@ -14,6 +14,31 @@ const TestimonialsCarousel = () => {
     autoplay: false,
     autoplaySpeed: 3000,
     cssEase: "linear",
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 6,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 6,
+        },
+      },
+    ],
   };
 
   return (

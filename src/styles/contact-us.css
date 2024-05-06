@@ -3,20 +3,17 @@
 .contact-us-container {
   display: flex;
   background: var(--bg-gradient);
-  padding: 20px;
-  border-radius: 5px;
+  padding: 1.25rem;
+  border-radius: .3125rem;
   font-family: "Tahoma", sans-serif;
-  width: 1160px;
-  height: 687px;
+  max-width: 72.5rem;
+  max-height: 42.9375rem;
   margin: 0 auto;
-  padding: 50px;
-  margin-bottom: 100px;
+  padding: 3.125rem;
+  margin-bottom: 6.25rem;
   position: relative;
   margin-top: 90px; /* temporary style*/
 }
-
-
-
 
 /* .popup.error::before {
   content: "";
@@ -31,27 +28,25 @@
 
 .contact-info h2 {
   color: var(--text);
-  font-size: 48px;
+  font-size: 3rem;
 }
 
 .contact-us {
-  width: 282px;
-  height: 58px;
+  max-width: 17.625rem;
+  max-height: 3.625rem;
 }
 
 .contact-details {
-  width: 271px;
-  height: 242px;
-  margin-top: 30px;
+  max-width: 16.9375rem;
+  max-height: 15.125rem;
+  margin-top: 1.875rem;
 }
 
 .contact {
   display: flex;
   align-items: center;
- 
-  padding: 15px 0;
+  padding: .9375rem 0;
   font-weight: 400;
- 
 }
 
 .address {
@@ -61,55 +56,69 @@
 .contact-info .contact {
   font-weight: 400;
   color: var(--text);
-  font-size: 20px;
+  font-size: 1.25rem;
 }
 
 .contact-icon {
-  margin-right: 20px;
-  width: 24px;
-  height: 24px;
+  margin-right: 1.25rem;
+  max-width: 1.5rem;
+  max-height: 1.5rem;
 }
 
 .contact-info {
   flex: 1;
-  margin-left: 20px;
-  
+  margin-left: 1.25rem;
 }
 
 .contact-info h2 {
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
 }
 
 .contact-info p {
-  margin: 5px 0;
+  margin: .3125rem 0;
 }
 
 .media-icons {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 165px;
-  height: 41px;
+  max-width: 10.3125rem;
+  max-height: 2.5625rem;
   padding: 2rem 0;
 }
 
 .instagram {
-  width: 24px;
-  height: 24px;
+  max-width: 1.5rem;
+  max-height: 1.5rem;
 }
 
 .twitter {
-  width: 27px;
-  height: 27px;
+  max-width: 1.6875;
+  max-height: 1.6875;
 }
 
 .facebook {
-  width: 25px;
-  height: 25px;
+  max-width: 1.5625rem;
+  max-height: 1.5625rem;
 }
 
 .youtube {
-  width: 29px;
-  height: 29px;
+  max-width: 1.8125rem;
+  max-height:1.8125rem;
 }
 
+@media (max-width: 600px) {
+  .hide-on-mobile {
+    display: none;
+  }
+
+  .contact-us-container {
+    padding: 0.5rem;
+    max-width: 343px;
+    max-height: 386px;
+
+   
+  }
+
+
+}

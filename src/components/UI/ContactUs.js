@@ -46,7 +46,7 @@ const ContactUs = () => {
 
   return (
     <div className="contact-us-container">
-      <div className="contact-info">
+      <div className="contact-info hide-on-mobile">
         <div className="contact-us">
           <h2>CONTACT US</h2>
         </div>

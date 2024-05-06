@@ -17,7 +17,7 @@
   flex-direction: column;
   max-width: 50rem;
   margin-top: 5rem;
-  padding-left: 10rem;  
+  padding-left: 10rem;
 }
 
 .hero-content__text .title {
@@ -64,13 +64,20 @@
 
 @media (max-width: 768px) {
   .hero-section {
-    background-position: right;
+    background-position: 90%;
   }
+
   .hero-content {
-    justify-content: center;
+    top: 8%;
   }
+
   .hero-content__text {
-    text-align: center;
-    align-items: center;
+    padding: 0 2rem 2rem 2rem;
+  }
+
+  .hero-content__text .title {
+    margin: 0;
+    line-height: 4rem;
+    margin-bottom: 0.625rem;
   }
 }
