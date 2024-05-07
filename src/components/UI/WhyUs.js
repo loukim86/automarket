@@ -9,7 +9,7 @@ import "../../styles/why-us.css";
 
 function WhyUs() {
   return (
-    <>
+    <div className="container">
       <div className="feature-cards">
         <FeatureCard
           icon={thumbUp}
@@ -32,7 +32,7 @@ function WhyUs() {
           title="Lorem ipsum dolor sit amet consectetur. Cras tortor eget ac interdum."
         />
       </div>
-    </>
+    </div>
   );
 }
 

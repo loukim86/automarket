@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
 .navbar {
   max-width: 77.5rem;
   width: 100%;
@@ -15,6 +17,21 @@
   margin: 0 auto;
 }
 
+.main-logo {
+  max-width: 2.7531rem;
+  max-height: 2.7531rem;
+}
+
+.logo-text {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 1.8356rem;
+}
+
+.logo-text span {
+  color: var(--border);
+}
+
 .navbar__links {
   position: relative;
 }
@@ -30,12 +47,15 @@
 }
 
 .navbar__img {
-  width: 16.2rem;
+  display: flex;
+  justify-content: flex-start;
 }
 
-.navbar__img img {
-  width: 100%;
-  height: 100%;
+.navbar__img img,
+.navbar__img p {
+  margin-right: 10px;
+  display: inline-block;
+  vertical-align: middle;
   cursor: pointer;
 }
 
@@ -143,11 +163,65 @@
   left: 0;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
+  .navbar {
+    padding: 1rem 1rem;
+  }
+  
   .navbar__links {
     display: none;
   }
+
+  .navbar__img {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 20%;
+  }
+
+  .navbar__img img,
+  .navbar__img p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  .navbar__img img {
+    margin-left: 30px;
+  }
+
+  .main-logo {
+    max-width: 1.5625rem;
+    max-height: 1.5625rem;
+  }
+
+  .logo-text {
+    font-size: .875rem;
+  }
+
+  .heart {
+    max-width: 1.2125rem;
+    max-height: 1.2125rem;
+  }
+
+  .cart {
+    max-width: 1.2375rem;
+    max-height: 1.2375rem;
+  }
+
+  .user {
+    max-width: 1.5681rem;
+    max-height: 1.5681rem;
+  }
+
+  .navbar__icons a {
+    padding-right: 0.5rem;
+  }
+  
   .mobile-hamb {
     display: flex;
   }
+
+ 
 }

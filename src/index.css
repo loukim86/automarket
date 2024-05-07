@@ -22,6 +22,12 @@ body {
   position: relative;
 }
 
+.container {
+
+  margin: 0 auto !important;
+  padding: 0 2.5rem !important;
+}
+
 :root {
   --footer-color: #89959d;
   --button-color: #d33030;

@@ -82,3 +82,18 @@
   width: 1.8125rem;
   height: 1.8125rem;
 }
+
+@media (max-width: 600px) {
+  .car-card {
+    max-height: 100%;
+  }
+
+  .car-card__header {
+    font-size: 0.875rem;
+  }
+
+  .car-card__image {
+    max-height: 100%;
+    max-width: 100%;
+  }
+}

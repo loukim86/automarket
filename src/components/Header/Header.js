@@ -7,6 +7,7 @@ import heart from "../../assets/img/heart.svg";
 import cart from "../../assets/img/cart1.svg";
 import user from "../../assets/img/user.png";
 import burgerMenu from "../../assets/img/burger.png";
+import alogo from '../../assets/img/a-logo.svg'
 
 import "./header.css";
 
@@ -62,7 +63,8 @@ const Header = () => {
           </div>
           <div className="navbar__img">
             <Link to="/" onClick={() => window.scrollTo(0, 0)}>
-              <img src={logo} alt="logo-img" />
+              <img src={alogo} alt="logo-img" className="main-logo"/>
+              <p className="logo-text">AUTO<span>MARKET</span></p>
             </Link>
           </div>
           <ul className="navbar__links">

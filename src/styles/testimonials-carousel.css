@@ -39,9 +39,9 @@
 
 @media (max-width: 600px) {
   .testimonial-container {
-    max-width: 21.4375rem;
-    max-height: 15.6506rem;
-    width: 100%;
+    height: 15.6506rem;
+    margin-left: 0;
+    margin-right: 0;
   }
 
   .testimonial-title {

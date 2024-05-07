@@ -1,5 +1,5 @@
 .arrival-container {
-  width: 72.43rem;
+  max-width: 72.43rem;
   height: auto;
   margin: 0 auto;
   min-height: 30rem;
@@ -23,4 +23,15 @@
 .card-car__container > :first-child,
 .card-car__container > :last-child {
   margin: 0;
+}
+
+@media (max-width: 600px) {
+  .arrival-container {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .arrival-title {
+    font-size: 1.25rem
+  }
 }

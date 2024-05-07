@@ -73,11 +73,19 @@
 
   .hero-content__text {
     padding: 0 2rem 2rem 2rem;
+    margin-top: 3.5rem;
+    padding: 1rem 1rem;
   }
 
   .hero-content__text .title {
     margin: 0;
-    line-height: 4rem;
+    line-height: 2.4281rem;
     margin-bottom: 0.625rem;
+    font-size: 2.0119rem;
+  }
+
+  .hero-content__text .sub-title {
+    font-size: .9375rem;
+    line-height: 1.5rem;
   }
 }

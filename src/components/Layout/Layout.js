@@ -8,6 +8,7 @@ import PopularCar from "../UI/PopularCar";
 import NewArrival from "../UI/NewArrival";
 import CarInformationCard from "../UI/CarInformationCard";
 
+
 const Layout = () => {
   return (
     <>

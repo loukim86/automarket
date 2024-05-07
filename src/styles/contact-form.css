@@ -1,111 +1,106 @@
 form {
-    flex: 1;
-    width: 563.12px;
-    height: 501.36px;
-    margin-top: 90px;
+  flex: 1;
+  width: 563.12px;
+  height: 501.36px;
+  margin-top: 5.625rem;
+}
+
+form input {
+  width: 100%;
+  padding: .625rem;
+  margin-bottom: .625rem;
+  border: none;
+  border-bottom: 0.85px solid #ffffff;
+  border-radius: 0;
+  background-color: transparent;
+}
+
+input::placeholder {
+  color: var(--input-placeholder);
+  font-family: "Tahoma", sans-serif;
+  font-size: .875rem;
+  line-height: 2;
+}
+
+form textarea {
+  width: 34.9025rem;
+  height: 12.5463rem;
+  padding: .625rem;
+  margin-bottom: .625rem;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  border-radius: .5337rem;
+  background-color: #fff;
+}
+
+textarea::placeholder {
+  color: var(--textarea-placeholder);
+  font-family: "Tahoma", sans-serif;
+  font-size: .875rem;
+}
+
+form button {
+  width: 22.6894rem;
+  height: 3.8975rem;
+  font-family: "Tahoma", sans-serif;
+  font-weight: 700;
+  font-size: 1.125rem;
+  background: var(--button-color);
+  color: var(--text);
+  border: none;
+  border-radius: .5587rem;
+  cursor: pointer;
+  margin-top: 1.25rem;
+}
+
+form button:hover {
+  background-color: #cc0000;
+}
+
+@media (max-width: 600px) {
+  form {
+    width: 18.5625rem;
+    height: 9.2269rem;
+    margin: 0;
   }
-  
+
   form input {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  input::placeholder {
+    font-size: 0.8125rem;
+    line-height: 2;
+  }
+
+  form textarea {
+    width: 18.5625rem;
+    height: 7.1875rem;
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
-    border: none;
-    border-bottom: 0.85px solid #ffffff;
-    border-radius: 0;
-    background-color: transparent;
+    margin-top: 18px;
   }
-  
-  input::placeholder {
-    color: var(--input-placeholder);
-    font-family: "Tahoma", sans-serif;
-    font-size: 14px;
-    line-height: 2;
-  }
-  
-  form textarea {
-    width: 558.44px;
-    height: 200.74px;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: none;
-    border-bottom: 1px solid #ccc;
-    border-radius: 8.54px;
-    background-color: #fff;
-  }
-  
+
   textarea::placeholder {
-    color: var(--textarea-placeholder);
-    font-family: "Tahoma", sans-serif;
-    font-size: 14px;
+    font-size: 0.75rem;
   }
-  
+
   form button {
-    width: 363.03px;
-    height: 62.36px;
-    font-family: "Tahoma", sans-serif;
-    font-weight: 700;
-    font-size: 18px;
+    width: 13.0625rem;
+    height: 2.375rem;
+    font-size: 0.75rem;
     background: var(--button-color);
     color: var(--text);
     border: none;
     border-radius: 8.94px;
     cursor: pointer;
-    margin-top: 20px;
+    margin-top: 3px;
   }
-  
+
   form button:hover {
     background-color: #cc0000;
   }
-
-  @media (max-width: 600px) {
-    form {
-      width: 18.5625rem;
-      height: 9.2269rem;
-      margin: 0;
-    }
-
-    form input {
-      width: 100%;
-      padding: .5rem;
-      margin-bottom: .5rem;
-    }
-    
-    input::placeholder {
-      font-size: .8125rem;
-      line-height: 2;
-    }
-
-    form textarea {
-      width: 18.5625rem;
-      height: 7.1875rem;
-      padding: 10px;
-      margin-bottom: 10px;
-    }
-    
-    textarea::placeholder {
-      font-size: .75rem;
-    }
-    
-    form button {
-      width: 363.03px;
-      height: 62.36px;
-      font-family: "Tahoma", sans-serif;
-      font-weight: 700;
-      font-size: 18px;
-      background: var(--button-color);
-      color: var(--text);
-      border: none;
-      border-radius: 8.94px;
-      cursor: pointer;
-      margin-top: 20px;
-    }
-    
-    form button:hover {
-      background-color: #cc0000;
-    }
-  
-    
-  
-  
-  }
-  
+}

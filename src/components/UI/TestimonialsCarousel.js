@@ -42,19 +42,21 @@ const TestimonialsCarousel = () => {
   };
 
   return (
-    <div className="testimonial-container">
-      <div className="testimonial-title">
-        <p>WHAT OUR CUSTOMER SAY</p>
-      </div>
-      <Slider {...settings}>
-        <CustomerCard />
-        <CustomerCard />
-        <CustomerCard />
-        <CustomerCard />
-        <CustomerCard />
-      </Slider>
-      <div className="testimonial-container__button">
-        <button className="testimonial-button">Leave a review</button>
+    <div className="container">
+      <div className="testimonial-container">
+        <div className="testimonial-title">
+          <p>WHAT OUR CUSTOMER SAY</p>
+        </div>
+        <Slider {...settings}>
+          <CustomerCard />
+          <CustomerCard />
+          <CustomerCard />
+          <CustomerCard />
+          <CustomerCard />
+        </Slider>
+        <div className="testimonial-container__button">
+          <button className="testimonial-button">Leave a review</button>
+        </div>
       </div>
     </div>
   );

@@ -66,7 +66,7 @@ const SearchCar = () => {
     <div className="form-container">
       <form className="search-panel" onSubmit={handleSubmit}>
         <div className="input-group">
-          {/* <label>Brand</label> */}
+          {/* <label className="brand-label">Brand</label> */}
           <select value={brand} onChange={(e) => setBrand(e.target.value)}>
             {findBrand.map((option, index) => (
               <option key={index} value={option}>

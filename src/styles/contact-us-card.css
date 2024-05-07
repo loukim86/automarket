@@ -1,0 +1,96 @@
+.contact-info {
+  background: transparent;
+}
+
+.contact-us h2 {
+  color: var(--text);
+  font-size: 3rem;
+}
+
+.contact-us {
+  max-width: 17.625rem;
+  max-height: 3.625rem;
+}
+
+.contact-details {
+  max-width: 16.9375rem;
+  max-height: 15.125rem;
+  margin-top: 1.875rem;
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+  padding: 0.9375rem 0;
+  font-weight: 400;
+}
+
+.address {
+  line-height: 1;
+}
+
+.contact-info .contact {
+  font-weight: 400;
+  color: var(--text);
+  font-size: 1.25rem;
+}
+
+.contact-icon {
+  margin-right: 1.25rem;
+  max-width: 1.5rem;
+  max-height: 1.5rem;
+}
+
+.contact-info {
+  flex: 1;
+  margin-left: 1.25rem;
+}
+
+.contact-info h2 {
+  margin-bottom: 1.25rem;
+}
+
+.contact-info p {
+  margin: 0.3125rem 0;
+}
+
+.media-icons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 10.3125rem;
+  max-height: 2.5625rem;
+  padding: 2rem 0;
+}
+
+.instagram {
+  max-width: 1.5rem;
+  max-height: 1.5rem;
+}
+
+.twitter {
+  max-width: 1.6875;
+  max-height: 1.6875;
+}
+
+.facebook {
+  max-width: 1.5625rem;
+  max-height: 1.5625rem;
+}
+
+.youtube {
+  max-width: 1.8125rem;
+  max-height: 1.8125rem;
+}
+
+@media (max-width: 600px) {
+  .contact-info .contact {
+    font-size: 0.75rem;
+  }
+
+  .contact-details {
+    max-width: 10.75rem;
+    max-height: 8rem;
+    margin-top: 0;
+  }
+}
