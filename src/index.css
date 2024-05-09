@@ -23,9 +23,9 @@ body {
 }
 
 .container {
-
+  
   margin: 0 auto !important;
-  padding: 0 2.5rem !important;
+  padding: 10rem 2.5rem 0 2.5rem !important;
 }
 
 :root {
@@ -49,11 +49,11 @@ body {
   --toggle-button: #1e1e1e;
 }
 
-.app {
+/* .app {
   max-width: 120rem !important;
   margin: 0 auto !important;
   width: 100%;
-}
+} */
 
 a {
   text-decoration: none;

@@ -1,11 +1,11 @@
 .arrival-container {
   max-width: 72.43rem;
-  height: auto;
+  max-height: 30rem;
+  height: 100%;
   margin: 0 auto;
-  min-height: 30rem;
+  /* min-height: 30rem; */
   font-family: "Tahoma", sans-serif;
   font-weight: 400;
-  margin-top: 100px; /*temporary*/
 }
 
 .arrival-title {
@@ -29,9 +29,14 @@
   .arrival-container {
     margin-left: 0;
     margin-right: 0;
+    height: 19.5rem;
+    padding: 0;
   }
 
   .arrival-title {
-    font-size: 1.25rem
+    font-size: 1.25rem;
+    margin-bottom: 1.625rem;
+    line-height: 1.5088rem;
+    max-width: 8rem;
   }
 }

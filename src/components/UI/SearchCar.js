@@ -5,6 +5,24 @@ import SearchFilter from "../../components/UI/SearchFilter";
 
 import "../../styles/search-car.css";
 
+const modelOptions = [
+  "Subcompact cars",
+  "Compact car",
+  "Midsize car",
+  "Sports car",
+  "Minivans",
+  "SUV's",
+];
+const priceOptions = [
+  "0-2M",
+  "2-4M",
+  "4-6M",
+  "6-10M",
+  "10-15M",
+  "15-2OM",
+  "20-25M",
+];
+
 const SearchCar = () => {
   function capitalize(str) {
     return str.toUpperCase();
@@ -18,24 +36,6 @@ const SearchCar = () => {
   const [showFilters, setShowFilters] = useState(false);
   const [findBrand, setFindBrand] = useState([]);
   const [findYear, setFindYear] = useState([]);
-
-  const modelOptions = [
-    "Subcompact cars",
-    "Compact car",
-    "Midsize car",
-    "Sports car",
-    "Minivans",
-    "SUV's",
-  ];
-  const priceOptions = [
-    "0-2M",
-    "2-4M",
-    "4-6M",
-    "6-10M",
-    "10-15M",
-    "15-2OM",
-    "20-25M",
-  ];
 
   useEffect(() => {
     const newBrandOptions = carsData.cars.map((car) => {
@@ -66,12 +66,11 @@ const SearchCar = () => {
     <div className="form-container">
       <form className="search-panel" onSubmit={handleSubmit}>
         <div className="input-group">
-          {/* <label className="brand-label">Brand</label> */}
+          <label className="brand-label">Brand</label>
           <select value={brand} onChange={(e) => setBrand(e.target.value)}>
             {findBrand.map((option, index) => (
               <option key={index} value={option}>
                 {option}
-        
               </option>
             ))}
           </select>

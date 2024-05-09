@@ -1,4 +1,3 @@
-
 import FeatureCard from "./FeatureCard";
 import thumbUp from "../../assets/img/thumbUp.svg";
 import check from "../../assets/img/check-circle.svg";
@@ -7,9 +6,10 @@ import dollar from "../../assets/img/dollar-sign.svg";
 
 import "../../styles/why-us.css";
 
-function WhyUs() {
+function WhyUs({style}) {
   return (
-    <div className="container">
+ 
+    <div className="container" style={style}>
       <div className="feature-cards">
         <FeatureCard
           icon={thumbUp}

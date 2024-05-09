@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { useState } from "react";
+import { Link, NavLink} from "react-router-dom";
 import { GrClose } from "react-icons/gr";
 import logo from "../../assets/img/logo.png";
 import logoMob from "../../assets/img/mobile-logo.png";
@@ -43,7 +43,7 @@ const Header = () => {
               </Link>
             </li>
             <li>
-              <Link onClick={openNav} to="/about-us">
+              <Link onClick={openNav} to="/about">
                 About us
               </Link>
             </li>
@@ -68,6 +68,7 @@ const Header = () => {
             </Link>
           </div>
           <ul className="navbar__links">
+         
             <li>
               <NavLink activeClassName="active" to="/">
                 Home
@@ -85,7 +86,7 @@ const Header = () => {
             </li>
             <li>
              
-              <NavLink activeClassName="active" to="/about-us">
+              <NavLink activeClassName="active" to="/about">
                 About us
               </NavLink>
             </li>

@@ -31,19 +31,19 @@ const SearchFilter = ({ isVisible }) => {
 
   const handleBrandClick = () => {
     setShowBrand(!showBrand);
-    setShowModel(false); 
-    setShowPrice(false); 
+    setShowModel(false);
+    setShowPrice(false);
   };
 
   const handleModelClick = () => {
-    setShowBrand(false); 
+    setShowBrand(false);
     setShowModel(!showModel);
-    setShowPrice(false); 
+    setShowPrice(false);
   };
 
   const handlePriceClick = () => {
-    setShowBrand(false); 
-    setShowModel(false); 
+    setShowBrand(false);
+    setShowModel(false);
     setShowPrice(!showPrice);
   };
 
@@ -52,24 +52,24 @@ const SearchFilter = ({ isVisible }) => {
   };
 
   return (
-    <div className={`filter ${isVisible ? 'visible' : ''}`}>
+    <div className={`filter ${isVisible ? "visible" : ""}`}>
       <div className="sidebar">
         <div className="filter-buttons">
-        <button
+          <button
             onClick={handleBrandClick}
-            className={`brand-button ${showBrand ? 'active' : ''}`}
+            className={`brand-button ${showBrand ? "active" : ""}`}
           >
             By brand
           </button>
           <button
             onClick={handleModelClick}
-            className={`brand-button ${showModel ? 'active' : ''}`}
+            className={`brand-button ${showModel ? "active" : ""}`}
           >
             By model
           </button>
           <button
             onClick={handlePriceClick}
-            className={`brand-button ${showPrice ? 'active' : ''}`}
+            className={`brand-button ${showPrice ? "active" : ""}`}
           >
             By price
           </button>

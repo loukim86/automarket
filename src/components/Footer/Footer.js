@@ -1,6 +1,5 @@
-import { NavLink } from "react-router-dom";
-import logo from "../../assets/img/footer-logo.png";
-import logoMobile from "../../assets/img/mobile-logo.png";
+import { NavLink, Link } from "react-router-dom";
+import alogo from "../../assets/img/a-logo.svg";
 import ContactUsCard from "../UI/ContactUsCard";
 import "./Footer.css";
 
@@ -33,8 +32,12 @@ const Footer = () => {
     <>
       <div className="footer">
         <div className="footer-logo">
-          <img src={logo} alt="Logo" className="logo-desktop" />
-          <img src={logoMobile} alt="Logo" className="logo-mobile" />
+          <Link to="/">
+            <img src={alogo} alt="logo-img" className="footer-img" />
+            <p className="footer-text">
+              AUTO<span>MARKET</span>
+            </p>
+          </Link>
         </div>
         <div className="footer-menu">
           {navLinks.map((item, index) => (

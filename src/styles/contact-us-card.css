@@ -84,8 +84,13 @@
 }
 
 @media (max-width: 600px) {
-  .contact-info .contact {
+  .contact-us {
+    display: none;
+  }
+
+  .contact {
     font-size: 0.75rem;
+    line-height: .905rem;
   }
 
   .contact-details {
@@ -93,4 +98,6 @@
     max-height: 8rem;
     margin-top: 0;
   }
+
+  
 }

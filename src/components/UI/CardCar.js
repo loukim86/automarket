@@ -5,13 +5,13 @@ import "../../styles/card-car.css";
 
 const CardCar = () => {
   return (
-    <div className="car-card">
-      <div className="car-card__header">
+    <div className="card-car">
+      <div className="card-car__header">
         <p>HYUNDAI</p>
-        <span className="car-card__price">15,000$</span>
+        <span className="card-car__price">15,000$</span>
       </div>
-      <img src={cardImg} alt="Hyundai Car" className="car-card__image" />
-      <div className="car-card__info">
+      <img src={cardImg} alt="Hyundai Car" className="card-car__image" />
+      <div className="card-car__info">
         <p>
           <span>Year</span>2020
         </p>
@@ -22,11 +22,11 @@ const CardCar = () => {
           <span>Mileage </span>10,000km
         </p>
       </div>
-      <div className="car-card__actions">
-        <button className="car-card__details-button">
-          View details <IoIosArrowForward className="car-card__icon"/>
+      <div className="card-car__actions">
+        <button className="card-car__details-button">
+          View details <IoIosArrowForward className="card-car__icon"/>
         </button>
-        <FaRegHeart className="car-card__like-icon" />
+        <FaRegHeart className="card-car__like-icon" />
       </div>
     </div>
   );

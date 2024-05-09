@@ -27,9 +27,16 @@ const NewArrival = () => {
         },
       },
       {
-        breakpoint: 600,
+        breakpoint: 1020,
         settings: {
           slidesToShow: 2,
+          slidesToScroll: 6,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2.5,
           slidesToScroll: 6,
         },
       },
@@ -43,18 +50,20 @@ const NewArrival = () => {
     ],
   };
   return (
-    <div className="arrival-container">
-      <div className="arrival-title">
-        <p>NEW ARRIVAL</p>
-      </div>
-      {/* <div className="card-car__container"> */}
+    <div className="container">
+      <div className="arrival-container">
+        <div className="arrival-title">
+          <p>NEW ARRIVAL</p>
+        </div>
+        {/* <div className="card-car__container"> */}
         <Slider {...settings}>
           <CardCar />
           <CardCar />
           <CardCar />
           <CardCar />
         </Slider>
-      {/* </div> */}
+        {/* </div> */}
+      </div>
     </div>
   );
 };

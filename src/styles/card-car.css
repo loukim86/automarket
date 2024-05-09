@@ -1,4 +1,4 @@
-.car-card {
+.card-car {
   width: 16.3125rem;
   height: 23.875rem;
   font-family: "Tahoma", sans-serif;
@@ -6,7 +6,7 @@
   background: var(--bg-gradient);
 }
 
-.car-card__header {
+.card-car__header {
   font-size: 1.125rem;
   width: 5.8125rem;
   height: 2.75rem;
@@ -18,19 +18,19 @@
   margin-bottom: 2rem;
 }
 
-.car-card__image {
+.card-car__image {
   width: 16.25rem;
   height: 9.8588rem;
   object-fit: cover;
 }
 
-.car-card__info {
+.card-car__info {
   padding: 0.625rem;
   font-size: 0.875rem;
   line-height: 1.0625rem;
 }
 
-.car-card__info p {
+.card-car__info p {
   border-bottom: 0.0187rem solid var(--divider);
   display: flex;
   justify-content: space-between;
@@ -38,23 +38,23 @@
   padding: 0.0625rem;
 }
 
-.car-card__info p:last-child {
+.card-car__info p:last-child {
   border-bottom: none;
 }
 
-.car-card__info span,
-.car-card__header span {
+.card-car__info span,
+.card-car__header span {
   color: var(--text);
 }
 
-.car-card__actions {
+.card-car__actions {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 0.8rem;
 }
 
-.car-card__details-button {
+.card-car__details-button {
   width: 11.25rem;
   height: 2.5625rem;
   border: none;
@@ -69,13 +69,13 @@
   justify-content: center;
 }
 
-.car-card__icon {
+.card-car__icon {
   margin-left: 0.5rem;
   width: 1rem;
   height: 1rem;
 }
 
-.car-card__like-icon {
+.card-car__like-icon {
   color: var(--button-color);
   font-size: 24px;
   cursor: pointer;
@@ -83,17 +83,44 @@
   height: 1.8125rem;
 }
 
-@media (max-width: 600px) {
-  .car-card {
-    max-height: 100%;
+@media (max-width: 600px){
+  .card-car {
+    max-height: 16.125rem;
+    max-width: 10.375rem;
   }
 
-  .car-card__header {
+  .card-car__header {
     font-size: 0.875rem;
+    max-width: 4.4212rem;
+    max-height: 2.2106rem;
+    line-height: 1.0562rem;
+    margin-bottom: 0.8rem;
   }
 
-  .car-card__image {
-    max-height: 100%;
-    max-width: 100%;
+  .card-car__image {
+    max-height: 6.2713rem;
+    max-width: 10.335rem;
+  }
+
+  .card-car__info {
+    font-size: 0.8125rem;
+    padding: 0.4rem;
+  }
+
+  .card-car__details-button {
+    max-width: 6.8781rem;
+    max-height: 1.5669rem;
+    font-size: 0.75rem;
+  }
+
+  .card-car__info p {
+    padding: 0.0425rem;
+  }
+
+  .card-car__like-icon {
+    font-size: 24px;
+    cursor: pointer;
+    max-width: 1.3669rem;
+    max-height: 1.1444rem;
   }
 }
