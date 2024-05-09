@@ -1,24 +1,49 @@
 .feature-card {
-  line-height: 28.97px;
-  padding: 20px;
-  margin: 10px;
+  line-height: 1.8106rem;
+  padding: 0.8rem;
+  margin: 0.625rem;
 }
 
 .card-icon img {
-  width: 50px;
-  height: 50px;
+  width: 3.125rem;
+  height: 3.125rem;
 }
 
 .feature-card .card-heading {
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: 400;
   color: var(--about-text);
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
 }
 
 .feature-card .card-title {
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: 400;
-  line-height: 21.73px;
+  line-height: 1.3581rem;
   color: var(--menu-text);
+}
+
+@media (max-width: 600px) {
+  .feature-card {
+    width: 9.8125rem;
+    height: 6.2538rem;
+    padding: 0;
+  }
+
+  .card-icon img {
+    width: 1.9019rem;
+    height: 1.9019rem;
+  }
+
+  .feature-card .card-heading {
+    font-size: 0.875rem;
+    line-height: 1.0562rem;
+    margin-bottom: .5rem;
+  }
+
+  .feature-card .card-title {
+    font-size: .75rem;
+    line-height: .905rem;
+    
+  }
 }

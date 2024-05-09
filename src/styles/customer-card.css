@@ -38,6 +38,11 @@
   padding: 0 10px;
 }
 
+.star-icon {
+  width: 1.5131rem;
+  height: 1.5131rem;
+}
+
 .card-text {
   width: 28.09rem;
   height: 14.72rem;
@@ -62,7 +67,7 @@
   }
 
   .card-info {
-    padding: .625rem;
+    padding: 0.625rem;
     border-radius: 0 0.37rem 0.37rem 0;
   }
 
@@ -75,29 +80,29 @@
   }
 
   .card h3 {
-    font-size: .9375rem;
+    font-size: 0.9375rem;
   }
 
   .card-date {
     font-size: 0.625rem;
-     text-align: center;
+    text-align: center;
   }
 
-  .card-stars svg{
-    max-width: .8rem;
-    max-height: .8rem;
+  .card-stars svg {
+    max-width: 0.8rem;
+    max-height: 0.8rem;
   }
 
   .card-stars {
-   padding: 0;
-   margin: 0;
+    padding: 0;
+    margin: 0;
   }
 
   .card-text {
     max-width: 10.875rem;
     max-height: 3.5rem;
-    font-size: .75rem;
-    line-height: .905rem;
+    font-size: 0.75rem;
+    line-height: 0.905rem;
   }
 
   .card-text p {

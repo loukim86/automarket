@@ -1,0 +1,46 @@
+.shopping-cart {
+  width: 100%;
+  max-width: 71.1875rem;
+  margin: 0 auto;
+  font-family: "Tahoma", sans-serif;
+}
+
+.shopping-cart p {
+  text-align: left;
+  font-weight: 400;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: 0.025rem solid var(--price-text);
+  padding: 8px;
+  text-align: center;
+}
+
+th {
+  background: var(--bg-gradient);
+  font-size: 1.25rem;
+  color: var(--text);
+  font-weight: 400;
+}
+
+thead th:first-child {
+  border-top-left-radius: 0.3069rem;
+}
+
+thead th:last-child {
+  border-top-right-radius: 0.3069rem;
+}
+
+.empty-cell {
+  width: 12.0625rem;
+  height: 2.7681rem;
+}
+

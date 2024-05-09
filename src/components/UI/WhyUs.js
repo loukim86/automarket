@@ -6,10 +6,9 @@ import dollar from "../../assets/img/dollar-sign.svg";
 
 import "../../styles/why-us.css";
 
-function WhyUs({style}) {
+function WhyUs() {
   return (
- 
-    <div className="container" style={style}>
+    <div className="container">
       <div className="feature-cards">
         <FeatureCard
           icon={thumbUp}

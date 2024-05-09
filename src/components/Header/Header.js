@@ -1,8 +1,6 @@
 import { useState } from "react";
 import { Link, NavLink} from "react-router-dom";
 import { GrClose } from "react-icons/gr";
-import logo from "../../assets/img/logo.png";
-import logoMob from "../../assets/img/mobile-logo.png";
 import heart from "../../assets/img/heart.svg";
 import cart from "../../assets/img/cart1.svg";
 import user from "../../assets/img/user.png";

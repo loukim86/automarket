@@ -14,8 +14,11 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     height: auto;
-    grid-gap: 1.25rem;
+    grid-gap: 1.2rem;
     margin: 0 auto;
-    margin-top: 100px;
   }
+
+  /* .container {
+    padding: 5rem 2.5rem 0 2.5rem;
+  } */
 }

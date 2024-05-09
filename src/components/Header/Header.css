@@ -36,34 +36,29 @@
   position: relative;
 }
 
-.navbar__links li a::after {
-  content: "";
-  display: none; /* По умолчанию скрыт для всех */
-  position: absolute;
-  bottom: -0.125rem;
-  left: 0;
-  width: 10%;
-  height: 0.125rem;
-  background-color: transparent; /* По умолчанию прозрачный */
-  transition: all 0.3s ease;
+.navbar__links a {
+  text-decoration: none;
+  position: relative;
+  padding-bottom: 0.3125rem;
 }
 
-.navbar__links li .active::after {
-  display: block; /* Только для активной ссылки */
-  background-color: var(
-    --button-color
-  ); /* или красный, если var(--button-color) не задан */
+.navbar__links .active {
+  font-weight: bold;
 }
 
-/* .navbar__links li .active::after {
+.navbar__links .active:after {
   content: "";
   position: absolute;
-  bottom: -0.125rem;
   left: 0;
-  width: 3.4rem;
+  bottom: 0;
+  width: 100%;
   height: 0.125rem;
   background-color: var(--button-color);
-} */
+}
+
+.navbar__links a:hover {
+  color: #000;
+}
 
 .navbar__img {
   display: flex;
@@ -92,10 +87,6 @@
   color: var(--menu-text);
   cursor: pointer;
   transition: all 0.3s;
-}
-
-.navbar__links a:hover {
-  color: #ff4d30;
 }
 
 .heart {
@@ -195,7 +186,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-left: 20%;
+    margin-left: 18%;
   }
 
   .navbar__img img,
@@ -207,7 +198,7 @@
   }
 
   .navbar__img img {
-    margin-left: 30px;
+    margin-left: 1.875rem;
   }
 
   .main-logo {

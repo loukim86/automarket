@@ -12,11 +12,11 @@ const CustomerCard = () => {
           <span className="card-date">2023.01.01</span>
         </div>
         <div className="card-stars">
-          <IoMdStarOutline />
-          <IoMdStarOutline />
-          <IoMdStarOutline />
-          <IoMdStarOutline />
-          <IoMdStarOutline />
+          <IoMdStarOutline className="star-icon"/>
+          <IoMdStarOutline className="star-icon"/>
+          <IoMdStarOutline className="star-icon"/>
+          <IoMdStarOutline className="star-icon"/>
+          <IoMdStarOutline className="star-icon"/>
         </div>
 
         <div className="card-text">

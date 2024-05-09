@@ -24,7 +24,7 @@ import suv from "../../assets/img/SUVs.png";
 import "../../styles/search-filter.css";
 
 const SearchFilter = ({ isVisible }) => {
-  const [showBrand, setShowBrand] = useState(false);
+  const [showBrand, setShowBrand] = useState(true);
   const [showModel, setShowModel] = useState(false);
   const [showPrice, setShowPrice] = useState(false);
   const [activeButton, setActiveButton] = useState(null);
