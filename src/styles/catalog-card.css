@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
+.catalog-card {
+  width: 16.8681rem;
+  height: 28.2056rem;
+  border: 1px solid #ccc;
+  text-align: left;
+  border-bottom-right-radius: 0.3125rem;
+  border-bottom-left-radius: 0.3125rem;
+  background: var(--bg-gradient);
+  font-family: "Inter", sans-serif;
+}
+
+.catalog-brand {
+  font-weight: 500;
+  font-size: 1.1169rem;
+  color: var(--text);
+  line-height: 1.3519rem;
+  padding: 0.625rem;
+}
+
+.catalog-card img {
+  width: 100%;
+  height: auto;
+}
+
+.catalog-info {
+  padding: 0 0.625rem;
+  font-weight: 400;
+  line-height: 2rem;
+}
+
+.catalog-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.625rem;
+  border-top: 1px solid black;
+}
+
+.catalog-price {
+  color: var(--text);
+  font-weight: 500;
+  font-size: 1.1169rem;
+}
+
+.catalog-button {
+  font-size: 0.8938rem;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  background: transparent;
+}

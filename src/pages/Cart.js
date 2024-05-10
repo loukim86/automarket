@@ -1,4 +1,5 @@
 import Footer from "../components/Footer/Footer";
+import ShoppingCartCard from "../components/UI/ShoppingCartCard";
 import "../styles/cart.css";
 
 const Cart = () => {
@@ -6,40 +7,30 @@ const Cart = () => {
     <>
       <div className="container">
         <div className="shopping-cart">
-          <p>SHOPPING CART</p>
+          <p className="cart-title">SHOPPING CART</p>
           <table>
             <thead>
               <tr>
-                <th>Photo</th>
-                <th>Model</th>
-                <th>Year</th>
-                <th>Mileage</th>
-                <th>Fuel</th>
-                <th>Price</th>
+                <th className="th-photo">Photo</th>
+                <th className="th-model">Model</th>
+                <th className="th-year">Year</th>
+                <th className="th-mileage">Mileage</th>
+                <th className="th-fuel">Fuel</th>
+                <th className="th-price">Price</th>
                 <th className="empty-cell "></th>
               </tr>
             </thead>
           </table>
-          <div class="cart-card">
-            <div class="cart-img">
-              <img src="" alt="Hyundai" />
-            </div>
-            <div class="cart-info">
-              <span>Hyundai</span>
-              <span>2021</span>
-              <span>1234km</span>
-              <span>Diesel</span>
-              <span>12,345,678</span>
-            </div>
-            <div class="cart-actions">
-              <button class="btn application">Application</button>
-              <button class="btn delete">Delete</button>
-            </div>
+          <div className="cart-container">
+            <ShoppingCartCard />
+            <ShoppingCartCard />
+            <ShoppingCartCard />
+            <ShoppingCartCard />
+            <ShoppingCartCard />
           </div>
         </div>
       </div>
       <div className="footer-box">
-        {" "}
         <Footer />
       </div>
     </>

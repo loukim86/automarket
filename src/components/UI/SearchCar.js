@@ -120,6 +120,7 @@ const SearchCar = () => {
           Search
         </button>
         <IoIosArrowDown className="arrow-icon" onClick={toggleFilters} />
+
         <SearchFilter isVisible={showFilters} />
       </form>
     </div>
