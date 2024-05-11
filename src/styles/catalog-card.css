@@ -9,6 +9,7 @@
   border-bottom-left-radius: 0.3125rem;
   background: var(--bg-gradient);
   font-family: "Inter", sans-serif;
+  position: relative;
 }
 
 .catalog-brand {
@@ -22,6 +23,15 @@
 .catalog-card img {
   width: 100%;
   height: auto;
+}
+
+.catalog-icon-heart {
+  position: absolute;
+  top: .625rem;
+  right: .625rem;
+  color: var(--button-color);
+  width: 2.0106rem;
+  height: 2.0106rem;
 }
 
 .catalog-info {
@@ -50,4 +60,20 @@
   padding: 10px;
   cursor: pointer;
   background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Inter", sans-serif;
+}
+
+.catalog-icon {
+  margin-left: 0.5rem;
+  width: 1rem;
+  height: 1rem;
+}
+
+.pagination-active a {
+  color: var(--button-color);
+  border-bottom: 0.125rem solid var(--button-color);
+  font-size: 2rem;
 }

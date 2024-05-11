@@ -6,12 +6,10 @@ import NewArrival from "../components/UI/NewArrival";
 import TestimonialsCarousel from "../components/UI/TestimonialsCarousel";
 import ContactUs from "../components/UI/ContactUs";
 import Footer from "../components/Footer/Footer";
-import Header from "../components/Header/Header";
 
 const Home = () => {
   return (
     <>
-      {/* <Header/> */}
       <Hero />
       <SearchCar />
       <WhyUs />

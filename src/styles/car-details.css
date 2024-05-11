@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
+.car-details-container {
+  display: grid;
+  grid-template-columns: 11.3012rem 38rem 20.9375rem;
+  gap: 0.625rem;
+  margin: 0 auto;
+  width: 72.5rem;
+}
+
+.selected-img {
+  width: 38rem;
+  height: 28.125rem;
+}
+
+.car-details-info {
+  width: 20.9375rem;
+  padding: 0 0.5rem 0.5rem 0.5rem;
+}
+
+.car-details-title {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 1.7056rem;
+}
+
+.car-details-content {
+  font-family: "Tahoma", sans-serif;
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 1.6rem;
+  color: var(--menu-text);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.details {
+  color: var(--about-text);
+}
+
+.car-details-price {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 1.7056rem;
+  margin-top: 1.5625rem;
+}
+
+.car-details-button {
+  width: 20.9375rem;
+  height: 3.875rem;
+  margin-top: 1.25rem;
+  border-radius: 0.3125rem;
+  background-color: var(--button-color);
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 1.2794rem;
+  color: var(--text);
+  border: none;
+  cursor: pointer;
+}
+
+.car-stars {
+    margin-bottom: 1.25rem;
+}
+
+

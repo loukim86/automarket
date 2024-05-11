@@ -1,7 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
 .car-gallery {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.25rem;
-    justify-content: center;
-    padding: 1.25rem;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  justify-content: center;
+  padding: 1.25rem;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.25rem;
+}
+
+.page-item {
+  margin: 0 0.625rem;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  color: var(--about-text);
+  font-size: 1.5rem;
+}
+
+.previous-button,
+.next-button {
+  margin: 0 1.625rem;
+}
+
+.footer-catalog {
+  margin-top: 15rem;
+}
+
+.catalog-category-links {
+  display: flex;
+  margin-bottom: 2%;
+  margin-left: 11%;
+}
+
+.catalog-category-links button {
+  background-color: transparent;
+  border: none;
+  font-size: 2rem;
+  font-family: "Tahoma", sans-serif;
+  font-weight: 400;
+  margin-right: 4%;
+  cursor: pointer;
+  padding-bottom: .3125rem;
+  border-bottom: 2px solid transparent;
+}
+
+.catalog-category-links button.active {
+  color: red;
+  border-bottom: 2px solid red;
+}
