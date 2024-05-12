@@ -1,0 +1,13 @@
+.tab-description {
+  width: 72.0625rem;
+  height: 20.5625rem;
+  margin: 0 auto;
+}
+
+.tab-description-text {
+  font-family: "Tahoma", sans-serif;
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 1.3581rem;
+  margin-top: 1.25rem;
+}

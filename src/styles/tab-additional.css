@@ -1,0 +1,24 @@
+.categories {
+  width: 72.5rem;
+
+  margin: 0 auto;
+}
+
+.categories-content {
+  width: 18.0981rem;
+  height: 2.9806rem;
+  border: .0269rem solid var(--price-text);
+  background: var(--bg-gradient);
+  font-family: "Tahoma", sans-serif;
+  font-weight: 400;
+  font-size: 1.25rem;
+  color: var(--text);
+}
+
+.categories-content:first-child {
+    border-top-left-radius: .5325rem;
+}
+
+.categories-content:last-child {
+    border-top-right-radius: .5325rem;
+}

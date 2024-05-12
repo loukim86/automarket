@@ -1,0 +1,72 @@
+.tab-application {
+  background: var(--bg-gradient);
+  width: 72.3125rem;
+  height: 54.3125rem;
+  margin: 0 auto;
+  border-radius: 0.625rem;
+}
+
+.inner-box {
+  width: 41.2025rem;
+  height: 44.3125rem;
+  margin: 0 auto;
+}
+
+.application-form {
+    margin: 0 auto;
+    padding-top: 10%;
+}
+
+.application-form input {
+  width: 100%;
+  padding: 0.625rem;
+  margin-bottom: 1.2rem;
+  border: none;
+  border-bottom: 0.0625rem solid var(--text);
+  border-radius: 0;
+  background-color: transparent;
+}
+
+input::placeholder {
+  color: var(--input-placeholder);
+  font-family: "Tahoma", sans-serif;
+  font-size: 0.875rem;
+  line-height: 2;
+}
+
+.application-form textarea {
+  width: 34.9025rem;
+  height: 12.5463rem;
+  padding: 0.625rem;
+  margin-top: 2rem;
+  margin-bottom: 0.625rem;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  border-radius: 0.5337rem;
+  background-color: #fff;
+}
+
+textarea::placeholder {
+  color: var(--textarea-placeholder);
+  font-family: "Tahoma", sans-serif;
+  font-size: 0.875rem;
+}
+
+.application-form button {
+  width: 20.25rem;
+  height: 4.5625rem;
+  font-family: "Tahoma", sans-serif;
+  font-weight: 700;
+  font-size: 1.125rem;
+  background: var(--button-color);
+  color: var(--text);
+  border: none;
+  border-radius: 0.6544rem;
+  cursor: pointer;
+  margin-top: 4rem;
+  margin-left: 20%;
+}
+
+.application-form button:hover {
+  background-color: #cc0000;
+}

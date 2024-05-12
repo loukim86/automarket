@@ -1,8 +1,13 @@
+import "../styles/favorite.css";
 
 const Favorite = () => {
   return (
-    <div>Favorite</div>
-  )
-}
+    <div className="container">
+      <div className="favorite-content">
+        <p>FAVORITE LIST</p>
+      </div>
+    </div>
+  );
+};
 
-export default Favorite
+export default Favorite;

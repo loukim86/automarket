@@ -1,6 +1,6 @@
 // import Header from "../components/Header/Header";
 import FeatureCard from "../components/UI/FeatureCard";
-import Footer from '../components/Footer/Footer'
+import Footer from "../components/Footer/Footer";
 import thumbUp from "../assets/img/thumbUp.svg";
 import check from "../assets/img/check-circle.svg";
 import trello from "../assets/img/trello.svg";
@@ -101,8 +101,10 @@ const About = () => {
           </div>
         </div>
       </div>
-      <div className="footer-box"> <Footer/></div>
-     
+      <div className="footer-box">
+        {" "}
+        <Footer />
+      </div>
     </>
   );
 };

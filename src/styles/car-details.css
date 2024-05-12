@@ -61,7 +61,38 @@
 }
 
 .car-stars {
-    margin-bottom: 1.25rem;
+  margin-bottom: 1.25rem;
 }
 
+.tab-buttons {
+  display: flex;
+  margin-bottom: 3%;
+  margin-top: 3%;
+  margin-left: 10%;
+}
 
+.tab-buttons button {
+  background-color: transparent;
+  border: none;
+  font-size: 2rem;
+  font-family: "Tahoma", sans-serif;
+  font-weight: 400;
+  margin-right: 4%;
+  cursor: pointer;
+  padding-bottom: 0.3125rem;
+  border-bottom: 2px solid transparent;
+}
+
+.tab-buttons button.active {
+  font-weight: 700;
+  border-bottom: 3px solid var(--button-color);
+}
+
+.similar-car-title {
+  font-family: "Tahoma", sans-serif;
+  font-weight: 400;
+  font-size: 2rem;
+  margin-top: 6%;
+  margin-left: 10%;
+  margin-bottom: 4%;
+}

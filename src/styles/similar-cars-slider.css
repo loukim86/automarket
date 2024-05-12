@@ -1,0 +1,11 @@
+.similar-cars-slider {
+  max-width: 72.43rem;
+  max-height: 30rem;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.slick-prev:before, .slick-next:before {
+    font-size: 80px;
+    line-height: .8px;
+}
