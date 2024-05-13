@@ -1,52 +1,59 @@
-import cartCar from "../../assets/img/shopping-car.png";
+import { getCarBrandAndModel } from "../../carUtils/carUtils";
 import "../../styles/shopping-cart-card.css";
 
-const ShoppingCartCard = () => {
+const ShoppingCartCard = ({ car, onRemove }) => {
+  const carBrandAndModel = getCarBrandAndModel(car.title_ru);
+
   return (
     <>
       <div class="cart-card">
         <div class="cart-img">
-          <img src={cartCar} alt="Hyundai" />
+          <img src={car.images[0]} alt={car.title_ru} />
         </div>
         <div class="cart-info">
-          <span className="cart-model">Hyundai</span>
+          <span className="cart-model">{carBrandAndModel}</span>
           <div className="cart-divider one"></div>
-          <span className="cart-year">2021</span>
+          <span className="cart-year">{car.production_year}</span>
           <div className="cart-divider two"></div>
-          <span className="cart-mileage">1234km</span>
+          <span className="cart-mileage">{car.distance} km</span>
           <div className="cart-divider three"></div>
-          <span className="cart-fuel">Diesel</span>
+          <span className="cart-fuel">{car.fuel_type_ru}</span>
           <div className="cart-divider four"></div>
-          <span className="cart-price">12,345,678</span>
+          <span className="cart-price">{car.price}$</span>
         </div>
         <div class="cart-actions">
           <button class="btn application">Application</button>
-          <button class="btn delete">Delete</button>
+          <button class="btn delete" onClick={onRemove}>
+            Delete
+          </button>
         </div>
       </div>
 
       <div class="cart-card__mobile mobile">
         <div class="cart-img__mobile">
-          <img src={cartCar} alt="Hyundai" />
+          <img src={car.images[0]} alt={car.title_ru} />
         </div>
         <div class="cart-details__mobile">
           <div class="cart-info__mobile">
-            <span class="cart-model__mobile">HYUNDAI</span>
-            <span class="cart-price__mobile">$15,000</span>
+            <span className="cart-model__mobile">{carBrandAndModel}</span>
+            <span className="cart-price__mobile">{car.price}$</span>
           </div>
-          <div class="cart-specs__mobile">
+          <div className="cart-specs__mobile">
             <p className="cart-specs">
-              <span className="cart-details">Year</span>2020
+              <span className="cart-details">Year</span>
+              {car.production_year}
             </p>
             <p className="cart-specs">
-              <span className="cart-details">Fuel</span> Gas
+              <span className="cart-details">Fuel</span>
+              {car.fuel_type_ru}
             </p>
             <p className="cart-specs">
-              <span className="cart-details">Mileage </span>10,000km
+              <span className="cart-details">Mileage</span>
+              {car.distance} km
             </p>
           </div>
-          <div class="cart-actions__mobile">
-            <button class="btn application-mobile">Application</button>
+          <div className="cart-actions__mobile">
+            <button className="btn application-mobile">Application</button>
           </div>
         </div>
       </div>

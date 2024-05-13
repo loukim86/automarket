@@ -1,0 +1,32 @@
+.modal {
+  width: 33.5625rem;
+  height: 28.875rem;
+  margin: 0 auto;
+  border: 0.0625rem solid var(--menu-text);
+  border-radius: 0.625rem;
+  font-family: "Tahoma", sans-serif;
+  font-weight: 400;
+}
+
+.modal-title {
+  font-size: 3rem;
+  color: var(--button-color);
+  text-align: center;
+}
+
+.modal-greeting {
+  font-size: 0.875rem;
+  color: var(--menu-text);
+  text-align: center;
+}
+
+.modal-form {
+  text-align: center;
+}
+
+.modal-form input {
+  width: 28.4375rem;
+  height: 3.125rem;
+  border: 0.0625rem solid var(--menu-text);
+  border-radius: 0.625rem;
+}

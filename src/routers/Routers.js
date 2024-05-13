@@ -8,6 +8,7 @@ import NotFound from "../pages/NotFound";
 import Favorite from "../pages/Favorite";
 import Cart from "../pages/Cart";
 import CarDetails from "../pages/CarDetails";
+import User from "../pages/User";
 
 const Routers = () => {
   return (
@@ -22,6 +23,7 @@ const Routers = () => {
       <Route path="/notfound" element={<NotFound />} />
       <Route path="/cart" element={<Cart />} />
       <Route path="/favorite" element={<Favorite />} />
+      <Route path="/user" element={<User />} />
     </Routes>
   );
 };

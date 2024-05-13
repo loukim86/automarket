@@ -29,6 +29,7 @@ body {
 }
 
 :root {
+  --bg-card: rgba(137, 149, 157, 0.44);
   --footer-color: #89959d;
   --button-color: #d33030;
   --bg-gradient: linear-gradient(#89959d, #babec1);

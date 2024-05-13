@@ -27,11 +27,20 @@
 
 .catalog-icon-heart {
   position: absolute;
-  top: .625rem;
-  right: .625rem;
+  top: 0.625rem;
+  right: 0.625rem;
   color: var(--button-color);
   width: 2.0106rem;
   height: 2.0106rem;
+}
+
+.full-heart {
+  position: absolute;
+  top: 0.625rem;
+  right: 0.625rem;
+  width: 2.0106rem;
+  height: 2.0106rem;
+  color: var(--button-color);
 }
 
 .catalog-info {

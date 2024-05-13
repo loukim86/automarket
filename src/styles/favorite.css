@@ -1,4 +1,13 @@
-.favorite-content {
+.favorite-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+    justify-content: center;
+    padding: 1.25rem;
+    margin-top: 3%;
+}
+
+.favorite {
     font-family: "Tahoma", sans-serif;
     font-weight: 400;
     font-size: 3rem;

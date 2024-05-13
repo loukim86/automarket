@@ -1,8 +1,12 @@
 import Footer from "../components/Footer/Footer";
 import ShoppingCartCard from "../components/UI/ShoppingCartCard";
+import { useFavorites } from "./context/FavoriteContext";
+
 import "../styles/cart.css";
 
 const Cart = () => {
+  const { cartItems, removeFromCart } = useFavorites();
+
   return (
     <>
       <div className="container">
@@ -22,11 +26,17 @@ const Cart = () => {
             </thead>
           </table>
           <div className="cart-container">
-            <ShoppingCartCard />
-            <ShoppingCartCard />
-            <ShoppingCartCard />
-            <ShoppingCartCard />
-            <ShoppingCartCard />
+            {cartItems.length > 0 ? (
+              cartItems.map((car, index) => (
+                <ShoppingCartCard
+                  key={index}
+                  car={car}
+                  onRemove={() => removeFromCart(car.pk_car_id)}
+                />
+              ))
+            ) : (
+              <p>Your cart is empty.</p>
+            )}
           </div>
         </div>
       </div>

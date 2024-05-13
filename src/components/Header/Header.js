@@ -31,7 +31,7 @@ const Header = () => {
               </Link>
             </li>
             <li>
-              <Link onClick={openNav} to="/catlog">
+              <Link onClick={openNav} to="/catalog">
                 Catalog
               </Link>
             </li>

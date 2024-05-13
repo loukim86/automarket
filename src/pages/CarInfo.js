@@ -1,6 +1,19 @@
-import { IoMdStarOutline } from 'react-icons/io';
+import { IoMdStarOutline } from "react-icons/io";
+import { useFavorites } from "./context/FavoriteContext";
+import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
-const CarInfo = ({ car, carBrandAndModel, carNumber, activeImage }) => {
+const CarInfo = ({ car, carBrandAndModel, carNumber }) => {
+  const { addToCart } = useFavorites();
+  const navigate = useNavigate();
+
+  const [isAddedToCart, setIsAddedToCart] = useState(false);
+
+  const handleAddToCart = () => {
+    addToCart(car);
+    setIsAddedToCart(true);
+  };
+
   return (
     <div className="car-details-info">
       <p className="car-details-title">{carBrandAndModel}</p>
@@ -36,7 +49,9 @@ const CarInfo = ({ car, carBrandAndModel, carNumber, activeImage }) => {
       <p className="car-details-content">Number of views: </p>
       <p className="car-details-content">In favorites: </p>
       <p className="car-details-price">{car.price}$</p>
-      <button className="car-details-button">Add to cart</button>
+      <button className="car-details-button" onClick={handleAddToCart}>
+        {isAddedToCart ? "Added To Cart" : "Add to cart"}
+      </button>
     </div>
   );
 };

@@ -1,21 +1,21 @@
-/* .car-card {
-    background: #e0e0e0; 
-    border-radius: 10px;
-    padding: 20px;
-    width: 300px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
-  }
-  
-  .car-card h3 {
-    text-align: center;
-  }
-  
-  .car-card ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .car-card li {
-    margin-bottom: 10px; 
-  }
-   */
+.card-red-style {
+  background: var(--bg-card);
+  font-family: "Tahoma", sans-serif;
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 1.3581rem;
+  width: 18.7488rem;
+  height: 100%;
+  padding: 30px 15px;
+}
+
+.info-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.info-details {
+  color: var(--text);
+}
+

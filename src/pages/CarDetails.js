@@ -70,22 +70,28 @@ const CarDetails = () => {
         </div>
         <div className="tab-content">
           {activeTab === "description" && (
+            <>
+              <div>
+                <TabDescription />
+              </div>
+              <div className="similar-car-title">
+                <p>Similar cars</p>
+              </div>
+              <div className="similar-cars">
+                <SimilarCarsSlider />
+              </div>
+            </>
+          )}
+          {activeTab === "options" && (
             <div>
-              <TabDescription />
+              <TabAdditional />
             </div>
           )}
-          {activeTab === "options" && <div><TabAdditional /></div>}
           {activeTab === "application" && (
             <div>
               <TabApplication />
             </div>
           )}
-        </div>
-        <div className="similar-car-title">
-          <p>Similar cars</p>
-        </div>
-        <div className="similar-cars">
-          <SimilarCarsSlider />
         </div>
       </div>
       <div className="footer-catalog">

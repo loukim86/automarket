@@ -36,26 +36,55 @@ const SearchCar = () => {
   const [showFilters, setShowFilters] = useState(false);
   const [findBrand, setFindBrand] = useState([]);
   const [findYear, setFindYear] = useState([]);
+  const [findModel, setFindModel] = useState([]);
 
   useEffect(() => {
-    const newBrandOptions = carsData.cars.map((car) => {
+    const brandOptions = carsData.cars.map((car) => {
       const words = car.title_ru.split(" ");
       return capitalize(words[1]);
     });
-    setFindBrand(newBrandOptions);
+
+    const uniqueBrandOptions = [...new Set(brandOptions)];
+
+    setFindBrand(uniqueBrandOptions);
   }, []);
 
   useEffect(() => {
-    const newYearOptions = carsData.cars.map((car) => {
-      const words = car.title_ru.split(" ");
-      return words[0];
+    const yearOptions = new Set();
+
+    carsData.cars.forEach((car) => {
+      yearOptions.add(car.production_year);
     });
-    setFindYear(newYearOptions);
+
+    const uniqueYearOptions = Array.from(yearOptions);
+
+    uniqueYearOptions.sort((a, b) => b - a);
+
+    setFindYear(uniqueYearOptions);
+  }, []);
+
+  useEffect(() => {
+    const modelOptions = carsData.cars.map((car) => {
+      const models = car.title_ru.split(" ");
+
+      if (models.length > 2) {
+        return `${capitalize(models[2])} ${capitalize(models[3])}`;
+      }
+
+      return "Unknown Model";
+    });
+    const uniqueModelOptions = [...new Set(modelOptions)];
+    setFindModel(uniqueModelOptions);
   }, []);
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log("Searching for:", { brand, seria, year });
+    setBrand("");
+    setSeria("");
+    setYear("");
+    setModel("");
+    setPrice("");
+    setShowFilters(showFilters);
   };
 
   const toggleFilters = () => {
@@ -79,11 +108,13 @@ const SearchCar = () => {
 
         <div className="input-group desktop-only">
           <label>Seria</label>
-          <input
-            type="text"
-            value={seria}
-            onChange={(e) => setSeria(e.target.value)}
-          />
+          <select value={seria} onChange={(e) => setSeria(e.target.value)}>
+            {findModel.map((option, index) => (
+              <option key={index} value={option}>
+                {option}
+              </option>
+            ))}
+          </select>
         </div>
         <div className="divider"></div>
 
@@ -97,9 +128,10 @@ const SearchCar = () => {
             ))}
           </select>
         </div>
+
         <div className="input-group mobile-only">
           <select value={model} onChange={(e) => setModel(e.target.value)}>
-            {modelOptions.map((option, index) => (
+            {findModel.map((option, index) => (
               <option key={index} value={option}>
                 {option}
               </option>
