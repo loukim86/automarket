@@ -1,9 +1,12 @@
+import PropTypes from "prop-types";
 import { useParams } from "react-router-dom";
 import { useState } from "react";
 import {
+  categorizeAttributes,
   findCarById,
   getCarBrandAndModel,
   getCarNumber,
+  getEngineCapacity,
 } from "../carUtils/carUtils";
 import CarInfo from "./CarInfo";
 import CarSlider from "./CarSlider";
@@ -27,6 +30,8 @@ const CarDetails = () => {
 
   const carBrandAndModel = getCarBrandAndModel(car.title_ru);
   const carNumber = getCarNumber(car.attributes);
+  const additionalOptions = categorizeAttributes(car.attributes);
+  const carCEngineCapacity = getEngineCapacity(car.attributes)
 
   const handleTabClick = (tab) => {
     setActiveTab(tab);
@@ -45,6 +50,7 @@ const CarDetails = () => {
             car={car}
             carBrandAndModel={carBrandAndModel}
             carNumber={carNumber}
+            carCEngineCapacity={carCEngineCapacity}
             activeImage={activeImage}
           />
         </div>
@@ -84,7 +90,7 @@ const CarDetails = () => {
           )}
           {activeTab === "options" && (
             <div>
-              <TabAdditional />
+              <TabAdditional options={additionalOptions} />
             </div>
           )}
           {activeTab === "application" && (
@@ -99,6 +105,13 @@ const CarDetails = () => {
       </div>
     </>
   );
+};
+
+CarDetails.propTypes = {
+  car: PropTypes.object,
+  carBrandAndModel: PropTypes.string,
+  carNumber: PropTypes.string,
+  activeImage: PropTypes.string,
 };
 
 export default CarDetails;

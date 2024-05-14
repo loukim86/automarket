@@ -1,11 +1,12 @@
+import PropTypes from "prop-types";
 import { IoMdStarOutline } from "react-icons/io";
 import { useFavorites } from "./context/FavoriteContext";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+import TabAdditional from "./TabContents/TabAdditional";
 
-const CarInfo = ({ car, carBrandAndModel, carNumber }) => {
+const CarInfo = ({ car, carBrandAndModel, carNumber, carCEngineCapacity }) => {
   const { addToCart } = useFavorites();
-  const navigate = useNavigate();
 
   const [isAddedToCart, setIsAddedToCart] = useState(false);
 
@@ -34,21 +35,28 @@ const CarInfo = ({ car, carBrandAndModel, carNumber }) => {
       <p className="car-details-content">
         Mileage: <span className="details">{car.distance} km</span>
       </p>
-      <p className="car-details-content">Engine capacity: </p>
+      <p className="car-details-content">
+        Engine capacity: <span className="details">{carCEngineCapacity}</span>
+      </p>
       <p className="car-details-content">
         Fuel: <span className="details">{car.fuel_type_ru}</span>
       </p>
-      <p className="car-details-content">Transmission: </p>
+      <p className="car-details-content">
+        Transmission: <span className="details">Automatic</span>
+      </p>
       <p className="car-details-content">
         Car model: <span className="details">{car.v_type_ru}</span>
       </p>
       <p className="car-details-content">
         Color: <span className="details">{car.color_ru}</span>
       </p>
-      <p className="car-details-content">Area: </p>
+      <p className="car-details-content">
+        Area: <span className="details">Seoul</span>
+      </p>
       <p className="car-details-content">Number of views: </p>
       <p className="car-details-content">In favorites: </p>
       <p className="car-details-price">{car.price}$</p>
+
       <button className="car-details-button" onClick={handleAddToCart}>
         {isAddedToCart ? "Added To Cart" : "Add to cart"}
       </button>

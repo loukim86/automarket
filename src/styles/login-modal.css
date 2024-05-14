@@ -12,6 +12,7 @@
   font-size: 3rem;
   color: var(--button-color);
   text-align: center;
+  margin-top: 25px;
 }
 
 .modal-greeting {
@@ -22,6 +23,7 @@
 
 .modal-form {
   text-align: center;
+  margin-bottom: 70px;
 }
 
 .modal-form input {

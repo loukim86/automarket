@@ -23,6 +23,44 @@ const PopularCar = () => {
     setShowBlueCarInfo((prevState) => !prevState);
   };
 
+  const carData1 = {
+    "car number": "12 가 3456",
+    "year of issue": "2021/January",
+    mileage: "12,345 km",
+    "engine capacity": "1,234cc",
+    fuel: "Diesel",
+    transmission: "Automatic",
+    "car model": "SUV",
+  };
+
+  const carData2 = {
+    "car number": "12 가 3456",
+    "year of issue": "2021/January",
+    mileage: "12,345 km",
+    "engine capacity": "1,234cc",
+    fuel: "Diesel",
+    transmission: "Automatic",
+    "car model": "SUV",
+    color: "Black",
+    area: "Seoul",
+    "number of views": "123",
+    "in favorites": "15",
+  };
+
+  const carData3 = {
+    "car number": "12 가 3456",
+    "year of issue": "2021/January",
+    mileage: "12,345 km",
+    "engine capacity": "1,234cc",
+    fuel: "Diesel",
+    transmission: "Automatic",
+    "car model": "SUV",
+    color: "Black",
+    area: "Seoul",
+    "number of views": "123",
+    "in favorites": "15",
+  };
+
   return (
     <div className="container">
       <div className="grid-container">
@@ -32,9 +70,10 @@ const PopularCar = () => {
         <div className="item white-car">
           {showWhiteCarInfo ? (
             <CarInformationCard
-              className="card-red-style"
-              titleClassName="info-title"
               toggleCarInfo={toggleWhiteCarInfo}
+              cardStyle="card-white-style"
+              infoStyle="card-white-info"
+              data={carData1}
             />
           ) : (
             <img src={whiteCar} alt="Car 1" onClick={toggleWhiteCarInfo} />
@@ -45,7 +84,12 @@ const PopularCar = () => {
         </div>
         <div className="item red-car">
           {showRedCarInfo ? (
-            <CarInformationCard toggleCarInfo={toggleRedCarInfo} />
+            <CarInformationCard
+              toggleCarInfo={toggleRedCarInfo}
+              cardStyle="card-red-style"
+              infoStyle="card-red-info"
+              data={carData2}
+            />
           ) : (
             <img src={redCar} alt="Car 1" onClick={toggleRedCarInfo} />
           )}
@@ -53,7 +97,12 @@ const PopularCar = () => {
 
         <div className="item blue-car">
           {showBlueCarInfo ? (
-            <CarInformationCard toggleCarInfo={toggleRedCarInfo} />
+            <CarInformationCard
+              toggleCarInfo={toggleBlueCarInfo}
+              cardStyle="card-blue-style"
+              infoStyle="card-blue-info"
+              data={carData3}
+            />
           ) : (
             <img src={blueCar} alt="Car 2" onClick={toggleBlueCarInfo} />
           )}

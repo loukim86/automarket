@@ -36,10 +36,18 @@ const CatalogCard = ({ car }) => {
           />
         )}
 
-        <h3 className="catalog-brand">{carBrandAndModel}</h3>
-        <p className="catalog-info">Year: {car.production_year}</p>
-        <p className="catalog-info">Mileage: {car.distance}km</p>
-        <p className="catalog-info">Fuel: {car.fuel_type_ru}</p>
+        <h3 className="catalog-brand">
+          <span>{carBrandAndModel}</span>
+        </h3>
+        <p className="catalog-info">
+          Year: <span>{car.production_year}</span>
+        </p>
+        <p className="catalog-info">
+          Mileage: <span>{car.distance}km</span>
+        </p>
+        <p className="catalog-info">
+          Fuel: <span>{car.fuel_type_ru}</span>
+        </p>
         <div className="catalog-bottom">
           <p className="catalog-price">{car.price}$</p>
           <button className="catalog-button">
