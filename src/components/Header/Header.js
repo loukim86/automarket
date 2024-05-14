@@ -7,7 +7,7 @@ import user from "../../assets/img/user.png";
 import burgerMenu from "../../assets/img/burger.png";
 import alogo from '../../assets/img/a-logo.svg'
 
-import "./header.css";
+import "../header/header.css";
 
 const Header = () => {
   const [nav, setNav] = useState(false);
