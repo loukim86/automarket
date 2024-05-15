@@ -1,0 +1,138 @@
+.review-form__wrapper {
+  width: 70.6875rem;
+  margin: 0 auto;
+  font-family: "Tahoma", sans-serif;
+  font-weight: 400;
+}
+
+.review-form__title {
+  font-size: 3rem;
+  margin-bottom: 3%;
+}
+
+.review-form__card {
+  overflow-y: auto;
+  max-height: 61.3125rem;
+}
+
+.review-form__card::-webkit-scrollbar {
+  width: 0.3rem;
+}
+
+.review-form__card::-webkit-scrollbar-track {
+  background: var(--menu-text);
+}
+
+.review-form__card::-webkit-scrollbar-thumb {
+  background: var(--about-text);
+  border-radius: 0.25rem;
+}
+
+.review-form__content {
+  margin-top: 6%;
+}
+
+.review-form {
+  background: var(--bg-gradient);
+  width: 72.4375rem;
+  height: 47.125rem;
+  border-radius: 0.5331rem;
+  position: relative;
+}
+
+.review-form__application {
+  padding-top: 8%;
+  margin: 0 auto;
+}
+
+.textarea-wrapper {
+  position: relative;
+}
+
+.textarea-wrapper textarea {
+  width: 100%;
+  padding: 1.9rem 1rem 1rem;
+  box-sizing: border-box;
+  font-size: 1.125rem;
+  line-height: 1.5;
+  
+}
+
+.stars {
+  position: absolute;
+  top: 0.3125rem;
+  left: 0.8rem;
+  display: flex;
+  gap: 0.25rem;
+}
+
+.review-icon {
+  width: 1.3931rem;
+  height: 1.4412rem;
+  cursor: pointer;
+}
+
+.review-form__application input {
+  width: 100%;
+  padding: 0.625rem;
+  margin-bottom: 1.2rem;
+  border: none;
+  border-bottom: 0.0625rem solid var(--text);
+  border-radius: 0;
+  background-color: transparent;
+}
+
+input::placeholder {
+  color: var(--input-placeholder);
+  font-family: "Tahoma", sans-serif;
+  font-size: 1.125rem;
+  line-height: 2;
+}
+
+textarea::placeholder {
+  color: var(--textarea-placeholder);
+  font-family: "Tahoma", sans-serif;
+  font-size: 0.875rem;
+}
+
+.review-form__application button {
+  width: 18.75rem;
+  height: 3.875rem;
+  font-family: "Tahoma", sans-serif;
+  font-weight: 700;
+  font-size: 1.125rem;
+  background: var(--button-color);
+  color: var(--text);
+  border: none;
+  border-radius: 0.5581rem;
+  cursor: pointer;
+  margin-top: 4rem;
+  margin-left: 20%;
+}
+
+.review-form__application button:hover {
+  background-color: #cc0000;
+}
+
+.file-upload-wrapper {
+  display: flex;
+}
+
+.file-input {
+  display: none;
+}
+
+.file-label {
+  cursor: pointer;
+}
+
+.upload-thumbnail {
+  width: 3.625rem;
+  height: 3.625rem;
+  object-fit: cover;
+  margin-right: 0.625rem;
+}
+
+.review-icon.filled {
+    color: #ffc107; 
+}

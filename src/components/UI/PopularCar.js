@@ -11,18 +11,13 @@ const PopularCar = () => {
   const [showRedCarInfo, setShowRedCarInfo] = useState(false);
   const [showBlueCarInfo, setShowBlueCarInfo] = useState(false);
 
-  const toggleWhiteCarInfo = () => {
-    setShowWhiteCarInfo((prevState) => !prevState);
+  const showInfo = (setShowFunction) => {
+    setShowFunction(true);
   };
 
-  const toggleRedCarInfo = () => {
-    setShowRedCarInfo((prevState) => !prevState);
+  const hideInfo = (setShowFunction) => {
+    setShowFunction(false);
   };
-
-  const toggleBlueCarInfo = () => {
-    setShowBlueCarInfo((prevState) => !prevState);
-  };
-
   const carData1 = {
     "car number": "12 가 3456",
     "year of issue": "2021/January",
@@ -67,44 +62,56 @@ const PopularCar = () => {
         <div className="grid-item">
           <p className="grid-title">#DREAMCAR</p>
         </div>
-        <div className="item white-car">
+        <div
+          className="item white-car"
+          onMouseEnter={() => showInfo(setShowWhiteCarInfo)}
+          onMouseLeave={() => hideInfo(setShowWhiteCarInfo)}
+        >
           {showWhiteCarInfo ? (
             <CarInformationCard
-              toggleCarInfo={toggleWhiteCarInfo}
+              toggleCarInfo={() => hideInfo(setShowWhiteCarInfo)}
               cardStyle="card-white-style"
               infoStyle="card-white-info"
               data={carData1}
             />
           ) : (
-            <img src={whiteCar} alt="Car 1" onClick={toggleWhiteCarInfo} />
+            <img src={whiteCar} alt="Car 1" />
           )}
         </div>
         <div className="grid-item__mobile">
           <p className="grid-title__mobile">#YOURMCAR</p>
         </div>
-        <div className="item red-car">
+        <div
+          className="item red-car"
+          onMouseEnter={() => showInfo(setShowRedCarInfo)}
+          onMouseLeave={() => hideInfo(setShowRedCarInfo)}
+        >
           {showRedCarInfo ? (
             <CarInformationCard
-              toggleCarInfo={toggleRedCarInfo}
+              toggleCarInfo={() => hideInfo(setShowRedCarInfo)}
               cardStyle="card-red-style"
               infoStyle="card-red-info"
               data={carData2}
             />
           ) : (
-            <img src={redCar} alt="Car 1" onClick={toggleRedCarInfo} />
+            <img src={redCar} alt="Car 1" />
           )}
         </div>
 
-        <div className="item blue-car">
+        <div
+          className="item blue-car"
+          onMouseEnter={() => showInfo(setShowBlueCarInfo)}
+          onMouseLeave={() => hideInfo(setShowBlueCarInfo)}
+        >
           {showBlueCarInfo ? (
             <CarInformationCard
-              toggleCarInfo={toggleBlueCarInfo}
+              toggleCarInfo={() => hideInfo(setShowBlueCarInfo)}
               cardStyle="card-blue-style"
               infoStyle="card-blue-info"
               data={carData3}
             />
           ) : (
-            <img src={blueCar} alt="Car 2" onClick={toggleBlueCarInfo} />
+            <img src={blueCar} alt="Car 2" />
           )}
         </div>
         <div className="grid-text">

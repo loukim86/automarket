@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import Slider from "react-slick";
 import CustomerCard from "./CustomerCard";
 import "slick-carousel/slick/slick.css";
@@ -5,6 +6,8 @@ import "slick-carousel/slick/slick-theme.css";
 import "../../styles/testimonials-carousel.css";
 
 const TestimonialsCarousel = () => {
+  const navigate = useNavigate();
+
   const settings = {
     dots: false,
     infinite: true,
@@ -41,6 +44,10 @@ const TestimonialsCarousel = () => {
     ],
   };
 
+  const handleLeaveReviewClick = () => {
+    navigate("/reviews");
+  };
+
   return (
     <div className="container">
       <div className="testimonial-container">
@@ -55,7 +62,12 @@ const TestimonialsCarousel = () => {
           <CustomerCard />
         </Slider>
         <div className="testimonial-container__button">
-          <button className="testimonial-button">Leave a review</button>
+          <button
+            className="testimonial-button"
+            onClick={handleLeaveReviewClick}
+          >
+            Leave a review
+          </button>
         </div>
       </div>
     </div>

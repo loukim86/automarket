@@ -33,11 +33,6 @@
   margin-bottom: 2rem;
 }
 
-table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
 .th-photo {
   width: 9.4469rem;
 }
@@ -58,7 +53,14 @@ table {
   width: 10rem;
 }
 
-th {
+.th-price {
+  width: 9.5906rem;
+}
+.shopping-cart-details {
+  display: flex;
+}
+
+.shopping-cart-info {
   background: var(--bg-gradient);
   font-size: 1.25rem;
   color: var(--text);
@@ -68,17 +70,14 @@ th {
   text-align: center;
 }
 
-thead th:first-child {
+.th-photo {
   border-top-left-radius: 0.3069rem;
-}
-
-thead th:last-child {
-  border-top-right-radius: 0.3069rem;
 }
 
 .empty-cell {
   width: 12.0625rem;
   height: 2.7681rem;
+  border-top-right-radius: 0.3069rem;
 }
 
 @media (max-width: 600px) {
@@ -88,7 +87,7 @@ thead th:last-child {
     margin-left: 40px;
   }
 
-  table {
+  .shopping-cart-details {
     display: none;
   }
 }

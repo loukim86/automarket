@@ -1,7 +1,7 @@
 import { NavLink, Link } from "react-router-dom";
 import alogo from "../../assets/img/a-logo.svg";
 import ContactUsCard from "../UI/ContactUsCard";
-import "./Footer.css";
+import "../../styles/footer.css";
 
 const navLinks = [
   {

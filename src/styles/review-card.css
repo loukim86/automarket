@@ -1,0 +1,51 @@
+.review-card {
+  display: flex;
+  border: 0.0537rem solid var(--menu-text);
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 0.305rem;
+  font-family: "Tahoma", sans-serif;
+  font-weight: 400;
+}
+
+.review-card__image img {
+  width: 15.6225rem;
+  height: 12.35rem;
+}
+
+.review-card__content {
+  margin-left: 1rem;
+  flex: 1;
+}
+
+.review-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.25rem;
+}
+
+.review-card__inner {
+  display: flex;
+  align-items: center;
+}
+
+.review-card__header .review-card__title {
+  font-size: 1.5rem;
+  margin-right: .625rem;
+}
+
+.review-icon {
+  width: 1.2456rem;
+  height: 1.2862rem;
+  margin-top: .3125rem;
+}
+
+.review-card__date {
+  font-size: 0.875rem;
+}
+
+.review-card__content p {
+  margin: 0;
+  font-size: 1.125rem;
+}

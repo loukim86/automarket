@@ -29,6 +29,8 @@ body {
 }
 
 :root {
+  --sg-text: rgba(0, 0, 0, 0.25);
+  --lg-text: rgba(0, 0, 0, 0.5);
   --bg-card: rgba(137, 149, 157, 0.44);
   --footer-color: #89959d;
   --button-color: #d33030;

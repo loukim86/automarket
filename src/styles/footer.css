@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 2rem;
+  background-color: var(--footer-color);
+  color: var(--text);
+  max-height: 14.5625rem;
+  width: 100%;
+  height: 100vh;
+  padding: 20px;
+ 
+}
+
+.footer-img {
+  max-width: 2.7531rem;
+  max-height: 2.7531rem;
+}
+
+.footer-text {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 1.8356rem;
+}
+
+.footer-text span {
+  color: var(--border);
+}
+
+.footer-logo {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.footer-logo img,
+.footer-logo p {
+  margin-right: 0.625rem;
+  display: inline-block;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.footer-menu {
+  display: flex;
+  align-items: center;
+  column-gap: 3.75rem;
+  margin-left: 1.25rem;
+}
+
+.footer-menu a {
+  color: inherit;
+  text-decoration: none;
+  padding: 0 0.625rem;
+  font-size: 1.125rem;
+  font-family: "Tahoma", sans-serif;
+  font-weight: 400;
+}
+
+.logo-mobile {
+  display: none;
+}
+
+.contact-mobile {
+  display: none;
+}
+
+.contact-us-card {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .logo-desktop {
+    display: none;
+  }
+
+  .logo-mobile {
+    display: block;
+  }
+
+  .contact-us-card {
+    display: block;
+  }
+
+  .footer-img {
+    max-width: 2.6875rem;
+    max-height: 2.6875rem;
+  }
+
+  .footer-text {
+    font-size: 0.4838rem;
+  }
+
+  .footer {
+    align-items: center;
+    padding: 20px;
+    margin-top: 7rem;
+  }
+
+  .footer-menu {
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    font-size: 0.75rem;
+    width: 100%;
+  }
+
+  .footer-menu a {
+    padding: 5px;
+  }
+
+  .contact-us h2 {
+    display: none;
+  }
+
+  .footer-logo  {
+    margin-left: 30px;
+  }
+}

@@ -4,11 +4,11 @@
   left: 50%;
   transform: translate(-50%, -50%);
   background: var(--bg-gradient);
-  width: 421.59px;
-  height: 165.33px;
-  padding: 10px;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  width: 26.3494rem;
+  height: 10.3331rem;
+  padding: 0.625rem;
+  border-radius: 0.3125rem;
+  box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.2);
   z-index: 1000;
   font-family: "Inter", sans-serif;
   font-weight: 400;
@@ -22,18 +22,19 @@
 }
 
 .success-title {
-  font-size: 32px;
+  font-size: 2rem;
   font-weight: 400;
   color: var(--text);
-  line-height: 46.82px;
+  line-height: 2.9263rem;
 }
 
-.success-text {
-  font-size: 16px;
+.success-text1,
+.success-text2,
+.success-text3 {
+  font-size: 1.125rem;
   font-weight: 400;
   color: var(--text);
-  line-height: 23.41px;
-  margin-top: 10px;
+  text-align: center;
 }
 
 .close-button {

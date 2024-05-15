@@ -45,8 +45,13 @@ const ContactUs = () => {
 
         <ContactForm onSubmit={handleSubmit} />
 
-        {showSuccessPopup && <SuccessPopup closePopup={closeSuccessPopup} />}
-
+        {showSuccessPopup && (
+          <SuccessPopup
+            closePopup={closeSuccessPopup}
+            title="Thank you!"
+            message1="Your application is accepted. We will contact you shortly."
+          />
+        )}
         {showErrorPopup && <ErrorPopup closePopup={closeErrorPopup} />}
       </div>
     </div>

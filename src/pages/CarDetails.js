@@ -40,6 +40,7 @@ const CarDetails = () => {
   return (
     <>
       <div className="container">
+        <div className="container-wrapper">
         <div className="car-details-container">
           <CarSlider
             car={car}
@@ -98,6 +99,7 @@ const CarDetails = () => {
               <TabApplication />
             </div>
           )}
+        </div>
         </div>
       </div>
       <div className="footer-catalog">

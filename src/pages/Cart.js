@@ -1,5 +1,6 @@
 import Footer from "../components/Footer/Footer";
 import ShoppingCartCard from "../components/UI/ShoppingCartCard";
+import CartSelection from "./cart/CartSelection";
 import { useFavorites } from "./context/FavoriteContext";
 
 import "../styles/cart.css";
@@ -12,27 +13,18 @@ const Cart = () => {
       <div className="container">
         <div className="shopping-cart">
           <p className="cart-title">SHOPPING CART</p>
-          <table>
-            <thead>
-              <tr>
-                <th className="th-photo">Photo</th>
-                <th className="th-model">Model</th>
-                <th className="th-year">Year</th>
-                <th className="th-mileage">Mileage</th>
-                <th className="th-fuel">Fuel</th>
-                <th className="th-price">Price</th>
-                <th className="empty-cell "></th>
-              </tr>
-            </thead>
-          </table>
+          <CartSelection />
+
           <div className="cart-container">
             {cartItems.length > 0 ? (
               cartItems.map((car, index) => (
                 <ShoppingCartCard
-                  key={index}
-                  car={car}
-                  onRemove={() => removeFromCart(car.pk_car_id)}
-                />
+                key={index}
+                car={car}
+                onRemove={() => removeFromCart(car.pk_car_id)}
+                className="custom-cart-card" 
+                mobileClassName="custom-cart-card-mobile"
+              />
               ))
             ) : (
               <p>Your cart is empty.</p>

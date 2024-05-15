@@ -1,0 +1,56 @@
+.user-profile-form {
+  width: 54.2188rem;
+  height: 38.4375rem;
+  border: 0.0537rem solid var(--menu-text);
+  border-top-right-radius: 0.3125rem;
+  border-bottom-right-radius: 0.3125rem;
+  font-family: "Tahoma", sans-serif;
+  font-weight: 400;
+  font-size: 1.125rem;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+.profile-image {
+  width: 12.375rem;
+  height: 12.375rem;
+  border-radius: 0.3125rem;
+  margin-bottom: 1.25rem;
+}
+
+.user-profile-form input {
+  width: 39.4956rem;
+  height: 2.5669rem;
+  padding: 0.625rem;
+  border: 0.0537rem solid var(--menu-text);
+  border-radius: 0.3125rem;
+}
+
+.password-row {
+  display: flex;
+  gap: .75rem;
+}
+
+.password-input input {
+  width: 19.345rem;
+ 
+ 
+}
+
+.edit-button {
+  width: 8.4362rem;
+  height: 2.2569rem;
+  background-color: var(--button-color);
+  color: var(--text);
+  border: none;
+  border-radius: 0.3125rem;
+  cursor: pointer;
+  font-size: 0.875rem;
+  margin-top: 1.875rem;
+}
+
+.edit-button:hover {
+  background-color: darkred;
+}

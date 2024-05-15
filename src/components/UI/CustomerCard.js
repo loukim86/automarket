@@ -5,18 +5,16 @@ import "../../styles/customer-card.css";
 const CustomerCard = () => {
   return (
     <div className="card-content">
-      <img src={clientImg} alt="Customer" className="card-image" />
+      <img src={clientImg} alt="Customer" />
       <div className="card-info">
         <div className="card">
           <h3>Ivan Ivanov</h3>
           <span className="card-date">2023.01.01</span>
         </div>
         <div className="card-stars">
-          <IoMdStarOutline className="star-icon"/>
-          <IoMdStarOutline className="star-icon"/>
-          <IoMdStarOutline className="star-icon"/>
-          <IoMdStarOutline className="star-icon"/>
-          <IoMdStarOutline className="star-icon"/>
+          {[...Array(5)].map((_, index) => (
+            <IoMdStarOutline key={index} className="star-icon" />
+          ))}
         </div>
 
         <div className="card-text">

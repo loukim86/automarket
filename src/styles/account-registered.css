@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
+.success {
+  width: 22rem;
+  height: 13.5625rem;
+  text-align: center;
+  font-family: "Tahoma", sans-serif;
+  margin: 0 auto;
+  border-radius: 0.625rem;
+  border: 0.0625rem solid var(--menu-text);
+  padding: 1.25rem;
+}
+
+.success-title {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--price-text);
+}
+
+.success-text {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--price-text);
+  font-family: "Inter", sans-serif;
+  margin: 0;
+}
+
+.success-button {
+  width: 13.6875rem;
+  height: 3.125rem;
+  background: var(--button-color);
+  color: var(--text);
+  border: none;
+  font-family: "Tahoma", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 700;
+  border-radius: .6544rem;
+  margin-top: 1.875rem;
+}
