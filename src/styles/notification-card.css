@@ -1,0 +1,39 @@
+.notification-card {
+  width: 31.8125rem;
+  height: 8.875rem;
+  font-family: "Tahoma", sans-serif;
+  background: var(--bg-gradient);
+  border: 1px solid #ccc;
+  border-radius: 0.625rem;
+  padding: 15px;
+  margin: 30px 40px;
+  position: relative;
+}
+
+.notification-content {
+  position: relative;
+}
+
+.notification-title {
+  margin: 0;
+  font-size: 1.125rem;
+  font-weight: 400;
+}
+
+.notification-text {
+  margin: 9px 0;
+  font-weight: 400;
+  font-size: 0.875rem;
+}
+
+.notification-card::before {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: -20px;
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-right: 20px solid #89959d;
+}

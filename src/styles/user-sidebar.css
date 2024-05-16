@@ -1,6 +1,6 @@
 .sidebar {
   width: 17.375rem;
-  height: 38.4375rem;
+  height: auto;
   padding: 20px;
   border: 0.0537rem solid var(--menu-text);
   border-top-left-radius: 0.3125rem;

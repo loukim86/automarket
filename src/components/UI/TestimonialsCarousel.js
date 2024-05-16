@@ -52,7 +52,7 @@ const TestimonialsCarousel = () => {
     <div className="container">
       <div className="testimonial-container">
         <div className="testimonial-title">
-          <p>WHAT OUR CUSTOMER SAY</p>
+          <p>WHAT OUR CUSTOMERS SAY</p>
         </div>
         <Slider {...settings}>
           <CustomerCard />

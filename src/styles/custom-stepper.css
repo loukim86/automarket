@@ -1,0 +1,183 @@
+.timeline-container {
+  width: 54.5rem;
+  padding: 1rem;
+  font-family: "Tahoma", sans-serif;
+  border: 0.0537rem solid var(--menu-text);
+  border-top-right-radius: 0.3125rem;
+  border-bottom-right-radius: 0.3125rem;
+}
+
+.status-section {
+  margin-bottom: 2.5rem;
+}
+
+.history-section {
+  margin-top: 25%;
+  margin-left: 0.625rem;
+}
+
+.status-section h2,
+.history-section h2 {
+  font-weight: 700;
+  font-size: 1.125rem;
+  margin-bottom: 0.625rem;
+  margin-left: 0.625rem;
+}
+
+.status-timeline {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  margin-top: 1.25rem;
+}
+
+.status-timeline::before {
+  content: "";
+  position: absolute;
+  top: 15%;
+  left: 3%;
+  right: 4%;
+  height: 2px;
+  background: var(--menu-text);
+  transform: translateY(-50%);
+}
+
+.status-item {
+  position: relative;
+  text-align: left;
+  flex: none;
+  margin-right: 17%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.status-dot {
+  width: 0.4831rem;
+  height: 0.4831rem;
+  background: var(--price-text);
+  border-radius: 50%;
+  position: relative;
+}
+
+.status-icon {
+  position: absolute;
+  top: -15%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.car-icon {
+  width: 1.02rem;
+  height: 1.02rem;
+}
+
+.tooltip-date {
+  font-size: 0.875rem;
+  font-weight: 400;
+  margin-top: 1rem;
+}
+
+.tooltip-desc {
+  font-size: 0.875rem;
+  font-weight: 400;
+  margin-top: 0.5rem;
+}
+
+.status-tooltip {
+  position: absolute;
+  top: 4rem;
+  left: 5%;
+  background: var(--bg-notification);
+  padding: 0 1.25rem;
+  border-radius: 0.5369rem;
+  width: 21.1019rem;
+  height: 8.1619rem;
+  text-align: left;
+  font-size: 0.9rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.status-tooltip::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: .625rem;
+  transform: translateY(-100%);
+  width: 0;
+  height: 0;
+  border-left: 1.25rem solid transparent;
+  border-right: 1.25rem solid transparent;
+  border-bottom: 1.25rem solid #bdbdbd;
+}
+
+.history-timeline {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  position: relative;
+  height: 20.9375rem;
+  overflow-y: scroll;
+
+}
+
+.history-timeline::-webkit-scrollbar {
+  width: 0.3rem;
+}
+
+.history-timeline::-webkit-scrollbar-track {
+  background: var(--menu-text);
+}
+
+.history-timeline::-webkit-scrollbar-thumb {
+  background: var(--about-text);
+  border-radius: 0.25rem;
+}
+
+.history-timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: .1875rem;
+  height: 100vh;
+  width: .1875rem;
+  background: var(--menu-text);
+}
+
+.history-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.25rem;
+  position: relative;
+}
+
+.history-dot {
+  width: 0.4831rem;
+  height: 0.4831rem;
+  background: var(--price-text);
+  border-radius: 50%;
+  position: relative;
+  z-index: 1;
+  margin-right: .625rem;
+}
+
+.history-icon {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.history-label {
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: var(--lg-text);
+  width: 33.5625rem;
+}
+
+.history-item:first-child .history-label {
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: var(--price-text);
+}

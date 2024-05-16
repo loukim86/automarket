@@ -1,6 +1,6 @@
 .user-page-wrapper {
   width: 72.2188rem;
-  height: 38.4375rem;
+  height: auto;
   margin: 0 auto;
 }
 
@@ -11,6 +11,6 @@
 
 .user-profile-container {
   padding: 0 0 0 1.25rem;
-  overflow-y: auto;
-  overflow-x: hidden;
+  /* overflow-y: auto;
+  overflow-x: hidden; */
 }
