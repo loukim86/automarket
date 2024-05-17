@@ -1,5 +1,6 @@
 import Slider from "react-slick";
 import CardCar from "./CardCar";
+import { PrevArrow, NextArrow } from "../../pages/TabContents/SliderArrows";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "../../styles/testimonials-carousel.css";
@@ -16,7 +17,18 @@ const NewArrival = () => {
     autoplay: false,
     autoplaySpeed: 3000,
     cssEase: "linear",
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
     responsive: [
+      {
+        breakpoint: 3023,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: false,
+        },
+      },
       {
         breakpoint: 1800,
         settings: {

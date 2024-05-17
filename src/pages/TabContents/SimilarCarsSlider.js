@@ -1,6 +1,9 @@
 import CardCar from "../../components/UI/CardCar";
 import Slider from "react-slick";
-import { PrevArrow, NextArrow } from "../../pages/TabContents/SliderArows";
+import { PrevArrow, NextArrow } from "./SliderArrows";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import "../../styles/testimonials-carousel.css";
 import "../../styles/similar-cars-slider.css";
 
 const SimilarCarsSlider = () => {

@@ -23,7 +23,7 @@ import minivan from "../../assets/img/minivans.png";
 import suv from "../../assets/img/SUVs.png";
 import "../../styles/search-filter.css";
 
-const SearchFilter = ({ isVisible }) => {
+const SearchFilter = ({ isVisible, top, left, usePosition }) => {
   const [showBrand, setShowBrand] = useState(true);
   const [showModel, setShowModel] = useState(false);
   const [showPrice, setShowPrice] = useState(false);
@@ -47,13 +47,19 @@ const SearchFilter = ({ isVisible }) => {
     setShowPrice(!showPrice);
   };
 
-  const handleButtonClick = (buttonName) => {
-    setActiveButton(buttonName === activeButton ? null : buttonName);
+  const filterStyle = {
+    top: top,
+    left: left,
+    background: "var(--main-color)",
+    margin: "0 auto",
+    display: isVisible ? "block" : "none",
+    transition: "all 0.3s ease-in-out",
+    ...(usePosition && { position: "absolute" }),
   };
 
   return (
-    <div className={`filter ${isVisible ? "visible" : ""}`}>
-      <div className="sidebar">
+    <div className="filter" style={filterStyle}>
+      <div className="sidebar-filter">
         <div className="filter-buttons">
           <button
             onClick={handleBrandClick}

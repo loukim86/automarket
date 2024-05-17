@@ -1,9 +1,7 @@
 import PropTypes from "prop-types";
 import { IoMdStarOutline } from "react-icons/io";
 import { useFavorites } from "./context/FavoriteContext";
-import { useNavigate } from "react-router-dom";
 import { useState } from "react";
-import TabAdditional from "./TabContents/TabAdditional";
 
 const CarInfo = ({ car, carBrandAndModel, carNumber, carCEngineCapacity }) => {
   const { addToCart } = useFavorites();

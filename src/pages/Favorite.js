@@ -3,12 +3,15 @@ import Footer from "../components/Footer/Footer";
 import "../styles/favorite.css";
 
 const Favorite = () => {
-
   return (
     <>
       <div className="container">
-        <p className="favorite">FAVOURITE LIST</p>
-       <FavoriteGallery/>
+        <div className="favorite">
+          <p className="favorite-title">FAVOURITE LIST</p>
+        </div>
+        <div className="favorite-wrapper">
+          <FavoriteGallery />
+        </div>
       </div>
       <div className="footer-catalog">
         <Footer />

@@ -40,7 +40,7 @@
 .middle-word {
   font-size: 0.875rem;
   color: var(--menu-text);
-  padding: .625rem;
+  padding: 0.625rem;
 }
 
 .signin-button {
@@ -53,9 +53,9 @@
 }
 
 .input-field {
-  padding: .625rem;
-  margin-bottom: .625rem;
-  border: .0625rem solid #ccc;
+  padding: 0.625rem;
+  margin-bottom: 0.625rem;
+  border: 0.0625rem solid #ccc;
   border-radius: 1.5625rem;
   outline: none;
   font-size: 1rem;
@@ -73,14 +73,10 @@
   top: 40%;
   transform: translateY(-50%);
   color: var(--menu-text);
-  font-size: .875rem;
+  font-size: 0.875rem;
   text-decoration: none;
 }
 
 .forgot-password:hover {
   text-decoration: underline;
 }
-
-
-
-

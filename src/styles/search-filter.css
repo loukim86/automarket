@@ -1,7 +1,4 @@
 .filter {
-  position: absolute;
-  top: 100%;
-  left: 5%;
   background: var(--main-color);
   margin: 0 auto;
   display: none;
@@ -14,10 +11,11 @@
   display: block;
 }
 
-.sidebar {
+.sidebar-filter {
   display: flex;
   width: 71.19rem;
   height: 18.96rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .filter-buttons {

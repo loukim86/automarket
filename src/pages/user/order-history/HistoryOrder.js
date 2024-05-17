@@ -1,13 +1,12 @@
-import CartSelection from "../cart/CartSelection";
-import ShoppingCartCard from "../../components/UI/ShoppingCartCard";
-import { useFavorites } from "../context/FavoriteContext";
-import "../../styles/user-shopping-cart.css";
+import CartSelection from "../../../pages/cart/CartSelection";
+import ShoppingCartCard from "../../../components/UI/ShoppingCartCard";
+import { useFavorites } from "../../context/FavoriteContext";
 
-const UserShoppingCart = () => {
+const HistoryOrder = () => {
   const { cartItems, removeFromCart } = useFavorites();
-  
+
   return (
-    <div className="shopping-cart-wrapper">
+    <div className="history-wrapper">
       <div className="user-shopping-cart">
         <CartSelection
           photo="Photo"
@@ -37,4 +36,4 @@ const UserShoppingCart = () => {
   );
 };
 
-export default UserShoppingCart;
+export default HistoryOrder;

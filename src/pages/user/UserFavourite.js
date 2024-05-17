@@ -5,7 +5,7 @@ const UserFavourite = () => {
   return (
     <div className="user-favourite-container">
       <div className="user-favourite-wrapper">
-        <FavoriteGallery />
+        <FavoriteGallery className="user-gallery"/>
       </div>
     </div>
   );

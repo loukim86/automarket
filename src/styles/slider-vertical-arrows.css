@@ -1,0 +1,43 @@
+.vertical-up,
+.vertical-down {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000000;
+  transition: color 0.3s ease;
+}
+
+.vertical-up:hover,
+.vertical-down {
+  color: gray;
+}
+
+.vertical-up {
+  top: 100%;
+}
+
+.vertical-down {
+  bottom: -80%;
+}
+
+.slick-arrow.slick-prev::before {
+  display: none;
+}
+
+.svg-icon {
+  transform: translateY(-460%);
+  color: black;
+}
+
+.svg-icon:hover {
+  color: gray;
+}

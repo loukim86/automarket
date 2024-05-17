@@ -13,18 +13,26 @@ const Cart = () => {
       <div className="container">
         <div className="shopping-cart">
           <p className="cart-title">SHOPPING CART</p>
-          <CartSelection />
+          <CartSelection
+            photo="Photo"
+            model="Model"
+            year="Year"
+            mileage="Mileage"
+            fuel="Fuel"
+            price="Price"
+            className="cart-style"
+          />
 
           <div className="cart-container">
             {cartItems.length > 0 ? (
               cartItems.map((car, index) => (
                 <ShoppingCartCard
-                key={index}
-                car={car}
-                onRemove={() => removeFromCart(car.pk_car_id)}
-                className="custom-cart-card" 
-                mobileClassName="custom-cart-card-mobile"
-              />
+                  key={index}
+                  car={car}
+                  onRemove={() => removeFromCart(car.pk_car_id)}
+                  className="custom-cart-card"
+                  mobileClassName="custom-cart-card-mobile"
+                />
               ))
             ) : (
               <p>Your cart is empty.</p>

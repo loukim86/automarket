@@ -15,7 +15,7 @@ const ReviewForm = () => {
     image: "",
     rating: 0,
   });
-  const [showSuccessPopup, setShowSuccessPopup] = useState(true);
+  const [showSuccessPopup, setShowSuccessPopup] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -198,7 +198,7 @@ const ReviewForm = () => {
           </div>
         </div>
       </div>
-       {showSuccessPopup && (
+      {showSuccessPopup && (
         <SuccessPopup
           closePopup={closeSuccessPopup}
           title="Thank you!"

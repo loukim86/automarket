@@ -1,0 +1,7 @@
+.order-history-container {
+  border: 0.0537rem solid var(--menu-text);
+  border-top-right-radius: 0.3125rem;
+  border-bottom-right-radius: 0.3125rem;
+  width: 54.25rem;
+  padding: 1.25rem;
+}

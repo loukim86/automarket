@@ -5,14 +5,14 @@ import { IoIosArrowForward } from "react-icons/io";
 import carsData from "../data/carsData.json";
 import CatalogCard from "../components/UI/CatalogCard";
 import Footer from "../components/Footer/Footer";
-
-// import SearchFilter from "../components/UI/SearchFilter";
+import SearchFilter from "../components/UI/SearchFilter";
 import "../styles/catalog.css";
 
 const Catalog = () => {
   const [pageNumber, setPageNumber] = useState(0);
   const [cars, setCars] = useState([]);
   const [category, setCategory] = useState("all");
+  const [isFilterVisible, setIsFilterVisible] = useState(true);
 
   const carsPerPage = 12;
   const pagesVisited = pageNumber * carsPerPage;
@@ -48,6 +48,14 @@ const Catalog = () => {
   return (
     <>
       <div className="container">
+        <div className="search-filter-wrapper">
+          <SearchFilter
+            isVisible={isFilterVisible}
+            top="0"
+            left="0"
+            usePosition={false}
+          />
+        </div>
         <div className="catalog-category-links">
           <button
             onClick={() => setCategory("all")}

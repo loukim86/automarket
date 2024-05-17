@@ -1,13 +1,17 @@
 .tabs {
   display: flex;
+  font-family: "Tahoma", sans-serif;
+  font-weight: 400;
+  font-size: 1.125rem;
+  margin-bottom: 1.25rem;
 }
+
 .tab {
-    padding: 10px 20px;
-    cursor: pointer;
-  }
-  
-  .tab.active {
-    border-bottom: 2px solid red;
-    font-weight: bold;
-  }
-  
+  padding: 0.625rem 1.25rem;
+  cursor: pointer;
+}
+
+.tab.active {
+  border-bottom: 0.1875rem solid var(--button-color);
+  font-weight: 700;
+}

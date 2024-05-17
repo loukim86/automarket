@@ -1,10 +1,5 @@
 .timeline-container {
-  width: 54.5rem;
-  padding: 1rem;
   font-family: "Tahoma", sans-serif;
-  border: 0.0537rem solid var(--menu-text);
-  border-top-right-radius: 0.3125rem;
-  border-bottom-right-radius: 0.3125rem;
 }
 
 .status-section {
@@ -103,7 +98,7 @@
   content: "";
   position: absolute;
   top: 0;
-  left: .625rem;
+  left: 0.625rem;
   transform: translateY(-100%);
   width: 0;
   height: 0;
@@ -119,7 +114,6 @@
   position: relative;
   height: 20.9375rem;
   overflow-y: scroll;
-
 }
 
 .history-timeline::-webkit-scrollbar {
@@ -139,9 +133,9 @@
   content: "";
   position: absolute;
   top: 0;
-  left: .1875rem;
+  left: 0.1875rem;
   height: 100vh;
-  width: .1875rem;
+  width: 0.1875rem;
   background: var(--menu-text);
 }
 
@@ -159,7 +153,7 @@
   border-radius: 50%;
   position: relative;
   z-index: 1;
-  margin-right: .625rem;
+  margin-right: 0.625rem;
 }
 
 .history-icon {

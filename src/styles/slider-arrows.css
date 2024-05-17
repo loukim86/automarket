@@ -1,0 +1,34 @@
+.custom-prev,
+.custom-next {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 45%;
+  transform: translateY(-50%);
+  z-index: 1;
+  width: 1.5106rem;
+  height: 3.0213rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000000;
+  transition: color 0.3s ease;
+}
+
+.custom-prev:hover,
+.custom-next:hover {
+  color: gray;
+}
+
+.custom-prev {
+  left: -5%;
+}
+
+.custom-next {
+  right: -0.5%;
+}
+
+.slick-arrow.slick-next::before {
+  display: none;
+}

@@ -5,7 +5,3 @@
   margin: 0 auto;
 }
 
-.slick-prev:before, .slick-next:before {
-    font-size: 80px;
-    line-height: .8px;
-}

@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
-import '../../styles/restore-password.css'
+import Footer from "../../components/Footer/Footer";
+import "../../styles/restore-password.css";
 
 const RestorePassword = () => {
   const navigate = useNavigate();
@@ -11,25 +12,30 @@ const RestorePassword = () => {
   };
 
   return (
-    <div className="container">
-      <div className="restore-password">
-        <p className="restore-password-title">Restore Password</p>
-        <form className="restore-form" onSubmit={handleSubmit}>
-          <div className="restore-input-wrapper">
-            <input
-              type="email"
-              placeholder="Email"
-              className="input-field"
-              required
-            />
-          </div>
+    <>
+      <div className="container">
+        <div className="restore-password">
+          <p className="restore-password-title">Restore Password</p>
+          <form className="restore-form" onSubmit={handleSubmit}>
+            <div className="restore-input-wrapper">
+              <input
+                type="email"
+                placeholder="Email"
+                className="input-field"
+                required
+              />
+            </div>
 
-          <button type="submit" className="restore-button">
-            Send
-          </button>
-        </form>
+            <button type="submit" className="restore-button">
+              Send
+            </button>
+          </form>
+        </div>
       </div>
-    </div>
+      <div className="footer-catalog">
+        <Footer />
+      </div>
+    </>
   );
 };
 

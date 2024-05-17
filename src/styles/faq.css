@@ -75,10 +75,21 @@
   border-bottom: 0.0619rem solid var(--menu-text);
 }
 
+.faq-form input::placeholder,
+.faq-form textarea::placeholder {
+  font-size: 0.875rem;
+  color: var(--lg-text);
+  font-weight: 400;
+}
+
+.faq-form textarea::placeholder {
+  padding: 0.9375rem;
+}
+
 .faq-form textarea {
   width: 100%;
   padding: 0.5rem;
-  margin-top: 2rem;
+  margin-top: 1.6rem;
   border: 0.0619rem solid var(--menu-text);
   border-radius: 0.5375rem;
 }
