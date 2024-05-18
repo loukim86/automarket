@@ -5,7 +5,7 @@ import "../../styles/customer-card.css";
 const CustomerCard = () => {
   return (
     <div className="card-content">
-      <img src={clientImg} alt="Customer" />
+      <img src={clientImg} alt="Customer" className="card-image"/>
       <div className="card-info">
         <div className="card">
           <h3>Ivan Ivanov</h3>

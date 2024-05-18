@@ -49,7 +49,7 @@
     margin: 0 0 0 2rem;
     height: auto;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 119px 213px auto;
+    grid-template-rows: 170px 270px auto;
     grid-template-areas:
       "dreamcar whitecar"
       "bluecar text"

@@ -13,8 +13,8 @@
 }
 
 .application-form {
-    margin: 0 auto;
-    padding-top: 10%;
+  margin: 0 auto;
+  padding-top: 10%;
 }
 
 .application-form input {
@@ -69,4 +69,23 @@ textarea::placeholder {
 
 .application-form button:hover {
   background-color: #cc0000;
+}
+
+@media (max-width: 600px) {
+  .tab-application {
+    width: 30rem;
+    height: 26rem;
+  }
+
+  .inner-box {
+    width: 41.2025rem;
+    height: 44.3125rem;
+    margin: 0 auto;
+  }
+
+  .inner-box {
+    width: 39rem;
+    height: 44.3125rem;
+    margin: 0 auto;
+  }
 }

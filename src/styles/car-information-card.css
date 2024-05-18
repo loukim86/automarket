@@ -6,7 +6,7 @@
   width: 18.7488rem;
   height: 100%;
   cursor: pointer;
-  padding: 1.875rem .9375rem;
+  padding: 1.875rem 0.9375rem;
 }
 
 .card-white-info {
@@ -54,4 +54,51 @@
   justify-content: space-between;
   align-items: center;
   line-height: 2rem;
+}
+
+@media (max-width: 600px) {
+  .card-white-style {
+    font-size: 0.875rem;
+    width: 16.2rem;
+    height: 100%;
+    cursor: pointer;
+    padding: 0.5rem;
+  }
+
+  .card-white-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 1.2rem;
+  }
+
+  .card-blue-style {
+    font-size: 0.875rem;
+    width: 16.2rem;
+    height: 16.875rem;
+    cursor: pointer;
+    padding: 1.875rem 2rem;
+  }
+
+  .card-blue-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 1.2rem;
+  }
+
+  .card-red-style {
+    font-size: 0.875rem;
+    width: 16.2rem;
+    height: 20.8712rem;
+    cursor: pointer;
+    padding: 3rem 2rem;
+  }
+
+  .card-red-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 1.3rem;
+  }
 }

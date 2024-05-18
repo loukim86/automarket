@@ -62,13 +62,13 @@
   display: flex;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   .hero-section {
     background-position: 90%;
   }
 
   .hero-content {
-    top: 8%;
+    top: 5%;
   }
 
   .hero-content__text {

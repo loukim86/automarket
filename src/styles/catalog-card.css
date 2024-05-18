@@ -90,3 +90,11 @@
   border-bottom: 0.125rem solid var(--button-color);
   font-size: 2rem;
 }
+
+@media (max-width: 600px) {
+  .catalog-card {
+    width: 15.8681rem;
+    height: 26.2056rem;
+    
+  }
+}

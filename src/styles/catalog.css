@@ -54,10 +54,82 @@
   margin-right: 4%;
   cursor: pointer;
   padding-bottom: 0.3125rem;
-  border-bottom: 2px solid transparent;
+  border-bottom: 0.125rem solid transparent;
 }
 
-.catalog-category-links button.active {
-  color: red;
-  border-bottom: 2px solid var(--button-color);
+.catalog-category-links button.active-btn {
+  color: var(--button-color);
+  border-bottom: 0.125rem solid var(--button-color);
+}
+
+@media (max-width: 600px) {
+  .search-filter-wrapper {
+    display: none;
+  }
+
+  .car-gallery,
+  .catalog-category-links {
+    width: 100%;
+    padding: 0 1rem;
+  }
+
+  .car-gallery {
+    gap: 0.625rem;
+  }
+
+  .catalog-card {
+    width: calc(50% - 0.3125rem);
+    height: auto;
+    min-width: 150px;
+  }
+
+  .catalog-category-links button {
+    font-size: 1.5rem;
+    margin-right: 4%;
+    margin-bottom: 4%;
+  }
+
+  .page-item {
+    font-size: 1.25rem;
+  }
+
+  .catalog-category-links button {
+    font-size: 1.5rem;
+    margin-right: 4%;
+    margin-bottom: 4%;
+  }
+
+  .page-item {
+    font-size: 1.25rem;
+  }
+
+  .previous-button,
+  .next-button {
+    margin: 0 1rem;
+    background-color: var(--button-color);
+    color: var(--text);
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.3125rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .catalog-card {
+    width: 100%;
+    min-width: unset;
+
+    .previous-button,
+    .next-button {
+      width: 2rem;
+      height: 2rem;
+    }
+
+    .page-item {
+      font-size: 1rem;
+    }
+  }
 }

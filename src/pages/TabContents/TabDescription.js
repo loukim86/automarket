@@ -23,7 +23,7 @@ const TabDescription = () => {
         adipiscing.
       </p>
       <br />
-      <p className="tab-description-text">
+      <p className="tab-description-text text-mobile">
         Lorem ipsum dolor sit amet consectetur. Lectus enim gravida viverra
         condimentum condimentum cursus sapien elementum nunc. Consequat quam
         tempus maecenas egestas nisl dictum pharetra. Venenatis consectetur sit

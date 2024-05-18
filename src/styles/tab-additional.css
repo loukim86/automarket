@@ -1,6 +1,5 @@
 .categories {
   width: 72.5rem;
-
   margin: 0 auto;
 }
 
@@ -36,12 +35,12 @@
 }
 
 .checkmark input[type="checkbox"] {
-  -webkit-appearance: none; 
+  -webkit-appearance: none;
   appearance: none;
   width: 1.5rem;
   height: 1.5rem;
-  border: .0625rem solid var(--about-text);
-  border-radius: .2737rem;
+  border: 0.0625rem solid var(--about-text);
+  border-radius: 0.2737rem;
   background-color: var(--text);
   margin-right: 10px;
   cursor: pointer;
@@ -51,10 +50,10 @@
 .checkmark input[type="checkbox"]:checked::after {
   content: "";
   position: absolute;
-  top: .125rem;
-  left: .3125rem;
-  width: .8125rem;
-  height: .5625rem;
+  top: 0.125rem;
+  left: 0.3125rem;
+  width: 0.8125rem;
+  height: 0.5625rem;
   border: solid red;
   border-width: 0 2px 2px 0;
   transform: rotate(45deg);
@@ -63,14 +62,39 @@
 .checkmark {
   display: flex;
   align-items: center;
-  margin: .3125rem 0;
-  height: 24px; 
+  margin: 0.3125rem 0;
+  height: 24px;
 }
-
 
 .checkmark label {
   font-size: 1rem;
   font-family: "Tahoma", sans-serif;
   font-weight: 400;
   line-height: 1rem;
+}
+
+@media (max-width: 600px) {
+  .categories, .features {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .categories-content, .features-content {
+    width: 100%;
+    font-size: 1rem;
+    height: auto;
+    text-align: left;
+  }
+
+  .checkmark input[type="checkbox"] {
+    width: 1.25rem;
+    height: 1.25rem;
+    margin-right: 5px;
+  }
+
+  .checkmark label {
+    font-size: 0.875rem;
+  }
 }

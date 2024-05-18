@@ -26,7 +26,7 @@ const TabAdditional = ({ options }) => {
                 checked={feature.value === "true" || feature.value === "1"}
                 readOnly
               />
-              <label >{feature.title_ru || feature.title}</label>
+              <label>{feature.title_ru || feature.title}</label>
             </li>
           ))}
         </ul>

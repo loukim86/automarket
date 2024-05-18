@@ -12,23 +12,14 @@ const NewArrival = () => {
     dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 1,
+    slidesToShow: 4,
     slidesToScroll: 1,
-    autoplay: false,
+    autoplay: true,
     autoplaySpeed: 3000,
     cssEase: "linear",
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
     responsive: [
-      {
-        breakpoint: 3023,
-        settings: {
-          slidesToShow: 4,
-          slidesToScroll: 3,
-          infinite: true,
-          dots: false,
-        },
-      },
       {
         breakpoint: 1800,
         settings: {
@@ -50,6 +41,8 @@ const NewArrival = () => {
         settings: {
           slidesToShow: 2.5,
           slidesToScroll: 6,
+          nextArrow: null,
+          prevArrow: null,
         },
       },
       {
@@ -57,6 +50,18 @@ const NewArrival = () => {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 6,
+          nextArrow: null,
+          prevArrow: null,
+        },
+      },
+      {
+        breakpoint: 320,
+        settings: {
+          dots: true,
+          slidesToShow: 1.05,
+          slidesToScroll: 1,
+          nextArrow: null,
+          prevArrow: null,
         },
       },
     ],
@@ -67,14 +72,15 @@ const NewArrival = () => {
         <div className="arrival-title">
           <p>NEW ARRIVAL</p>
         </div>
-        {/* <div className="card-car__container"> */}
         <Slider {...settings}>
           <CardCar />
           <CardCar />
           <CardCar />
           <CardCar />
+          <CardCar />
+          <CardCar />
+          <CardCar />
         </Slider>
-        {/* </div> */}
       </div>
     </div>
   );

@@ -11,3 +11,14 @@
   line-height: 1.3581rem;
   margin-top: 1.25rem;
 }
+
+@media (max-width: 600px) {
+  .text-mobile {
+    display: none;
+  }
+  .tab-description {
+    width: 30rem;
+    height: 15rem;
+  }
+
+}

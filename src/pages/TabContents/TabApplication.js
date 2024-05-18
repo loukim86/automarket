@@ -1,4 +1,3 @@
-
 import "../../styles/tab-application.css";
 
 const TabApplication = () => {

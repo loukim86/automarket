@@ -11,7 +11,7 @@ const SimilarCarsSlider = () => {
     dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 1,
+    slidesToShow: 4,
     slidesToScroll: 1,
     autoplay: false,
     autoplaySpeed: 3000,
@@ -31,7 +31,7 @@ const SimilarCarsSlider = () => {
       {
         breakpoint: 1020,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 3,
           slidesToScroll: 6,
         },
       },
@@ -40,6 +40,8 @@ const SimilarCarsSlider = () => {
         settings: {
           slidesToShow: 2.5,
           slidesToScroll: 6,
+          nextArrow: null,
+          prevArrow: null,
         },
       },
       {

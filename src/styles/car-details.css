@@ -96,7 +96,97 @@
   font-weight: 400;
   font-size: 2rem;
   margin-top: 6%;
- 
   margin-bottom: 4%;
- 
+}
+
+.mobile-car-slider {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .slider-desktop,
+  .img-box-desktop {
+    display: none;
+  }
+
+  .mobile-car-slider {
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+    max-width: 30rem;
+    margin: 0 auto;
+  }
+
+  .selected-img {
+    width: 30rem;
+    height: auto;
+    border-radius: 0.3125rem;
+  }
+
+  .car-details-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 30rem;
+    margin: 0;
+  }
+
+  .container-wrapper {
+    margin: 0 auto;
+    max-width: 30rem;
+  }
+
+  .car-details-info {
+    width: 30rem;
+    margin-top: 20px;
+  }
+
+  .car-details-title,
+  .car-details-price {
+    font-size: 1.3rem;
+  }
+
+  .car-details-content {
+    font-size: 1rem;
+    line-height: 1.4rem;
+    color: var(--menu-text);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 18rem;
+  }
+
+  .similar-car-title {
+    margin-top: 50%;
+    font-size: 1.4rem;
+  }
+
+  .similar-cars {
+    margin-top: 4%;
+  }
+    
+  .car-details-button {
+    width: 100%;
+  }
+
+  .car-slider .slick-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  .tab-buttons {
+    margin-bottom: 2%;
+    margin-top: 4%;
+  }
+
+  .tab-buttons button {
+    font-size: 1rem;
+    font-family: "Tahoma", sans-serif;
+    font-weight: 400;
+    margin-right: 4%;
+    cursor: pointer;
+    padding-bottom: 0.3125rem;
+    border-bottom: 2px solid transparent;
+  }
 }

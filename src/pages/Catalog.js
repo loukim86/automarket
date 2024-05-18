@@ -59,19 +59,19 @@ const Catalog = () => {
         <div className="catalog-category-links">
           <button
             onClick={() => setCategory("all")}
-            className={category === "all" ? "active" : ""}
+            className={category === "all" ? "active-btn" : ""}
           >
             All
           </button>
           <button
             onClick={() => setCategory("korean")}
-            className={category === "korean" ? "active" : ""}
+            className={category === "korean" ? "active-btn" : ""}
           >
             Korean Auto
           </button>
           <button
             onClick={() => setCategory("european")}
-            className={category === "european" ? "active" : ""}
+            className={category === "european" ? "active-btn" : ""}
           >
             European Auto
           </button>

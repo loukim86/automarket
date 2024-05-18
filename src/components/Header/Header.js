@@ -19,7 +19,6 @@ const Header = () => {
   return (
     <>
       <nav>
-        {/* for mobile temporarily!!!*/}
         <div className={`mobile-navbar ${nav ? "open-nav" : ""}`}>
           <div onClick={openNav} className="mobile-navbar__close">
             <GrClose />
@@ -52,8 +51,6 @@ const Header = () => {
             </li>
           </ul>
         </div>
-
-        {/* desktop */}
 
         <div className="navbar">
           <div className="mobile-hamb" onClick={openNav}>
@@ -105,8 +102,6 @@ const Header = () => {
               <img src={user} alt="user icon" className="user" />
             </Link>
           </div>
-
-          {/* mobile */}
         </div>
       </nav>
     </>
