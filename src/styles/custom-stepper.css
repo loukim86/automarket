@@ -175,3 +175,9 @@
   font-weight: 400;
   color: var(--price-text);
 }
+
+@media (max-width: 800px) {
+  .status-section {
+    width: 100%;
+  }
+}

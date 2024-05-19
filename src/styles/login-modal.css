@@ -1,5 +1,6 @@
 .modal {
-  width: 33.5625rem;
+  width: 90%;
+  max-width: 33.5625rem;
   height: 28.875rem;
   margin: 0 auto;
   border: 0.0625rem solid var(--menu-text);
@@ -26,7 +27,8 @@
   text-align: center;
   padding: 1.25rem;
   margin: 0;
-  width: 33.5625rem;
+  width: 100%;
+  max-width: 33.5625rem;
   height: 22.875rem;
 }
 
@@ -40,7 +42,7 @@
 .middle-word {
   font-size: 0.875rem;
   color: var(--menu-text);
-  padding: 0.625rem;
+  padding: 0.4rem;
 }
 
 .signin-button {
@@ -79,4 +81,98 @@
 
 .forgot-password:hover {
   text-decoration: underline;
+}
+
+@media (max-width: 800px) {
+  .middle-word {
+    display: none;
+  }
+
+  .modal {
+    width: 100%;
+    border: none;
+  }
+
+  .modal-title {
+    font-size: 2.5rem;
+  }
+
+  .modal-form {
+    width: 100%;
+    padding: 1.25rem 0;
+  }
+
+  .modal-form input {
+    width: 100%;
+  }
+
+  .forgot-password {
+    right: 2rem;
+  }
+
+  .signin-button {
+    margin-top: 3%;
+  }
+
+  .input-field::placeholder {
+    color: #ccc;
+    font-size: 0.75rem;
+  }
+
+  .forgot-password {
+    font-size: 0.9rem;
+  }
+
+  .signin-button,
+  .login-button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .modal {
+    width: 100%;
+  }
+
+  .modal-title {
+    font-size: 2rem;
+  }
+
+  .modal-form {
+    width: 100%;
+  }
+
+  .modal-form input {
+    width: 100%;
+  }
+
+  .forgot-password {
+    right: 1rem;
+  }
+}
+
+@media (max-width: 370px) {
+  .modal {
+    width: 100%;
+  }
+
+  .modal-title {
+    font-size: 2rem;
+  }
+
+  .modal-form {
+    width: 100%;
+  }
+
+  .modal-form input {
+    width: 100%;
+  }
+
+  .input-field {
+    width: 100%;
+  }
+
+  .forgot-password {
+    right: 1rem;
+  }
 }

@@ -1,5 +1,6 @@
 .user-page-wrapper {
-  width: 72.2188rem;
+  max-width: 72.2188rem;
+  width: 100%;
   height: auto;
   margin: 0 auto;
 }
@@ -11,6 +12,46 @@
 
 .user-profile-container {
   padding: 0 0 0 1.25rem;
-  /* overflow-y: auto;
-  overflow-x: hidden; */
+}
+
+@media (max-width: 800px) {
+  .user-page {
+    flex-direction: column;
+  }
+
+  .user-profile-container {
+    display: none;
+    padding: 1rem;
+  }
+
+  .user-profile-container.active {
+    display: block; 
+  }
+
+  .user-sidebar {
+    width: 100%;
+    height: auto;
+    background-color: white;
+    z-index: 1000;
+    overflow-y: auto;
+    transition: transform 0.3s ease;
+  }
+
+  .user-sidebar.hidden {
+    display: none; 
+  }
+
+  .sidebar-toggle {
+    display: none;
+  }
+
+  .back-button {
+    display: block;
+    margin: 1rem 0;
+    background-color: transparent;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    color: var(--menu-text);
+  }
 }

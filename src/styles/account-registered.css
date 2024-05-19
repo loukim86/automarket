@@ -34,6 +34,62 @@
   font-family: "Tahoma", sans-serif;
   font-size: 1.125rem;
   font-weight: 700;
-  border-radius: .6544rem;
+  border-radius: 0.6544rem;
   margin-top: 1.875rem;
+}
+
+@media (max-width: 800px) {
+  .success {
+    width: 100%;
+    border: none;
+    padding: 0;
+  }
+
+  .success-title {
+    font-size: 1.25rem;
+    padding: 0;
+  }
+
+  .success-text {
+    font-size: 0.75rem;
+    padding: 0;
+  }
+
+  .success-button {
+    margin-top: 7%;
+    width: 100%;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .email-code {
+    width: 100%;
+  }
+
+  .email-code-form {
+    width: 100%;
+  }
+
+  .email-code-form input {
+    width: 100%;
+  }
+}
+
+@media (max-width: 370px) {
+  .email-code {
+    width: 100%;
+  }
+
+  .email-code-form {
+    width: 100%;
+  }
+
+  .email-code-form input {
+    width: 100%;
+  }
+
+  .input-field {
+    width: 100%;
+  }
 }

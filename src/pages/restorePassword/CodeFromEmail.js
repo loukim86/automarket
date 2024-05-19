@@ -44,7 +44,6 @@ const CodeFromEmail = () => {
             </div>
             <p className="code-notice">
               If you have not received a confirmation code within 2 minutes,
-              <br />
               contact Help&Support
             </p>
 

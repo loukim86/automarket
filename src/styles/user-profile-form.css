@@ -78,3 +78,37 @@
 .edit-button:hover {
   background-color: darkred;
 }
+
+@media (max-width: 800px) {
+  .user-profile-form {
+    border: none;
+    width: 100%;
+    padding: 0;
+  }
+
+  .user-profile-form input {
+    width: 100%;
+  }
+
+  .user-profile-container.active {
+    padding: 0;
+  }
+
+  .user-profile-form input::placeholder,
+  .user-profile-form textarea::placeholder {
+    font-size: 0.75rem;
+  }
+
+  .password-row {
+    display: block;
+    width: 80%;
+  }
+
+  .user-profile-form .phone {
+    width: 80%;
+  }
+
+  .edit-button {
+    width: 40%;
+  }
+}

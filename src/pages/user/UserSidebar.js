@@ -12,6 +12,7 @@ import "../../styles/user-sidebar.css";
 const UserSidebar = ({ onSelect }) => {
   const [activeItem, setActiveItem] = useState("Profile");
   const navigate = useNavigate();
+  const isMobile = window.innerWidth <= 800;
 
   const handleItemClick = (item) => {
     setActiveItem(item);
@@ -26,7 +27,9 @@ const UserSidebar = ({ onSelect }) => {
     <div className="sidebar">
       <ul className="sidebar-list">
         <li
-          className={`sidebar-item ${activeItem === "Profile" ? "active" : ""}`}
+          className={`sidebar-item ${
+            !isMobile && activeItem === "Profile" ? "active" : ""
+          }`}
           onClick={() => handleItemClick("Profile")}
         >
           <img src={profile} alt="" className="sidebar-icon profile" />
@@ -34,7 +37,7 @@ const UserSidebar = ({ onSelect }) => {
         </li>
         <li
           className={`sidebar-item ${
-            activeItem === "Shopping cart" ? "active" : ""
+            !isMobile && activeItem === "Shopping cart" ? "active" : ""
           }`}
           onClick={() => handleItemClick("Shopping cart")}
         >
@@ -43,7 +46,7 @@ const UserSidebar = ({ onSelect }) => {
         </li>
         <li
           className={`sidebar-item ${
-            activeItem === "Favourite" ? "active" : ""
+            !isMobile && activeItem === "Favourite" ? "active" : ""
           }`}
           onClick={() => handleItemClick("Favourite")}
         >
@@ -52,7 +55,7 @@ const UserSidebar = ({ onSelect }) => {
         </li>
         <li
           className={`sidebar-item ${
-            activeItem === "Order history" ? "active" : ""
+            !isMobile && activeItem === "Order history" ? "active" : ""
           }`}
           onClick={() => handleItemClick("Order history")}
         >
@@ -61,7 +64,7 @@ const UserSidebar = ({ onSelect }) => {
         </li>
         <li
           className={`sidebar-item ${
-            activeItem === "Notification" ? "active" : ""
+            !isMobile && activeItem === "Notification" ? "active" : ""
           }`}
           onClick={() => handleItemClick("Notification")}
         >
@@ -74,7 +77,7 @@ const UserSidebar = ({ onSelect }) => {
         </li>
         <li
           className={`sidebar-item ${
-            activeItem === "Help & Support" ? "active" : ""
+            !isMobile && activeItem === "Help & Support" ? "active" : ""
           }`}
           onClick={() => handleItemClick("Help & Support")}
         >
@@ -84,7 +87,7 @@ const UserSidebar = ({ onSelect }) => {
         <hr />
         <li
           className={`sidebar-item logout ${
-            activeItem === "Log out" ? "active" : ""
+            !isMobile && activeItem === "Log out" ? "active" : ""
           }`}
           onClick={() => handleItemClick("Log out")}
         >

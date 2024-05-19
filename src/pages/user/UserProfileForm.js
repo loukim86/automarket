@@ -110,6 +110,7 @@ const UserProfileForm = () => {
         value={formData.phone}
         onChange={handleChange}
         placeholder="Phone number"
+        className="phone"
       />
       <div className="upload-button" onClick={handleUploadClick}>
         <img src={iconDw} alt="Upload" />

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState, useEffect } from "react";
 import UserProfileForm from "./UserProfileForm";
 import UserSidebar from "./UserSidebar";
 import OrderStatus from "./order-history/OrderStatus";
@@ -12,7 +12,20 @@ import UserShoppingCart from "./UserShoppingCart";
 import "../../styles/user-page.css";
 
 const UserPage = () => {
-  const [selectedComponent, setSelectedComponent] = useState("Profile");
+  const [selectedComponent, setSelectedComponent] = useState(null);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 800);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 800);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    setSelectedComponent(window.innerWidth > 800 ? "Profile" : null);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const renderComponent = () => {
     switch (selectedComponent) {
@@ -28,10 +41,17 @@ const UserPage = () => {
         return <Notification />;
       case "Help & Support":
         return <Faq />;
-
       default:
-        return <UserProfileForm />;
+        return null;
     }
+  };
+
+  const handleSelectComponent = (component) => {
+    setSelectedComponent(component);
+  };
+
+  const handleBackToSidebar = () => {
+    setSelectedComponent(null);
   };
 
   return (
@@ -39,8 +59,31 @@ const UserPage = () => {
       <div className="container">
         <div className="user-page-wrapper">
           <div className="user-page">
-            <UserSidebar onSelect={setSelectedComponent} />
-            <div className="user-profile-container">{renderComponent()}</div>
+            {isMobile && !selectedComponent && (
+              <UserSidebar
+                onSelect={handleSelectComponent}
+                className="user-sidebar"
+              />
+            )}
+            {isMobile && selectedComponent && (
+              <div className="user-profile-container active">
+                <button className="back-button" onClick={handleBackToSidebar}>
+                  Go back to menu
+                </button>
+                {renderComponent()}
+              </div>
+            )}
+            {!isMobile && (
+              <>
+                <UserSidebar
+                  onSelect={handleSelectComponent}
+                  className="user-sidebar"
+                />
+                <div className="user-profile-container">
+                  {renderComponent()}
+                </div>
+              </>
+            )}
           </div>
         </div>
       </div>

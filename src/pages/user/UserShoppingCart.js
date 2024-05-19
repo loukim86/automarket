@@ -8,6 +8,9 @@ const UserShoppingCart = () => {
   
   return (
     <div className="shopping-cart-wrapper">
+      <div className="user-shopping-title">
+        <p className="shopping-title">SHOPPING CART</p>
+      </div>
       <div className="user-shopping-cart">
         <CartSelection
           photo="Photo"
