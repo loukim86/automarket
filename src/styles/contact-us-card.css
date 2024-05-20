@@ -83,21 +83,21 @@
   max-height: 1.8125rem;
 }
 
+.contact-us-card-desktop {
+  display: block;
+}
+
+.contact-us-card-mobile {
+  display: none;
+}
+
 @media (max-width: 600px) {
-  .contact-us {
+  .contact-us-card-desktop {
     display: none;
   }
-
-  .contact {
-    font-size: 0.75rem;
-    line-height: .905rem;
-  }
-
-  .contact-details {
-    max-width: 10.75rem;
-    max-height: 8rem;
-    margin-top: 0;
-  }
-
   
+  .contact-us-card-mobile {
+    display: block;
+  }
 }
+

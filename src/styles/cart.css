@@ -80,14 +80,17 @@
   border-top-right-radius: 0.3069rem;
 }
 
-@media (max-width: 600px) {
-  .shopping-cart .cart-title {
-    font-size: 1.25rem;
-    margin-bottom: 2rem;
-    margin-left: 40px;
-  }
+@media (max-width: 1000px) {
+}
 
+@media (max-width: 800px) {
   .shopping-cart-details {
     display: none;
   }
+  .shopping-cart .cart-title {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    
+  }
 }
+

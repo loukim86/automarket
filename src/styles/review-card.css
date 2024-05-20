@@ -9,7 +9,8 @@
 }
 
 .review-card__image img {
-  width: 15.6225rem;
+  max-width: 15.6225rem;
+  width: 100%;
   height: 12.35rem;
 }
 
@@ -32,20 +33,66 @@
 
 .review-card__header .review-card__title {
   font-size: 1.5rem;
-  margin-right: .625rem;
+  margin-right: 0.625rem;
 }
 
 .review-icon {
   width: 1.2456rem;
   height: 1.2862rem;
-  margin-top: .3125rem;
+  margin-top: 0.3125rem;
 }
 
 .review-card__date {
   font-size: 0.875rem;
 }
 
-.review-card__content p {
+.review-card__text {
   margin: 0;
   font-size: 1.125rem;
+}
+
+@media (max-width: 800px) {
+  .review-card {
+    padding: 0;
+    border: none;
+    border-radius: 0.3125rem;
+  }
+  .review-card__image img {
+    width: 100%;
+    border-top-left-radius: 0.3125rem;
+    border-bottom-left-radius: 0.3125rem;
+  }
+  .review-card__content {
+    margin: 0;
+    background: var(--grid);
+    padding: 0.3125rem;
+    border-top-right-radius: 0.3125rem;
+    border-bottom-right-radius: 0.3125rem;
+  }
+  .review-card__header .review-card__title {
+    font-size: 0.875rem;
+    margin-right: 0.625rem;
+  }
+  .review-card__date {
+    font-size: 0.625rem;
+  }
+  .review-card__inner {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .review-card__rating {
+    align-items: center;
+  }
+  .review-card__text {
+    margin: 0;
+    font-size: 1.125rem;
+    color: var(--text);
+  }
+  .review-card__title {
+    color: black;
+  }
+  .review-card__date {
+    margin-bottom: 15%;
+  }
 }

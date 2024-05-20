@@ -11,7 +11,6 @@
   width: 100%;
   height: 100vh;
   padding: 20px;
- 
 }
 
 .footer-img {
@@ -66,9 +65,6 @@
   display: none;
 }
 
-.contact-us-card {
-  display: none;
-}
 
 @media (max-width: 600px) {
   .logo-desktop {
@@ -76,10 +72,6 @@
   }
 
   .logo-mobile {
-    display: block;
-  }
-
-  .contact-us-card {
     display: block;
   }
 
@@ -94,20 +86,24 @@
 
   .footer {
     align-items: center;
-    padding: 20px;
+    padding: 0;
     margin-top: 7rem;
+    display: flex;
+    justify-content: left;
+    
+    column-gap: 0rem;
   }
 
   .footer-menu {
     flex-direction: column;
     margin: 0;
     padding: 0;
-    font-size: 0.75rem;
     width: 100%;
   }
 
   .footer-menu a {
-    padding: 5px;
+    padding: .3125rem;
+    font-size: 0.75rem;
   }
 
   .contact-us h2 {

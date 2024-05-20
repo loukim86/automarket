@@ -20,7 +20,7 @@ const ReviewCard = ({ image, name, date, rating, text }) => {
           <div className="review-card__date">{date}</div>
         </div>
 
-        <p>{text}</p>
+        <p className="review-card__text">{text}</p>
       </div>
     </div>
   );

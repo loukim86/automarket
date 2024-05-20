@@ -91,10 +91,30 @@
   font-size: 2rem;
 }
 
+.text-content {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+}
+
+@media (max-width: 800px) {
+  .catalog-card {
+    width: 15.8681rem;
+    height: 26.2056rem;
+  }
+  .text-content {
+    -webkit-line-clamp: 4;
+  }
+}
+
 @media (max-width: 600px) {
   .catalog-card {
     width: 15.8681rem;
     height: 26.2056rem;
-    
+  }
+  .text-content {
+    -webkit-line-clamp: 4;
   }
 }

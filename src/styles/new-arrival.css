@@ -24,7 +24,7 @@
   margin: 0;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
   .arrival-container {
     margin-left: 0;
     margin-right: 0;
@@ -34,6 +34,21 @@
 
   .arrival-title {
     font-size: 1.7rem;
+    margin-bottom: 1.625rem;
+    line-height: 1.5088rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .arrival-container {
+    margin-left: 0;
+    margin-right: 0;
+    height: 19.5rem;
+    padding: 0;
+  }
+
+  .arrival-title {
+    font-size: 1.25rem;
     margin-bottom: 1.625rem;
     line-height: 1.5088rem;
   }

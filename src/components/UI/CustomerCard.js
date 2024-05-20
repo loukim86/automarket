@@ -18,7 +18,7 @@ const CustomerCard = () => {
         </div>
 
         <div className="card-text">
-          <p>
+          <p className="text-content">
             Lorem ipsum dolor sit amet consectetur. Odio elit cras senectus
             posuere varius ullamcorper pulvinar nec. Cursus adipiscing arcu diam
             platea volutpat viverra sollicitudin nulla. Et eget quam imperdiet

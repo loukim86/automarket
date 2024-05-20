@@ -89,17 +89,17 @@
   transition: all 0.3s;
 }
 
-.heart {
+.heart-icon {
   width: 1.8125rem;
   height: 1.8125rem;
 }
 
-.cart {
+.cart-icon {
   width: 1.875rem;
   height: 1.875rem;
 }
 
-.user {
+.user-icon {
   width: 2.375rem;
   height: 2.375rem;
 }
@@ -173,11 +173,68 @@
   left: 0;
 }
 
+
 @media (max-width: 1000px) {
+  .navbar {
+    padding: 1rem 1rem;
+  }
+
   .navbar__links {
     display: none;
   }
+
+  .navbar__img {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 15%;
+  }
+
+  .navbar__img img,
+  .navbar__img p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  .navbar__img img {
+    margin-left: 1.875rem;
+  }
+
+  .main-logo {
+    max-width: 1.5625rem;
+    max-height: 1.5625rem;
+  }
+
+  .logo-text {
+    font-size: 0.7125rem;
+  }
+
+  .heart-icon {
+    max-width: 1.2125rem;
+    max-height: 1.2125rem;
+  }
+
+  .cart-icon {
+    max-width: 1.2375rem;
+    max-height: 1.2375rem;
+  }
+
+  .user-icon {
+    max-width: 1.5681rem;
+    max-height: 1.5681rem;
+  }
+
+  .navbar__icons a {
+    padding-right: 0.5rem;
+  }
+
+  .mobile-hamb {
+    display: flex;
+  }
 }
+
 
 @media (max-width: 600px) {
   .navbar {
@@ -216,17 +273,17 @@
     font-size: 0.7125rem;
   }
 
-  .heart {
+  .heart-icon {
     max-width: 1.2125rem;
     max-height: 1.2125rem;
   }
 
-  .cart {
+  .cart-icon {
     max-width: 1.2375rem;
     max-height: 1.2375rem;
   }
 
-  .user {
+  .user-icon {
     max-width: 1.5681rem;
     max-height: 1.5681rem;
   }

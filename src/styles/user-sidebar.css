@@ -81,6 +81,36 @@ hr {
   width: 10.5625rem;
 }
 
+@media (max-width: 1000px) {
+  .sidebar {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 0.3125rem;
+  }
+
+  hr {
+    display: none;
+  }
+
+  .sidebar-item.active {
+    background-color: transparent;
+    border: none;
+  }
+
+  .sidebar-item::after {
+    content: ">";
+    margin-left: auto;
+    font-size: 1.5rem;
+    color: #000;
+  }
+
+  .sidebar-list .sidebar-item {
+    padding: 0.3rem 0;
+  }
+}
+
 @media (max-width: 800px) {
   .sidebar {
     width: 100%;

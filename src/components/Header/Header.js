@@ -93,13 +93,13 @@ const Header = () => {
           </ul>
           <div className="navbar__icons">
             <Link to="/favorite">
-              <img src={heart} alt="heart icon" className="heart" />
+              <img src={heart} alt="heart icon" className="heart-icon" />
             </Link>
             <Link to="/cart">
-              <img src={cart} alt="cart icon" className="cart" />
+              <img src={cart} alt="cart icon" className="cart-icon" />
             </Link>
             <Link to="/user">
-              <img src={user} alt="user icon" className="user" />
+              <img src={user} alt="user icon" className="user-icon" />
             </Link>
           </div>
         </div>

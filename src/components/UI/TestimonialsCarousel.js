@@ -8,8 +8,8 @@ import "../../styles/testimonials-carousel.css";
 const TestimonialsCarousel = () => {
   const navigate = useNavigate();
 
-  const settings = {
-    dots: false,
+  const settingsReview = {
+    dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
@@ -19,10 +19,10 @@ const TestimonialsCarousel = () => {
     cssEase: "linear",
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 800,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 3,
+          slidesToScroll: 1,
           infinite: true,
           dots: true,
         },
@@ -31,14 +31,15 @@ const TestimonialsCarousel = () => {
         breakpoint: 600,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 6,
+          slidesToScroll: 1,
+          dots: true,
         },
       },
       {
-        breakpoint: 480,
+        breakpoint: 370,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 6,
+          slidesToScroll: 1,
         },
       },
     ],
@@ -54,7 +55,7 @@ const TestimonialsCarousel = () => {
         <div className="testimonial-title">
           <p>WHAT OUR CUSTOMERS SAY</p>
         </div>
-        <Slider {...settings}>
+        <Slider {...settingsReview}>
           <CustomerCard />
           <CustomerCard />
           <CustomerCard />

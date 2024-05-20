@@ -12,7 +12,7 @@ import "../../styles/user-sidebar.css";
 const UserSidebar = ({ onSelect }) => {
   const [activeItem, setActiveItem] = useState("Profile");
   const navigate = useNavigate();
-  const isMobile = window.innerWidth <= 800;
+  const isMobile = window.innerWidth <= 1000;
 
   const handleItemClick = (item) => {
     setActiveItem(item);

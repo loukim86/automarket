@@ -1,9 +1,13 @@
 import { useState } from "react";
+import Slider from "react-slick";
+import { useMediaQuery } from "react-responsive";
 import ReviewCard from "./ReviewCard";
 import { IoMdStarOutline, IoMdStar } from "react-icons/io";
 import Footer from "../../components/Footer/Footer";
 import SuccessPopup from "../../components/UI/SuccessPopup";
 import iconDw from "../../assets/img/icon-dw.svg";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import "../../styles/review-form.css";
 
 const ReviewForm = () => {
@@ -16,6 +20,8 @@ const ReviewForm = () => {
     rating: 0,
   });
   const [showSuccessPopup, setShowSuccessPopup] = useState(false);
+
+  const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -41,10 +47,19 @@ const ReviewForm = () => {
       image: "",
       rating: 0,
     });
+    setShowSuccessPopup(true);
   };
 
   const closeSuccessPopup = () => {
     setShowSuccessPopup(false);
+  };
+
+  const settings = {
+    dots: true,
+    infinite: false,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
   };
 
   return (
@@ -53,24 +68,47 @@ const ReviewForm = () => {
         <div className="review-form__wrapper">
           <p className="review-form__title">CAR OWNER REVIEWS</p>
           <div className="review-form__card">
-            {reviews.map((review, index) => (
-              <ReviewCard
-                key={index}
-                image={review.image}
-                name={review.fullName}
-                date={review.dateOfPurchase}
-                rating={Array(5)
-                  .fill(<IoMdStarOutline className="review-icon" />)
-                  .map((star, i) =>
-                    i < review.rating ? (
-                      <IoMdStar key={i} className="review-icon filled" />
-                    ) : (
-                      <IoMdStarOutline key={i} className="review-icon" />
-                    )
-                  )}
-                text={review.additionalComment}
-              />
-            ))}
+            {isMobile ? (
+              <Slider {...settings}>
+                {reviews.map((review, index) => (
+                  <ReviewCard
+                    key={index}
+                    image={review.image}
+                    name={review.fullName}
+                    date={review.dateOfPurchase}
+                    rating={Array(5)
+                      .fill(<IoMdStarOutline className="review-icon" />)
+                      .map((star, i) =>
+                        i < review.rating ? (
+                          <IoMdStar key={i} className="review-icon filled" />
+                        ) : (
+                          <IoMdStarOutline key={i} className="review-icon" />
+                        )
+                      )}
+                    text={review.additionalComment}
+                  />
+                ))}
+              </Slider>
+            ) : (
+              reviews.map((review, index) => (
+                <ReviewCard
+                  key={index}
+                  image={review.image}
+                  name={review.fullName}
+                  date={review.dateOfPurchase}
+                  rating={Array(5)
+                    .fill(<IoMdStarOutline className="review-icon" />)
+                    .map((star, i) =>
+                      i < review.rating ? (
+                        <IoMdStar key={i} className="review-icon filled" />
+                      ) : (
+                        <IoMdStarOutline key={i} className="review-icon" />
+                      )
+                    )}
+                  text={review.additionalComment}
+                />
+              ))
+            )}
           </div>
 
           <div className="review-form__content">
@@ -117,7 +155,6 @@ const ReviewForm = () => {
                 </div>
                 <div className="file-upload-wrapper">
                   <input
-                    t
                     type="file"
                     id="file1"
                     className="file-input"
@@ -132,7 +169,6 @@ const ReviewForm = () => {
                     />
                   </label>
                   <input
-                    t
                     type="file"
                     id="file2"
                     className="file-input"
@@ -147,7 +183,6 @@ const ReviewForm = () => {
                     />
                   </label>
                   <input
-                    t
                     type="file"
                     id="file3"
                     className="file-input"
@@ -162,14 +197,13 @@ const ReviewForm = () => {
                     />
                   </label>
                   <input
-                    t
                     type="file"
                     id="file4"
                     className="file-input"
                     name="image"
                     onChange={handleFileChange}
                   />
-                  <label htmlFor="file3" className="file-label">
+                  <label htmlFor="file4" className="file-label">
                     <img
                       src={iconDw}
                       alt="Upload"
@@ -177,14 +211,13 @@ const ReviewForm = () => {
                     />
                   </label>
                   <input
-                    t
                     type="file"
                     id="file5"
                     className="file-input"
                     name="image"
                     onChange={handleFileChange}
                   />
-                  <label htmlFor="file4" className="file-label">
+                  <label htmlFor="file5" className="file-label">
                     <img
                       src={iconDw}
                       alt="Upload"

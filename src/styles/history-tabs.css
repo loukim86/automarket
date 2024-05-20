@@ -18,6 +18,12 @@
 
 @media (max-width: 800px) {
   .tabs {
-    font-size: 0.875rem;
+    font-size: 0.9rem;
+    justify-content: space-between;
+    max-width: 18.75rem;
+  }
+  .tab {
+    padding: 0;
+    padding-bottom: 5px;
   }
 }

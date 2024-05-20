@@ -13,16 +13,16 @@ import "../../styles/user-page.css";
 
 const UserPage = () => {
   const [selectedComponent, setSelectedComponent] = useState(null);
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 800);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 1000);
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth <= 800);
+      setIsMobile(window.innerWidth <= 1000);
     };
 
     window.addEventListener("resize", handleResize);
 
-    setSelectedComponent(window.innerWidth > 800 ? "Profile" : null);
+    setSelectedComponent(window.innerWidth > 1000 ? "Profile" : null);
 
     return () => window.removeEventListener("resize", handleResize);
   }, []);

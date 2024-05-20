@@ -8,57 +8,61 @@ import "../../styles/testimonials-carousel.css";
 import "../../styles/new-arrival.css";
 
 const NewArrival = () => {
-  const settings = {
+  const settingsArrival = {
     dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 1,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 3000,
     cssEase: "linear",
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
     responsive: [
       {
-        breakpoint: 1800,
+        breakpoint: 1000,
         settings: {
-          slidesToShow: 4,
-          slidesToScroll: 3,
-          infinite: true,
-          dots: false,
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          nextArrow: null,
+          prevArrow: null,
         },
       },
       {
-        breakpoint: 1020,
+        breakpoint: 800,
         settings: {
-          slidesToShow: 2,
-          slidesToScroll: 6,
+          slidesToShow: 2.1,
+          slidesToScroll: 1,
+          nextArrow: null,
+          prevArrow: null,
         },
       },
       {
         breakpoint: 600,
+        dots: true,
         settings: {
-          slidesToShow: 2.5,
-          slidesToScroll: 6,
+          slidesToShow: 2,
+          slidesToScroll: 1,
           nextArrow: null,
           prevArrow: null,
         },
       },
       {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 6,
-          nextArrow: null,
-          prevArrow: null,
-        },
-      },
-      {
-        breakpoint: 320,
+        breakpoint: 400,
         settings: {
           dots: true,
-          slidesToShow: 1.05,
+          slidesToShow: 1.7,
+          slidesToScroll: 1,
+          nextArrow: null,
+          prevArrow: null,
+        },
+      },
+      {
+        breakpoint: 370,
+        settings: {
+          dots: true,
+          slidesToShow: 1.7,
           slidesToScroll: 1,
           nextArrow: null,
           prevArrow: null,
@@ -72,7 +76,7 @@ const NewArrival = () => {
         <div className="arrival-title">
           <p>NEW ARRIVAL</p>
         </div>
-        <Slider {...settings}>
+        <Slider {...settingsArrival}>
           <CardCar />
           <CardCar />
           <CardCar />

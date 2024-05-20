@@ -74,7 +74,11 @@ const CustomStepper = () => {
               <div className="status-dot">
                 {index === 1 && (
                   <span className="status-icon">
-                    <img src={carStatus} alt="Car Icon" className="car-icon" />
+                    <img
+                      src={carStatus}
+                      alt="Car Icon"
+                      className="car-icon-status"
+                    />
                   </span>
                 )}
               </div>
@@ -91,6 +95,7 @@ const CustomStepper = () => {
       </div>
       <div className="history-section">
         <h2>History</h2>
+
         <div className="history-timeline">
           {historyItems.map((item, index) => (
             <div key={item.id} className="history-item">

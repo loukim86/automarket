@@ -5,7 +5,7 @@ import "../../styles/user-shopping-cart.css";
 
 const UserShoppingCart = () => {
   const { cartItems, removeFromCart } = useFavorites();
-  
+
   return (
     <div className="shopping-cart-wrapper">
       <div className="user-shopping-title">

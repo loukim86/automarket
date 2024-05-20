@@ -46,7 +46,7 @@ const Footer = () => {
             </NavLink>
           ))}
         </div>
-        <div className="contact-us-card">
+        <div className="contact-us-card-mobile">
           <ContactUsCard />
         </div>
       </div>

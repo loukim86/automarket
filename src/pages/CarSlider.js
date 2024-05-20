@@ -7,7 +7,7 @@ import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
 
 const CarSlider = ({ car, activeImage, setActiveImage }) => {
-  const settings = {
+  const settingsCars = {
     dots: false,
     infinite: true,
     speed: 500,
@@ -19,10 +19,10 @@ const CarSlider = ({ car, activeImage, setActiveImage }) => {
     nextArrow: <CustomNextArrow />,
     responsive: [
       {
-        breakpoint: 600,
+        breakpoint: 400,
         settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
+          slidesToShow: 2,
+          slidesToScroll: 1,
           vertical: false,
           verticalSwiping: false,
           prevArrow: null,
@@ -39,7 +39,7 @@ const CarSlider = ({ car, activeImage, setActiveImage }) => {
   return (
     <>
       <div className="car-slider slider-desktop">
-        <Slider {...settings}>
+        <Slider {...settingsCars}>
           {car.images.map((image, index) => (
             <div key={index} onClick={() => handleImageClick(image)}>
               <img
@@ -68,7 +68,7 @@ const CarSlider = ({ car, activeImage, setActiveImage }) => {
           )}
         </div>
         <div className="car-slider">
-          <Slider {...settings}>
+          <Slider {...settingsCars}>
             {car.images.map((image, index) => (
               <div key={index} onClick={() => handleImageClick(image)}>
                 <img

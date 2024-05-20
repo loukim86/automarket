@@ -41,7 +41,9 @@ const ContactUs = () => {
   return (
     <div className="container">
       <div className="contact-us-container">
-        <ContactUsCard />
+        <div className="contact-us-card-desktop">
+          <ContactUsCard />
+        </div>
 
         <ContactForm onSubmit={handleSubmit} />
 
@@ -59,3 +61,5 @@ const ContactUs = () => {
 };
 
 export default ContactUs;
+
+

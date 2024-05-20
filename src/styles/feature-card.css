@@ -23,11 +23,12 @@
   color: var(--menu-text);
 }
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
   .feature-card {
     width: 9.8125rem;
     height: 6.2538rem;
     padding: 0;
+    margin: .625rem;
   }
 
   .card-icon img {

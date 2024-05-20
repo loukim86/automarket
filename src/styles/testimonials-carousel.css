@@ -36,7 +36,7 @@
   cursor: pointer;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
   .testimonial-container {
     height: 15.6506rem;
     margin-left: 0;
@@ -44,7 +44,7 @@
   }
 
   .testimonial-title {
-    font-size: 1.7rem;
+    font-size: 1.25rem;
     margin-bottom: 1.625rem;
     line-height: 1.5088rem;
   }
