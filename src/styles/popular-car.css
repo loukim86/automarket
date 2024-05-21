@@ -28,7 +28,7 @@
 .grid-text {
   font-size: 1.1rem;
   color: var(--text);
-  line-height: 21.73px;
+  line-height: 1.3581rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -39,7 +39,7 @@
   display: none;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
   .grid-item__mobile {
     display: block;
   }

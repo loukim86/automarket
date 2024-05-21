@@ -9,7 +9,7 @@ const TestimonialsCarousel = () => {
   const navigate = useNavigate();
 
   const settingsReview = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
@@ -38,6 +38,7 @@ const TestimonialsCarousel = () => {
       {
         breakpoint: 370,
         settings: {
+          dots: true,
           slidesToShow: 1,
           slidesToScroll: 1,
         },

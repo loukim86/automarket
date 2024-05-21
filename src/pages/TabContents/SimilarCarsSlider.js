@@ -20,35 +20,44 @@ const SimilarCarsSlider = () => {
     prevArrow: <PrevArrow />,
     responsive: [
       {
-        breakpoint: 1800,
+        breakpoint: 900,
         settings: {
-          slidesToShow: 4,
-          slidesToScroll: 3,
-          infinite: true,
-          dots: false,
+          slidesToShow: 2.5,
+          slidesToScroll: 1,
+          nextArrow: null,
+          prevArrow: null,
+          dots: true,
         },
       },
+
       {
-        breakpoint: 1020,
+        breakpoint: 800,
         settings: {
-          slidesToShow: 3,
-          slidesToScroll: 6,
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          nextArrow: null,
+          prevArrow: null,
+          dots: true,
         },
       },
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 2.5,
-          slidesToScroll: 6,
+          slidesToShow: 2.1,
+          slidesToScroll: 1,
           nextArrow: null,
           prevArrow: null,
+          dots: true,
         },
       },
       {
-        breakpoint: 480,
+        breakpoint: 400,
         settings: {
-          slidesToShow: 1,
-          slidesToScroll: 6,
+          slidesToShow: 1.5,
+          slidesToScroll: 1,
+          nextArrow: null,
+          prevArrow: null,
+          dots: true,
         },
       },
     ],

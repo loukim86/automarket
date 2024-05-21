@@ -57,7 +57,7 @@ form button:hover {
   background-color: #cc0000;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
   form {
     width: 18.5625rem;
     height: 9.2269rem;

@@ -1,0 +1,11 @@
+.application-wrapper {
+  margin: 0 auto;
+  max-width: 72.5rem;
+  font-family: "Tahoma", sans-serif;
+}
+
+.application-title {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 2rem;
+}

@@ -23,7 +23,7 @@ const NewArrival = () => {
       {
         breakpoint: 1000,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 2.8,
           slidesToScroll: 1,
           nextArrow: null,
           prevArrow: null,

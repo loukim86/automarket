@@ -81,6 +81,10 @@
 }
 
 @media (max-width: 1000px) {
+  .shopping-cart .cart-title {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
 }
 
 @media (max-width: 800px) {
@@ -90,7 +94,5 @@
   .shopping-cart .cart-title {
     font-size: 1.25rem;
     margin-bottom: 1rem;
-    
   }
 }
-

@@ -1,8 +1,13 @@
+import '../styles/contacts.css'
 
 const Contacts = () => {
   return (
-    <div>Contacts</div>
-  )
-}
+    <div className="container">
+      <div className="contacts-wrapper">
+        <p className="contacts-title"> Application</p>
+      </div>
+    </div>
+  );
+};
 
-export default Contacts
+export default Contacts;

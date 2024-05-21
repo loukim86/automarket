@@ -118,3 +118,43 @@
     -webkit-line-clamp: 4;
   }
 }
+
+@media (max-width: 500px) {
+  .catalog-brand {
+    font-size: 1rem;
+    padding: 0.625rem;
+  }
+  .text-content {
+    -webkit-line-clamp: 4;
+  }
+  .catalog-info {
+    font-size: 0.6rem;
+  }
+  .catalog-price {
+    font-size: 1rem;
+  }
+  .catalog-button {
+    font-size: 0.7rem;
+    padding: 0;
+  }
+}
+
+@media (max-width: 400px) {
+  .catalog-brand {
+    font-size: 1rem;
+    padding: 0.625rem;
+  }
+  .text-content {
+    -webkit-line-clamp: 4;
+  }
+  .catalog-info {
+    font-size: 0.6rem;
+  }
+  .catalog-price {
+    font-size: 1rem;
+  }
+  .catalog-button {
+    font-size: 0.7rem;
+    padding: 0;
+  }
+}

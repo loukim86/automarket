@@ -12,7 +12,11 @@
   position: relative;
 }
 
-@media (max-width: 600px) {
+.contact-us-card-desktop {
+  margin-right: 15%;
+}
+
+@media (max-width: 800px) {
   .hide-on-mobile {
     display: none;
   }

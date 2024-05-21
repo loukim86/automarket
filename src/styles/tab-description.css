@@ -1,5 +1,6 @@
 .tab-description {
-  width: 72.0625rem;
+  max-width: 72.0625rem;
+  width: 100%;
   height: 20.5625rem;
   margin: 0 auto;
 }
@@ -12,13 +13,12 @@
   margin-top: 1.25rem;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
   .text-mobile {
     display: none;
   }
   .tab-description {
-    width: 30rem;
-    height: 15rem;
+    width: 100%;
+    height: 100%;
   }
-
 }

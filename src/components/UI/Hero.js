@@ -1,5 +1,6 @@
-import { useState, useEffect } from "react"
+import { useState, useEffect } from "react";
 import SearchCar from "./SearchCar";
+
 import "../../styles/hero.css";
 
 const Hero = () => {

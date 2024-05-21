@@ -1,16 +1,16 @@
 .testimonial-container {
   max-width: 72.5rem;
-  height: 40.93rem;
+  max-height: 40.93rem;
   width: 100%;
+  height: 100%;
   margin: 0 auto;
   font-family: "Tahoma", sans-serif;
   font-weight: 400;
-  position: relative;
 }
 
 .testimonial-title {
   font-size: 3rem;
-  margin-bottom: 3.625rem;
+  margin-bottom: 2.7rem;
   line-height: 3.62rem;
 }
 
@@ -18,10 +18,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  margin-top: 0.625rem;
 }
 
 .testimonial-button {
@@ -38,13 +35,11 @@
 
 @media (max-width: 800px) {
   .testimonial-container {
-    height: 15.6506rem;
-    margin-left: 0;
-    margin-right: 0;
+    height: 100%;
+    width: 100%;
   }
-
-  .testimonial-title {
-    font-size: 1.25rem;
+  .testimonial-title p {
+    font-size: 1.7rem;
     margin-bottom: 1.625rem;
     line-height: 1.5088rem;
   }
@@ -53,12 +48,22 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    margin-top: 1.25rem;
   }
 
+  .testimonial-button {
+    max-width: 10.5625rem;
+    max-height: 2.125rem;
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .testimonial-title p {
+    font-size: 1.25rem;
+    margin-bottom: 1.625rem;
+    line-height: 1.5088rem;
+  }
   .testimonial-button {
     max-width: 10.5625rem;
     max-height: 2.125rem;

@@ -19,9 +19,9 @@ const CarSlider = ({ car, activeImage, setActiveImage }) => {
     nextArrow: <CustomNextArrow />,
     responsive: [
       {
-        breakpoint: 400,
+        breakpoint: 1000,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 3,
           slidesToScroll: 1,
           vertical: false,
           verticalSwiping: false,

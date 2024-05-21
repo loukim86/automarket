@@ -1,72 +1,75 @@
+import { useState } from "react";
+import useSearchOptions from "../hooks/useSearchOptions";
+import "../../styles/mobile-search-file.css";
 
-const MobileSearchFile = ({
-  brand,
-  setBrand,
-  seria,
-  setSeria,
-  year,
-  setYear,
-  model,
-  setModel,
-  price,
-  setPrice,
-  findBrand,
-  findModel,
-  findYear,
-  priceOptions,
-  handleSubmit,
-  showFilters,
-  toggleFilters,
-}) => {
+const MobileSearchFile = ({ isAbsolute }) => {
+  const { findBrand } = useSearchOptions();
+  const [brand, setBrand] = useState("");
+  const [model, setModel] = useState("");
+  const [price, setPrice] = useState("");
+
+  const modelOptions = [
+    "Subcompact cars",
+    "Compact car",
+    "Midsize car",
+    "Sports car",
+    "Minivans",
+    "SUV's",
+  ];
+
+  const priceOptions = [
+    "0-2M",
+    "2-4M",
+    "4-6M",
+    "6-10M",
+    "10-15M",
+    "15-20M",
+    "20-25M",
+  ];
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    setBrand("");
+    setModel("");
+    setPrice("");
+  };
+
   return (
-    <form className="search-panel" onSubmit={handleSubmit}>
-      <div className="input-group">
-        <label className="brand-label">Brand</label>
-        <select value={brand} onChange={(e) => setBrand(e.target.value)}>
+    <form
+      className={`search-bar-mobile ${isAbsolute ? "absolute" : ""}`}
+      onSubmit={handleSubmit}
+    >
+      <div className="selectors">
+        <select
+          className="dropdown"
+          value={brand}
+          onChange={(e) => setBrand(e.target.value)}
+        >
+          <option value="">Brand</option>
           {findBrand.map((option, index) => (
             <option key={index} value={option}>
               {option}
             </option>
           ))}
         </select>
-      </div>
-      <div className="divider"></div>
-
-      <div className="input-group desktop-only">
-        <label>Seria</label>
-        <select value={seria} onChange={(e) => setSeria(e.target.value)}>
-          {findModel.map((option, index) => (
+        <select
+          className="dropdown"
+          value={model}
+          onChange={(e) => setModel(e.target.value)}
+        >
+          <option value="">Model</option>
+          {modelOptions.map((option, index) => (
             <option key={index} value={option}>
               {option}
             </option>
           ))}
         </select>
-      </div>
-      <div className="divider"></div>
-
-      <div className="input-group desktop-only">
-        <label>Year</label>
-        <select value={year} onChange={(e) => setYear(e.target.value)}>
-          {findYear.map((option, index) => (
-            <option key={index} value={option}>
-              {option}
-            </option>
-          ))}
-        </select>
-      </div>
-
-      <div className="input-group mobile-only">
-        <select value={model} onChange={(e) => setModel(e.target.value)}>
-          {findModel.map((option, index) => (
-            <option key={index} value={option}>
-              {option}
-            </option>
-          ))}
-        </select>
-      </div>
-
-      <div className="input-group mobile-only">
-        <select value={price} onChange={(e) => setPrice(e.target.value)}>
+        <select
+          className="dropdown"
+          value={price}
+          onChange={(e) => setPrice(e.target.value)}
+        >
+          <option value="">Price</option>
           {priceOptions.map((option, index) => (
             <option key={index} value={option}>
               {option}
@@ -74,17 +77,9 @@ const MobileSearchFile = ({
           ))}
         </select>
       </div>
-      <button type="submit" className="btn-search">
+      <button className="search-button-mobile" type="submit">
         Search
       </button>
-      <IoIosArrowDown className="arrow-icon" onClick={toggleFilters} />
-
-      <SearchFilter
-        isVisible={showFilters}
-        top="100%"
-        left="5%"
-        usePosition={true}
-      />
     </form>
   );
 };

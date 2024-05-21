@@ -1,4 +1,3 @@
-// import Header from "../components/Header/Header";
 import FeatureCard from "../components/UI/FeatureCard";
 import Footer from "../components/Footer/Footer";
 import thumbUp from "../assets/img/thumbUp.svg";
