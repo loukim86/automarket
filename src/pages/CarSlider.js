@@ -29,6 +29,28 @@ const CarSlider = ({ car, activeImage, setActiveImage }) => {
           nextArrow: null,
         },
       },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2.2,
+          slidesToScroll: 1,
+          vertical: false,
+          verticalSwiping: false,
+          prevArrow: null,
+          nextArrow: null,
+        },
+      },
+      {
+        breakpoint: 400,
+        settings: {
+          slidesToShow: 1.6,
+          slidesToScroll: 1,
+          vertical: false,
+          verticalSwiping: false,
+          prevArrow: null,
+          nextArrow: null,
+        },
+      },
     ],
   };
 

@@ -15,10 +15,13 @@ const Catalog = () => {
   const [category, setCategory] = useState("all");
 
   const carsPerPage = 12;
-  const pagesVisited = pageNumber * carsPerPage;
 
-  const displayCars = cars
-    .filter((car) => {
+  useEffect(() => {
+    setCars(carsData.cars);
+  }, []);
+
+  const filterCars = () => {
+    return cars.filter((car) => {
       if (category === "all") return true;
       if (category === "european") {
         return car.attributes.some(
@@ -29,21 +32,26 @@ const Catalog = () => {
           (attr) => attr.title_ru === "Корейские авто"
         );
       }
-
       return false;
-    })
+    });
+  };
+
+  const filteredCars = filterCars();
+  const pagesVisited = pageNumber * carsPerPage;
+  const displayCars = filteredCars
     .slice(pagesVisited, pagesVisited + carsPerPage)
     .map((car) => <CatalogCard key={car.id} car={car} />);
 
-  const pageCount = Math.ceil(cars.length / carsPerPage);
+  const pageCount = Math.ceil(filteredCars.length / carsPerPage);
 
   const changePage = ({ selected }) => {
     setPageNumber(selected);
   };
 
-  useEffect(() => {
-    setCars(carsData.cars);
-  }, []);
+  const handleCategoryChange = (category) => {
+    setCategory(category);
+    setPageNumber(0);
+  };
 
   return (
     <>
@@ -56,19 +64,19 @@ const Catalog = () => {
         </div>
         <div className="catalog-category-links">
           <button
-            onClick={() => setCategory("all")}
+            onClick={() => handleCategoryChange("all")}
             className={category === "all" ? "active-btn" : ""}
           >
             All
           </button>
           <button
-            onClick={() => setCategory("korean")}
+            onClick={() => handleCategoryChange("korean")}
             className={category === "korean" ? "active-btn" : ""}
           >
             Korean Auto
           </button>
           <button
-            onClick={() => setCategory("european")}
+            onClick={() => handleCategoryChange("european")}
             className={category === "european" ? "active-btn" : ""}
           >
             European Auto

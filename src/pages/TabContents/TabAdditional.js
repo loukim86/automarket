@@ -10,66 +10,26 @@ const TabAdditional = ({ options }) => {
   };
 
   return (
-    <div>
-      <div className="categories">
-        <button className="categories-content">Guise</button>
-        <button className="categories-content">Interior</button>
-        <button className="categories-content">Safety</button>
-        <button className="categories-content">Convenience</button>
-      </div>
-      <div className="features">
-        <ul className="features-content">
-          {categories.Guise.map((feature, index) => (
-            <li key={index} className="checkmark">
-              <input
-                type="checkbox"
-                checked={feature.value === "true" || feature.value === "1"}
-                readOnly
-              />
-              <label>{feature.title_ru || feature.title}</label>
-            </li>
-          ))}
-        </ul>
-
-        <ul className="features-content">
-          {categories.Interior.map((feature, index) => (
-            <li key={index} className="checkmark">
-              <input
-                type="checkbox"
-                checked={feature.value === "true" || feature.value === "1"}
-                readOnly
-              />
-              <label>{feature.title_ru || feature.title}</label>
-            </li>
-          ))}
-        </ul>
-
-        <ul className="features-content">
-          {categories.Safety.map((feature, index) => (
-            <li key={index} className="checkmark">
-              <input
-                type="checkbox"
-                checked={feature.value === "true" || feature.value === "1"}
-                readOnly
-              />
-              <label>{feature.title_ru || feature.title}</label>
-            </li>
-          ))}
-        </ul>
-
-        <ul className="features-content">
-          {categories.Convenience.map((feature, index) => (
-            <li key={index} className="checkmark">
-              <input
-                type="checkbox"
-                checked={feature.value === "true" || feature.value === "1"}
-                readOnly
-              />
-              <label>{feature.title_ru || feature.title}</label>
-            </li>
-          ))}
-        </ul>
-      </div>
+    <div className="categories-container">
+      {Object.keys(categories).map((category, index) => (
+        <div key={index} className="category-section">
+          <div className={`categories-content ${index === 0 ? 'first' : ''} ${index === Object.keys(categories).length - 1 ? 'last' : ''}`}>
+            {category}
+          </div>
+          <ul className="features-content">
+            {categories[category].map((feature, index) => (
+              <li key={index} className="checkmark">
+                <input
+                  type="checkbox"
+                  checked={feature.value === "true" || feature.value === "1"}
+                  readOnly
+                />
+                <label>{feature.title_ru || feature.title}</label>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
     </div>
   );
 };

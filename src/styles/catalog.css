@@ -51,6 +51,7 @@
   font-size: 2rem;
   font-family: "Tahoma", sans-serif;
   font-weight: 400;
+  color: var(--about-text);
   margin-right: 4%;
   cursor: pointer;
   padding-bottom: 0.3125rem;
@@ -78,7 +79,7 @@
   .search-filter-mobile {
     display: block;
     width: 100%;
-    padding: 10px;
+    padding: 0.625rem;
     margin: 0 auto;
     padding-bottom: 8%;
   }
@@ -97,7 +98,7 @@
   .catalog-card {
     width: calc((100% / 3) - 2 * 1rem / 3);
     height: auto;
-    min-width: 150px;
+    min-width: 9.375rem;
   }
 
   .catalog-category-links button {
@@ -132,7 +133,7 @@
   .search-filter-mobile {
     display: block;
     width: 100%;
-    padding: 10px;
+    padding: 0.625rem;
     margin: 0 auto;
     padding-bottom: 8%;
   }
