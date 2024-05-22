@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { RiArrowLeftDoubleFill } from "react-icons/ri";
 import UserProfileForm from "./UserProfileForm";
 import UserSidebar from "./UserSidebar";
 import OrderStatus from "./order-history/OrderStatus";
@@ -68,6 +69,7 @@ const UserPage = () => {
             {isMobile && selectedComponent && (
               <div className="user-profile-container active">
                 <button className="back-button" onClick={handleBackToSidebar}>
+                  <RiArrowLeftDoubleFill className="double-arrow" />
                   Go back to menu
                 </button>
                 {renderComponent()}

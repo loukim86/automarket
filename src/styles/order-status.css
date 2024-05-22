@@ -5,3 +5,9 @@
   width: 54.25rem;
   padding: 1.25rem;
 }
+
+@media (max-width: 800px) {
+  .order-history-container {
+    width: 100%;
+  }
+}

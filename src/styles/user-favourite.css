@@ -29,3 +29,67 @@
   background: var(--about-text);
   border-radius: 0.25rem;
 }
+
+.pagination-container {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  .user-favourite-container {
+    width: 100%;
+    border: 0;
+    padding: 1rem;
+  }
+  .user-favourite-wrapper {
+    height: auto;
+    overflow: hidden;
+  }
+  .pagination-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.25rem;
+  }
+  .page-item-f {
+    margin: 0 0.625rem;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    color: var(--about-text);
+    font-size: 0.9rem;
+  }
+  .pagination-favorite {
+    display: inline-block;
+  }
+  .pagination-favorite li {
+    display: inline;
+    margin: 0 5px;
+  }
+  .pagination-favorite a {
+    color: var(--about-text);
+    float: left;
+  }
+  .pagination-active-f a {
+    color: var(--button-color);
+    text-decoration: underline;
+    text-decoration-color: var(--button-color);
+    font-size: 1rem;
+  }
+  .previous-btn,
+  .next-btn {
+    margin: 0 1rem;
+    background-color: var(--button-color);
+    color: var(--text);
+    width: 1.5625rem;
+    height: 1.5625rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.3125rem;
+  }
+  .previous-btn svg,
+  .next-btn svg {
+    color: var(--text);
+    width: 0.8rem;
+    height: 0.8rem;
+  }
+}

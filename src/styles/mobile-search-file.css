@@ -1,7 +1,6 @@
 .search-bar-mobile.absolute {
   position: absolute;
   top: 87%;
-  z-index: 10;
 }
 
 .search-bar-mobile {

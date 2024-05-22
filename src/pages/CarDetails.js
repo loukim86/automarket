@@ -31,7 +31,7 @@ const CarDetails = () => {
   const carBrandAndModel = getCarBrandAndModel(car.title_ru);
   const carNumber = getCarNumber(car.attributes);
   const additionalOptions = categorizeAttributes(car.attributes);
-  const carCEngineCapacity = getEngineCapacity(car.attributes)
+  const carCEngineCapacity = getEngineCapacity(car.attributes);
 
   const handleTabClick = (tab) => {
     setActiveTab(tab);
@@ -41,65 +41,65 @@ const CarDetails = () => {
     <>
       <div className="container">
         <div className="container-wrapper">
-        <div className="car-details-container">
-          <CarSlider
-            car={car}
-            activeImage={activeImage}
-            setActiveImage={setActiveImage}
-          />
-          <CarInfo
-            car={car}
-            carBrandAndModel={carBrandAndModel}
-            carNumber={carNumber}
-            carCEngineCapacity={carCEngineCapacity}
-            activeImage={activeImage}
-          />
-        </div>
-        <div className="tab-buttons">
-          <button
-            onClick={() => handleTabClick("description")}
-            className={activeTab === "description" ? "active" : ""}
-          >
-            Description
-          </button>
-          <button
-            onClick={() => handleTabClick("options")}
-            className={activeTab === "options" ? "active" : ""}
-          >
-            Additional options
-          </button>
-          <button
-            onClick={() => handleTabClick("application")}
-            className={activeTab === "application" ? "active" : ""}
-          >
-            Application
-          </button>
-        </div>
-        <div className="tab-content">
-          {activeTab === "description" && (
-            <>
+          <div className="car-details-container">
+            <CarSlider
+              car={car}
+              activeImage={activeImage}
+              setActiveImage={setActiveImage}
+            />
+            <CarInfo
+              car={car}
+              carBrandAndModel={carBrandAndModel}
+              carNumber={carNumber}
+              carCEngineCapacity={carCEngineCapacity}
+              activeImage={activeImage}
+            />
+          </div>
+          <div className="tab-buttons">
+            <button
+              onClick={() => handleTabClick("description")}
+              className={activeTab === "description" ? "active" : ""}
+            >
+              Description
+            </button>
+            <button
+              onClick={() => handleTabClick("options")}
+              className={activeTab === "options" ? "active" : ""}
+            >
+              Additional options
+            </button>
+            <button
+              onClick={() => handleTabClick("application")}
+              className={activeTab === "application" ? "active" : ""}
+            >
+              Application
+            </button>
+          </div>
+          <div className="tab-content">
+            {activeTab === "description" && (
+              <>
+                <div>
+                  <TabDescription />
+                </div>
+                <div className="similar-car-title">
+                  <p>Similar cars</p>
+                </div>
+                <div className="similar-cars">
+                  <SimilarCarsSlider />
+                </div>
+              </>
+            )}
+            {activeTab === "options" && (
               <div>
-                <TabDescription />
+                <TabAdditional options={additionalOptions} />
               </div>
-              <div className="similar-car-title">
-                <p>Similar cars</p>
+            )}
+            {activeTab === "application" && (
+              <div>
+                <TabApplication />
               </div>
-              <div className="similar-cars">
-                <SimilarCarsSlider />
-              </div>
-            </>
-          )}
-          {activeTab === "options" && (
-            <div>
-              <TabAdditional options={additionalOptions} />
-            </div>
-          )}
-          {activeTab === "application" && (
-            <div>
-              <TabApplication />
-            </div>
-          )}
-        </div>
+            )}
+          </div>
         </div>
       </div>
       <div className="footer-catalog">

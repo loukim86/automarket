@@ -23,7 +23,7 @@ const CatalogCard = ({ car }) => {
   const carBrandAndModel = getCarBrandAndModel(car.title_ru);
 
   return (
-    <div className="catalog-card" onClick={(e) => e.stopPropagation()}>
+    <div className="catalog-card">
       <Link to={`/catalog/${car.pk_car_id}`}>
         <img src={car.images[0]} alt={car.title_ru} style={{ width: "100%" }} />
 
@@ -36,7 +36,7 @@ const CatalogCard = ({ car }) => {
           />
         )}
 
-        <h3 className="catalog-brand">
+        <h3 className="catalog-brand" onClick={(e) => e.stopPropagation()}>
           <span>{carBrandAndModel}</span>
         </h3>
         <p className="catalog-info">

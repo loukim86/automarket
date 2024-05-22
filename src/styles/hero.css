@@ -39,30 +39,21 @@
   margin-bottom: 4rem;
 }
 
-.scroll-up {
-  position: fixed;
-  font-size: 2.5rem;
-  color: white;
-  background-color: #ff4d30;
-  border: 3px solid white;
-  width: 2rem;
-  height: 2rem;
-  bottom: 5rem;
-  right: 5rem;
-  z-index: 20;
+.search-panel-mobile {
   display: none;
-  align-items: center;
-  text-align: center;
-  justify-content: center;
-  padding: 2rem;
-  cursor: pointer;
-}
-
-.show-scroll {
-  display: flex;
 }
 
 @media (max-width: 1000px) {
+  .search-panel-desktop {
+    display: none;
+  }
+
+  .search-panel-mobile {
+    display: block;
+    width: 100%;
+    max-width: 50rem;
+    margin: 0 auto;
+  }
   .hero-section {
     background-position: 90%;
   }
@@ -91,6 +82,10 @@
 }
 
 @media (max-width: 800px) {
+  .search-panel-desktop {
+    display: none;
+  }
+
   .hero-section {
     background-position: 90%;
   }

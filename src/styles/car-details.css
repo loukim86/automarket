@@ -89,6 +89,7 @@
 .tab-buttons {
   margin-bottom: 2%;
   margin-top: 3%;
+  color: var(--about-text);
 }
 
 .tab-buttons button {

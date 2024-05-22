@@ -2,7 +2,6 @@ import { useState } from "react";
 import { IoIosArrowDown } from "react-icons/io";
 import useSearchOptions from "../hooks/useSearchOptions";
 import SearchFilter from "../../components/UI/SearchFilter";
-import MobileSearchFile from "./MobileSearchFile";
 
 import "../../styles/search-car.css";
 
@@ -79,9 +78,6 @@ const SearchCar = () => {
           left="5%"
           usePosition={true}
         />
-      </div>
-      <div className="search-panel-mobile">
-        <MobileSearchFile isAbsolute={true} />
       </div>
     </>
   );

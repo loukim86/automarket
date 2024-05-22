@@ -1,30 +1,9 @@
-import { useState, useEffect } from "react";
 import SearchCar from "./SearchCar";
+import MobileSearchFile from "../../components/UI/MobileSearchFile";
 
 import "../../styles/hero.css";
 
 const Hero = () => {
-  const [goUp, setGoUp] = useState(false);
-
-  const scrollToTop = () => {
-    window.scrollTo({ top: (0, 0), behavior: "smooth" });
-  };
-
-  useEffect(() => {
-    const onPageScroll = () => {
-      if (window.pageYOffset > 600) {
-        setGoUp(true);
-      } else {
-        setGoUp(false);
-      }
-    };
-    window.addEventListener("scroll", onPageScroll);
-
-    return () => {
-      window.removeEventListener("scroll", onPageScroll);
-    };
-  }, []);
-
   return (
     <>
       <section id="home" className="hero-section">
@@ -40,13 +19,14 @@ const Hero = () => {
             </p>
           </div>
         </div>
-        <div
-          onClick={scrollToTop}
-          className={`scroll-up ${goUp ? "show-scroll" : ""}`}
-        >
-          ^
+
+        <div className="search-panel-desktop">
+          <SearchCar />
         </div>
-        <SearchCar />
+
+        <div className="search-panel-mobile">
+          <MobileSearchFile isAbsolute={true} />
+        </div>
       </section>
     </>
   );

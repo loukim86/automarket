@@ -27,7 +27,6 @@ const SearchFilter = ({ isVisible, top, left, usePosition }) => {
   const [showBrand, setShowBrand] = useState(true);
   const [showModel, setShowModel] = useState(false);
   const [showPrice, setShowPrice] = useState(false);
-  const [activeButton, setActiveButton] = useState(null);
 
   const handleBrandClick = () => {
     setShowBrand(!showBrand);
