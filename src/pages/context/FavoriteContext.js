@@ -1,31 +1,3 @@
-// import React, { createContext, useContext, useState } from "react";
-
-// const FavoriteContext = createContext();
-
-// export const FavoriteProvider = ({ children }) => {
-//   const [favorites, setFavorites] = useState([]);
-
-//   const addFavorite = (carId) => {
-//     if (!favorites.includes(carId)) {
-//       setFavorites([...favorites, carId]);
-//     }
-//   };
-
-//   const removeFavorite = (carId) => {
-//     setFavorites(favorites.filter((id) => id !== carId));
-//   };
-
-//   return (
-//     <FavoriteContext.Provider
-//       value={{ favorites, addFavorite, removeFavorite }}
-//     >
-//       {children}
-//     </FavoriteContext.Provider>
-//   );
-// };
-
-// export const useFavorites = () => useContext(FavoriteContext);
-
 import React, { createContext, useContext, useState } from "react";
 
 const FavoriteContext = createContext();

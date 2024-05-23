@@ -69,6 +69,18 @@
   background-color: rgba(225, 225, 225, 0.42);
 }
 
+select::-webkit-scrollbar {
+  width: 0.375rem;
+}
+
+select::-webkit-scrollbar-track {
+  background: var(--menu-text);
+}
+
+select::-webkit-scrollbar-thumb {
+  background: var(--about-text);
+}
+
 @media (max-width: 1000px) {
   .form-container {
     display: none;
@@ -76,18 +88,5 @@
   .search-panel-mobile {
     display: block;
   }
+
 }
-
-
-
-/* select::-webkit-scrollbar {
-    width: 0.375rem;
-  }
-
-  select::-webkit-scrollbar-track {
-    background: var(--menu-text);
-  }
-
-  select::-webkit-scrollbar-thumb {
-    background: var(--about-text);
-  } */

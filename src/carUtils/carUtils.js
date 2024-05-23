@@ -60,3 +60,55 @@ export const categorizeAttributes = (attributes) => {
 
   return categories;
 };
+
+export const getUniqueBrands = () => {
+  const brands = new Set();
+  carsData.cars.forEach((car) => {
+    car.attributes.forEach((attr) => {
+      if (
+        attr.attribute_id >= 3 &&
+        attr.attribute_id <= 102 &&
+        !brands.has(attr.title_ru)
+      ) {
+        brands.add(attr.title_ru);
+      }
+    });
+  });
+  return Array.from(brands);
+};
+
+export const getUniqueModels = () => {
+  const models = new Set();
+  carsData.cars.forEach((car) => {
+    car.attributes.forEach((attr) => {
+      if (
+        (attr.attribute_id >= 183 && attr.attribute_id <= 315) ||
+        (attr.attribute_id >= 39962 && attr.attribute_id <= 41681) ||
+        (attr.attribute_id >= 64963 && attr.attribute_id <= 67536)
+      ) {
+        models.add(attr.title_ru);
+      }
+    });
+  });
+  return Array.from(models);
+};
+
+export const getUniqueYear = () => {
+  const yearOptions = new Set();
+  carsData.cars.forEach((car) => {
+    yearOptions.add(car.production_year);
+  });
+  return Array.from(yearOptions).sort((a, b) => b - a);
+};
+
+export const fetchCarsByCategory = (category) => {
+  return carsData.cars.filter((car) => {
+    if (category === "all") return true;
+    if (category === "european") {
+      return car.attributes.some((attr) => attr.title_ru === "Импортные авто");
+    } else if (category === "korean") {
+      return car.attributes.some((attr) => attr.title_ru === "Корейские авто");
+    }
+    return false;
+  });
+};

@@ -51,7 +51,8 @@ const ContactUs = () => {
           <SuccessPopup
             closePopup={closeSuccessPopup}
             title="Thank you!"
-            message1="Your application is accepted. We will contact you shortly."
+            message1="Your application is accepted."
+            message2=" We will contact you shortly."
           />
         )}
         {showErrorPopup && <ErrorPopup closePopup={closeErrorPopup} />}

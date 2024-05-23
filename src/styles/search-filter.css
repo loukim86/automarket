@@ -13,8 +13,7 @@
 
 .sidebar-filter {
   display: flex;
-  max-width: 71.19rem;
-  width: 100%;
+  width: 71.19rem;
   height: 18.96rem;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }

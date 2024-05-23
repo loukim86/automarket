@@ -1,14 +1,14 @@
 form {
   flex: 1;
-  width: 563.12px;
-  height: 501.36px;
+  width: 35.195rem;
+  height: 31.335rem;
   margin-top: 5.625rem;
 }
 
 form input {
   width: 100%;
-  padding: .625rem;
-  margin-bottom: .625rem;
+  padding: 0.625rem;
+  margin-bottom: 0.625rem;
   border: none;
   border-bottom: 0.85px solid #ffffff;
   border-radius: 0;
@@ -18,25 +18,25 @@ form input {
 input::placeholder {
   color: var(--input-placeholder);
   font-family: "Tahoma", sans-serif;
-  font-size: .875rem;
+  font-size: 0.875rem;
   line-height: 2;
 }
 
 form textarea {
   width: 34.9025rem;
   height: 12.5463rem;
-  padding: .625rem;
-  margin-bottom: .625rem;
+  padding: 0.625rem;
+  margin-bottom: 0.625rem;
   border: none;
   border-bottom: 1px solid #ccc;
-  border-radius: .5337rem;
+  border-radius: 0.5337rem;
   background-color: #fff;
 }
 
 textarea::placeholder {
   color: var(--textarea-placeholder);
   font-family: "Tahoma", sans-serif;
-  font-size: .875rem;
+  font-size: 0.875rem;
 }
 
 form button {
@@ -48,7 +48,7 @@ form button {
   background: var(--button-color);
   color: var(--text);
   border: none;
-  border-radius: .5587rem;
+  border-radius: 0.5587rem;
   cursor: pointer;
   margin-top: 1.25rem;
 }
@@ -79,9 +79,9 @@ form button:hover {
     width: 18.5625rem;
     height: 7.1875rem;
     width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    margin-top: 18px;
+    padding: 0.625rem;
+    margin-bottom: 0.625rem;
+    margin-top: 1.125rem;
   }
 
   textarea::placeholder {
@@ -97,7 +97,7 @@ form button:hover {
     border: none;
     border-radius: 8.94px;
     cursor: pointer;
-    margin-top: 3px;
+    margin-top: 0.1875rem;
   }
 
   form button:hover {

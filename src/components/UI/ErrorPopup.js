@@ -15,6 +15,9 @@ const ErrorPopup = ({ closePopup }) => {
         <div className="error-text">
           Something went wrong. <br /> Please, try again.
         </div>
+        <button className="ok-button" onClick={closePopup}>
+          OK
+        </button>
       </div>
     </div>
   );

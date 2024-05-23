@@ -1,17 +1,29 @@
-import PropTypes from "prop-types";
 import { IoMdStarOutline } from "react-icons/io";
 import { useFavorites } from "./context/FavoriteContext";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const CarInfo = ({ car, carBrandAndModel, carNumber, carCEngineCapacity }) => {
-  const { addToCart } = useFavorites();
-
+  const { addToCart, removeFromCart, cartItems } = useFavorites();
   const [isAddedToCart, setIsAddedToCart] = useState(false);
 
+  useEffect(() => {
+    setIsAddedToCart(
+      cartItems.some((item) => item.pk_car_id === car.pk_car_id)
+    );
+  }, [cartItems, car.pk_car_id]);
+
   const handleAddToCart = () => {
-    addToCart(car);
-    setIsAddedToCart(true);
+    if (isAddedToCart) {
+      removeFromCart(car.pk_car_id);
+    } else {
+      addToCart(car);
+    }
+    setIsAddedToCart(!isAddedToCart);
   };
+
+  useEffect(() => {
+    car.views = (car.views || 0) + 1;
+  }, [car]);
 
   return (
     <div className="car-details-info">
@@ -51,8 +63,12 @@ const CarInfo = ({ car, carBrandAndModel, carNumber, carCEngineCapacity }) => {
       <p className="car-details-content">
         Area: <span className="details">Seoul</span>
       </p>
-      <p className="car-details-content">Number of views: </p>
-      <p className="car-details-content">In favorites: </p>
+      <p className="car-details-content">
+        Number of views: <span className="details">{car.views}</span>
+      </p>
+      <p className="car-details-content">
+        In favorites: <span className="details">{car.favorites || 0}</span>
+      </p>
       <p className="car-details-price">{car.price}$</p>
 
       <button className="car-details-button" onClick={handleAddToCart}>

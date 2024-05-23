@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import ReactPaginate from "react-paginate";
 import { IoIosArrowBack } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
-import carsData from "../data/carsData.json";
+import { fetchCarsByCategory } from "../carUtils/carUtils";
 import CatalogCard from "../components/UI/CatalogCard";
 import Footer from "../components/Footer/Footer";
 import SearchFilter from "../components/UI/SearchFilter";
@@ -11,32 +11,16 @@ import "../styles/catalog.css";
 
 const Catalog = () => {
   const [pageNumber, setPageNumber] = useState(0);
-  const [cars, setCars] = useState([]);
+  const [filteredCars, setFilteredCars] = useState([]);
   const [category, setCategory] = useState("all");
 
   const carsPerPage = 12;
 
   useEffect(() => {
-    setCars(carsData.cars);
-  }, []);
+    const cars = fetchCarsByCategory(category);
+    setFilteredCars(cars);
+  }, [category]);
 
-  const filterCars = () => {
-    return cars.filter((car) => {
-      if (category === "all") return true;
-      if (category === "european") {
-        return car.attributes.some(
-          (attr) => attr.title_ru === "Импортные авто"
-        );
-      } else if (category === "korean") {
-        return car.attributes.some(
-          (attr) => attr.title_ru === "Корейские авто"
-        );
-      }
-      return false;
-    });
-  };
-
-  const filteredCars = filterCars();
   const pagesVisited = pageNumber * carsPerPage;
   const displayCars = filteredCars
     .slice(pagesVisited, pagesVisited + carsPerPage)

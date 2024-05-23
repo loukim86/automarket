@@ -6,7 +6,7 @@ import { useFavorites } from "./context/FavoriteContext";
 import "../styles/cart.css";
 
 const Cart = () => {
-  const { cartItems, removeFromCart } = useFavorites();
+  const {  cartItems, removeFromCart } = useFavorites();
 
   return (
     <>
