@@ -72,7 +72,7 @@ textarea::placeholder {
 }
 
 .application-form button:hover {
-  background-color: #cc0000;
+  background-color: darkred;
 }
 
 @media (max-width: 800px) {

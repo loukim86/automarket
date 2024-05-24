@@ -25,6 +25,12 @@ const ReviewForm = () => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
+    if (name === "additionalComment") {
+      const words = value.split(/\s+/);
+      if (words.length > 40) {
+        return;
+      }
+    }
     setFormData({ ...formData, [name]: value });
   };
 
@@ -126,7 +132,7 @@ const ReviewForm = () => {
                   onChange={handleChange}
                 />
                 <input
-                  type="text"
+                  type="date"
                   name="dateOfPurchase"
                   placeholder="Date of purchase/sale"
                   value={formData.dateOfPurchase}
@@ -225,7 +231,7 @@ const ReviewForm = () => {
                     />
                   </label>
                 </div>
-                <button type="submit">Send</button>
+                <button type="submit" className="review-btn">Send</button>
               </form>
             </div>
           </div>

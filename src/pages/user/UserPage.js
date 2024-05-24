@@ -1,4 +1,11 @@
 import React, { useState, useEffect } from "react";
+import {
+  Routes,
+  Route,
+  useLocation,
+  Navigate,
+  useNavigate,
+} from "react-router-dom";
 import { RiArrowLeftDoubleFill } from "react-icons/ri";
 import UserProfileForm from "./UserProfileForm";
 import UserSidebar from "./UserSidebar";
@@ -13,8 +20,10 @@ import UserShoppingCart from "./UserShoppingCart";
 import "../../styles/user-page.css";
 
 const UserPage = () => {
-  const [selectedComponent, setSelectedComponent] = useState(null);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 1000);
+  const [showSidebar, setShowSidebar] = useState(true);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleResize = () => {
@@ -23,36 +32,18 @@ const UserPage = () => {
 
     window.addEventListener("resize", handleResize);
 
-    setSelectedComponent(window.innerWidth > 1000 ? "Profile" : null);
-
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const renderComponent = () => {
-    switch (selectedComponent) {
-      case "Profile":
-        return <UserProfileForm />;
-      case "Shopping cart":
-        return <UserShoppingCart />;
-      case "Favourite":
-        return <UserFavourite />;
-      case "Order history":
-        return <OrderStatus />;
-      case "Notification":
-        return <Notification />;
-      case "Help & Support":
-        return <Faq />;
-      default:
-        return null;
+  useEffect(() => {
+    if (isMobile) {
+      setShowSidebar(location.pathname === "/user-page");
     }
-  };
-
-  const handleSelectComponent = (component) => {
-    setSelectedComponent(component);
-  };
+  }, [location, isMobile]);
 
   const handleBackToSidebar = () => {
-    setSelectedComponent(null);
+    navigate("/user-page");
+    setShowSidebar(true);
   };
 
   return (
@@ -60,29 +51,54 @@ const UserPage = () => {
       <div className="container">
         <div className="user-page-wrapper">
           <div className="user-page">
-            {isMobile && !selectedComponent && (
-              <UserSidebar
-                onSelect={handleSelectComponent}
-                className="user-sidebar"
-              />
-            )}
-            {isMobile && selectedComponent && (
-              <div className="user-profile-container active">
-                <button className="back-button" onClick={handleBackToSidebar}>
-                  <RiArrowLeftDoubleFill className="double-arrow" />
-                  Go back to menu
-                </button>
-                {renderComponent()}
-              </div>
-            )}
-            {!isMobile && (
-              <>
+            {isMobile ? (
+              showSidebar ? (
                 <UserSidebar
-                  onSelect={handleSelectComponent}
+                  onSelect={() => setShowSidebar(false)}
                   className="user-sidebar"
                 />
+              ) : (
+                <div className="user-profile-container active">
+                  <button className="back-button" onClick={handleBackToSidebar}>
+                    <RiArrowLeftDoubleFill className="double-arrow" />
+                    Go back to menu
+                  </button>
+                  <Routes>
+                    <Route path="profile" element={<UserProfileForm />} />
+                    <Route
+                      path="shopping-cart"
+                      element={<UserShoppingCart />}
+                    />
+                    <Route path="favourite" element={<UserFavourite />} />
+                    <Route path="order-history" element={<OrderStatus />} />
+                    <Route path="notification" element={<Notification />} />
+                    <Route path="help-&-support" element={<Faq />} />
+                    <Route
+                      path="*"
+                      element={<Navigate to="/user-page/profile" />}
+                    />
+                  </Routes>
+                </div>
+              )
+            ) : (
+              <>
+                <UserSidebar className="user-sidebar" />
                 <div className="user-profile-container">
-                  {renderComponent()}
+                  <Routes>
+                    <Route path="profile" element={<UserProfileForm />} />
+                    <Route
+                      path="shopping-cart"
+                      element={<UserShoppingCart />}
+                    />
+                    <Route path="favourite" element={<UserFavourite />} />
+                    <Route path="order-history" element={<OrderStatus />} />
+                    <Route path="notification" element={<Notification />} />
+                    <Route path="help-&-support" element={<Faq />} />
+                    <Route
+                      path="*"
+                      element={<Navigate to="/user-page/profile" />}
+                    />
+                  </Routes>
                 </div>
               </>
             )}

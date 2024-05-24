@@ -10,14 +10,17 @@ import logout from "../../assets/img/share.svg";
 import "../../styles/user-sidebar.css";
 
 const UserSidebar = ({ onSelect }) => {
-  const [activeItem, setActiveItem] = useState("Profile");
+  const [activeItem, setActiveItem] = useState("profile");
   const navigate = useNavigate();
   const isMobile = window.innerWidth <= 1000;
 
   const handleItemClick = (item) => {
     setActiveItem(item);
-    onSelect(item);
-    if (item === "Log out") {
+    if (onSelect) {
+      onSelect(item);
+    }
+    navigate(`/user-page/${item.replace(/\s+/g, "-").toLowerCase()}`);
+    if (item === "log out") {
       localStorage.removeItem("userData");
       navigate("/user");
     }
@@ -28,45 +31,45 @@ const UserSidebar = ({ onSelect }) => {
       <ul className="sidebar-list">
         <li
           className={`sidebar-item ${
-            !isMobile && activeItem === "Profile" ? "active" : ""
+            !isMobile && activeItem === "profile" ? "active" : ""
           }`}
-          onClick={() => handleItemClick("Profile")}
+          onClick={() => handleItemClick("profile")}
         >
           <img src={profile} alt="" className="sidebar-icon profile" />
           Profile
         </li>
         <li
           className={`sidebar-item ${
-            !isMobile && activeItem === "Shopping cart" ? "active" : ""
+            !isMobile && activeItem === "shopping cart" ? "active" : ""
           }`}
-          onClick={() => handleItemClick("Shopping cart")}
+          onClick={() => handleItemClick("shopping cart")}
         >
           <img src={cart} alt="" className="sidebar-icon cart" />
           Shopping cart
         </li>
         <li
           className={`sidebar-item ${
-            !isMobile && activeItem === "Favourite" ? "active" : ""
+            !isMobile && activeItem === "favourite" ? "active" : ""
           }`}
-          onClick={() => handleItemClick("Favourite")}
+          onClick={() => handleItemClick("favourite")}
         >
           <img src={heart} alt="" className="sidebar-icon heart" />
           Favourite
         </li>
         <li
           className={`sidebar-item ${
-            !isMobile && activeItem === "Order history" ? "active" : ""
+            !isMobile && activeItem === "order history" ? "active" : ""
           }`}
-          onClick={() => handleItemClick("Order history")}
+          onClick={() => handleItemClick("order history")}
         >
           <img src={shoppingBag} alt="" className="sidebar-icon bag" />
           Order history
         </li>
         <li
           className={`sidebar-item ${
-            !isMobile && activeItem === "Notification" ? "active" : ""
+            !isMobile && activeItem === "notification" ? "active" : ""
           }`}
-          onClick={() => handleItemClick("Notification")}
+          onClick={() => handleItemClick("notification")}
         >
           <img
             src={notification}
@@ -77,9 +80,9 @@ const UserSidebar = ({ onSelect }) => {
         </li>
         <li
           className={`sidebar-item ${
-            !isMobile && activeItem === "Help & Support" ? "active" : ""
+            !isMobile && activeItem === "help & support" ? "active" : ""
           }`}
-          onClick={() => handleItemClick("Help & Support")}
+          onClick={() => handleItemClick("help & support")}
         >
           <img src={aq} alt="" className="sidebar-icon aq" />
           Help & Support
@@ -87,9 +90,9 @@ const UserSidebar = ({ onSelect }) => {
         <hr />
         <li
           className={`sidebar-item logout ${
-            !isMobile && activeItem === "Log out" ? "active" : ""
+            !isMobile && activeItem === "log out" ? "active" : ""
           }`}
-          onClick={() => handleItemClick("Log out")}
+          onClick={() => handleItemClick("log out")}
         >
           <img src={logout} alt="" className="sidebar-icon logout" />
           Log out

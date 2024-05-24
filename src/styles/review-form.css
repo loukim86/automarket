@@ -96,7 +96,7 @@ textarea::placeholder {
   font-size: 0.875rem;
 }
 
-.review-form__application button {
+.review-btn {
   width: 18.75rem;
   height: 3.875rem;
   font-family: "Tahoma", sans-serif;
@@ -111,8 +111,8 @@ textarea::placeholder {
   margin-left: 20%;
 }
 
-.review-form__application button:hover {
-  background-color: #cc0000;
+.review-btn:hover {
+  background: darkred;
 }
 
 .file-upload-wrapper {

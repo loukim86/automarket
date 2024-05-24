@@ -1,0 +1,48 @@
+.car-slider img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.3125rem;
+}
+
+.selected-img-box {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.selected-img {
+  width: 100%;
+  height: auto;
+}
+
+.mobile-car-slider {
+  display: none;
+}
+
+@media (max-width: 1000px) {
+  .selected-img-box {
+    width: 100%;
+    margin-bottom: 1rem;
+    box-sizing: border-box;
+  }
+
+  .selected-img {
+    width: 100%;
+    height: auto;
+  }
+
+  .slick-slider {
+    width: 100%;
+    margin-bottom: 1rem;
+    box-sizing: border-box;
+  }
+
+  .mobile-car-slider {
+    display: block;
+    width: 100%;
+  }
+
+  .slider-desktop,
+  .img-box-desktop {
+    display: none;
+  }
+}

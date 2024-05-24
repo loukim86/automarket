@@ -55,6 +55,10 @@
   margin-bottom: 1.25rem;
 }
 
+.btn-search:hover {
+  background-color: darkred;
+}
+
 .arrow-icon {
   color: var(--menu-text);
   cursor: pointer;

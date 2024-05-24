@@ -63,6 +63,10 @@
   border-bottom: 0.125rem solid var(--button-color);
 }
 
+.catalog-category-links button:hover {
+  color: var(--button-color);
+}
+
 .search-filter-mobile {
   display: none;
 }

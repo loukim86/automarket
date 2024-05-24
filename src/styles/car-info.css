@@ -1,0 +1,79 @@
+.car-details-info {
+  width: 23rem;
+  padding: 0 0.4rem 0.4rem 0.4rem;
+}
+
+.car-details-title {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 1.7056rem;
+}
+
+.car-details-content {
+  font-family: "Tahoma", sans-serif;
+  font-weight: 400;
+  font-size: 1.120rem;
+  line-height: 1.6rem;
+  color: var(--menu-text);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 22rem;
+}
+
+.details {
+  color: var(--about-text);
+}
+
+.car-details-price {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 1.7056rem;
+  margin-top: 1.5625rem;
+}
+
+.car-details-button {
+  width: 100%;
+  height: 3.875rem;
+  margin-top: 1.25rem;
+  border-radius: 0.3125rem;
+  background-color: var(--button-color);
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 1.2794rem;
+  color: var(--text);
+  border: none;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.car-details-button:hover {
+  background-color: darkred;
+}
+
+.car-stars {
+  margin-bottom: 1.25rem;
+}
+
+@media (max-width: 1000px) {
+  .car-details-info {
+    width: 100%;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .car-details-content {
+    font-size: 1rem;
+    line-height: 1.4rem;
+    color: var(--menu-text);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 20rem;
+  }
+
+  .car-details-button {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}

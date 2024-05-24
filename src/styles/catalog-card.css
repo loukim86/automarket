@@ -80,6 +80,10 @@
   color: var(--about-text);
 }
 
+.catalog-button:hover {
+  color: rgb(236, 114, 33);
+}
+
 .catalog-icon {
   margin-left: 0.5rem;
   width: 1rem;

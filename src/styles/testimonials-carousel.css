@@ -33,6 +33,10 @@
   cursor: pointer;
 }
 
+.testimonial-button:hover {
+  background-color: darkred;
+}
+
 @media (max-width: 800px) {
   .testimonial-container {
     height: 100%;

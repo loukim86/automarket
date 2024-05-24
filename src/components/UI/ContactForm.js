@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import '../../styles/contact-form.css'
+import React, { useState } from "react";
+import "../../styles/contact-form.css";
 
 const ContactForm = ({ onSubmit }) => {
   const initialFormData = {
@@ -26,6 +26,15 @@ const ContactForm = ({ onSubmit }) => {
     setFormData(initialFormData);
   };
 
+  const handlePhoneInput = (e) => {
+    const { name, value } = e.target;
+    const onlyNumbers = value.replace(/\D/g, "");
+    setFormData({
+      ...formData,
+      [name]: onlyNumbers,
+    });
+  };
+
   return (
     <form onSubmit={handleSubmit}>
       <input
@@ -36,11 +45,11 @@ const ContactForm = ({ onSubmit }) => {
         onChange={handleInputChange}
       />
       <input
-        type="text"
+        type="tel"
         name="phoneNumber"
         placeholder="Phone number"
         value={formData.phoneNumber}
-        onChange={handleInputChange}
+        onChange={handlePhoneInput}
       />
       <input
         type="email"

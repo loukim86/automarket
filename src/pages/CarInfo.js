@@ -1,10 +1,13 @@
 import { IoMdStarOutline } from "react-icons/io";
 import { useFavorites } from "./context/FavoriteContext";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
+
+import "../styles/car-info.css";
 
 const CarInfo = ({ car, carBrandAndModel, carNumber, carCEngineCapacity }) => {
   const { addToCart, removeFromCart, cartItems } = useFavorites();
   const [isAddedToCart, setIsAddedToCart] = useState(false);
+  const hasViewed = useRef(false);
 
   useEffect(() => {
     setIsAddedToCart(
@@ -22,7 +25,10 @@ const CarInfo = ({ car, carBrandAndModel, carNumber, carCEngineCapacity }) => {
   };
 
   useEffect(() => {
-    car.views = (car.views || 0) + 1;
+    if (!hasViewed.current) {
+      car.views = (car.views || 0) + 1;
+      hasViewed.current = true;
+    }
   }, [car]);
 
   return (

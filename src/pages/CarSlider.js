@@ -6,6 +6,8 @@ import {
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
 
+import '../styles/car-slider.css'
+
 const CarSlider = ({ car, activeImage, setActiveImage }) => {
   const settingsCars = {
     dots: false,

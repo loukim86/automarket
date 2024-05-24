@@ -22,7 +22,8 @@ const Routers = () => {
     <Routes>
       <Route path="/" element={<Navigate to="/home" />} />
       <Route path="/home" element={<Home />} />
-      <Route path="/catalog" element={<Catalog />} />
+      <Route path="/catalog/all" element={<Catalog />} />
+      <Route path="/catalog/all/:category" element={<Catalog />} />
       <Route path="/catalog/:carId" element={<CarDetails />} />
       <Route path="/application" element={<Application />} />
       <Route path="/about" element={<About />} />
@@ -37,7 +38,7 @@ const Routers = () => {
       <Route path="/sign-up" element={<SignUp />} />
       <Route path="/reviews" element={<ReviewForm />} />
       <Route path="/account-registered" element={<AccountRegistered />} />
-      <Route path="/user-page" element={<UserPage />} />
+      <Route path="/user-page/*" element={<UserPage />} />
     </Routes>
   );
 };

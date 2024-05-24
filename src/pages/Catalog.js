@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 import ReactPaginate from "react-paginate";
 import { IoIosArrowBack } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
@@ -13,8 +14,17 @@ const Catalog = () => {
   const [pageNumber, setPageNumber] = useState(0);
   const [filteredCars, setFilteredCars] = useState([]);
   const [category, setCategory] = useState("all");
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const carsPerPage = 12;
+
+  useEffect(() => {
+    const pathCategory = location.pathname.split('/').pop();
+    if (pathCategory) {
+      setCategory(pathCategory);
+    }
+  }, [location.pathname]);
 
   useEffect(() => {
     const cars = fetchCarsByCategory(category);
@@ -32,9 +42,10 @@ const Catalog = () => {
     setPageNumber(selected);
   };
 
-  const handleCategoryChange = (category) => {
-    setCategory(category);
+  const handleCategoryChange = (newCategory) => {
+    setCategory(newCategory);
     setPageNumber(0);
+    navigate(`/catalog/all/${newCategory}`);
   };
 
   return (
@@ -88,5 +99,6 @@ const Catalog = () => {
     </>
   );
 };
+
 
 export default Catalog;

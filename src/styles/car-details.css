@@ -2,81 +2,13 @@
 
 .car-details-container {
   display: grid;
-  grid-template-columns: 11.3012rem 38rem 20.9375rem;
-  gap: 0.625rem;
+  grid-template-columns: 11.3012rem 38rem 22rem;
+  gap: 0.4rem;
   margin: 0 auto;
   max-width: 72.5rem;
   width: 100%;
   padding: 3.125rem 0 0 0;
   box-sizing: border-box;
-}
-
-.car-slider img {
-  width: 100%;
-  height: auto;
-  border-radius: 0.3125rem;
-}
-
-.selected-img-box {
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.selected-img {
-  width: 100%;
-  height: auto;
-}
-
-.car-details-info {
-  width: 20.9375rem;
-  padding: 0 0.5rem 0.5rem 0.5rem;
-}
-
-.car-details-title {
-  font-family: "Inter", sans-serif;
-  font-weight: 600;
-  font-size: 1.7056rem;
-}
-
-.car-details-content {
-  font-family: "Tahoma", sans-serif;
-  font-weight: 400;
-  font-size: 1.125rem;
-  line-height: 1.6rem;
-  color: var(--menu-text);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.details {
-  color: var(--about-text);
-}
-
-.car-details-price {
-  font-family: "Inter", sans-serif;
-  font-weight: 600;
-  font-size: 1.7056rem;
-  margin-top: 1.5625rem;
-}
-
-.car-details-button {
-  width: 100%;
-  height: 3.875rem;
-  margin-top: 1.25rem;
-  border-radius: 0.3125rem;
-  background-color: var(--button-color);
-  font-family: "Inter", sans-serif;
-  font-weight: 500;
-  font-size: 1.2794rem;
-  color: var(--text);
-  border: none;
-  cursor: pointer;
-  box-sizing: border-box;
-}
-
-.car-stars {
-  margin-bottom: 1.25rem;
 }
 
 .container-wrapper {
@@ -117,9 +49,6 @@
   margin-bottom: 4%;
 }
 
-.mobile-car-slider {
-  display: none;
-}
 
 @media (max-width: 1000px) {
   .car-details-container {
@@ -131,53 +60,6 @@
     box-sizing: border-box;
   }
 
-  .selected-img-box {
-    width: 100%;
-    margin-bottom: 1rem;
-    box-sizing: border-box;
-  }
-
-  .selected-img {
-    width: 100%;
-    height: auto;
-  }
-
-  .slick-slider {
-    width: 100%;
-    margin-bottom: 1rem;
-    box-sizing: border-box;
-  }
-
-  .car-details-info {
-    width: 100%;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
-  .car-details-content {
-    font-size: 1rem;
-    line-height: 1.4rem;
-    color: var(--menu-text);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 18rem;
-  }
-
-  .car-details-button {
-    width: 100%;
-    box-sizing: border-box;
-  }
-
-  .mobile-car-slider {
-    display: block;
-    width: 100%;
-  }
-
-  .slider-desktop,
-  .img-box-desktop {
-    display: none;
-  }
   .tab-buttons {
     margin-bottom: 2%;
     margin-top: 3%;

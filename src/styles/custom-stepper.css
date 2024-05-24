@@ -390,3 +390,9 @@
     margin: 0;
   }
 }
+
+@media (max-width: 500px) {
+  .history-section {
+    margin-top: 60%;
+  }
+}

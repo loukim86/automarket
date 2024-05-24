@@ -12,8 +12,10 @@ const OrderStatus = () => {
       <HistoryTabs activeTab={activeTab} setActiveTab={setActiveTab} />
       {activeTab === "In process" ? (
         <CustomStepper />
-      ) : (
+      ) : activeTab === "All order" || activeTab === "In process" ? (
         <HistoryOrder activeTab={activeTab} />
+      ) : (
+        <div>No orders available in this category.</div>
       )}
     </div>
   );
