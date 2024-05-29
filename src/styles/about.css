@@ -20,6 +20,7 @@
   font-weight: 400;
   font-size: 3rem;
   margin-top: 5rem;
+  margin-bottom: 3rem;
 }
 
 .about-text {
@@ -29,14 +30,14 @@
 }
 
 .why-us {
-  margin-top: 3rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
- 
   max-width: 1160px;
   width: 100%;
   margin-right: 1.875rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr));
+  gap: 0.625rem;
+  font-family: "Tahoma", sans-serif;
+  margin: 0 auto;
 }
 
 .stat-card {
@@ -89,9 +90,7 @@
   }
 
   .why-us {
-    width: 100%;
-    flex-wrap: wrap;
-    height: 100%;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .stat-card {
@@ -108,5 +107,11 @@
 
   .footer-box {
     margin-top: 0;
+  }
+}
+
+@media (max-width: 320px) {
+  .why-us {
+    grid-template-columns: 1fr;
   }
 }

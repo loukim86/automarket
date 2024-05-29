@@ -147,7 +147,7 @@
   .checkmark input[type="checkbox"]:checked::after {
     content: "";
     position: absolute;
-    top: 0.125rem;
+    top: 0rem;
     left: 0.1rem;
     width: 0.7rem;
     height: 0.4rem;
@@ -157,7 +157,7 @@
   }
 
   .checkmark label {
-    font-size: 0.53rem;
+    font-size: 0.650rem;
   }
 }
 

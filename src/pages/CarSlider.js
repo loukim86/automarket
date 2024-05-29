@@ -115,17 +115,6 @@ const CarSlider = ({ car, activeImage, setActiveImage }) => {
               </div>
             ))}
           </Slider>
-          {/* <Slider {...settingsCars}>
-            {car.images.map((image, index) => (
-              <div key={index} onClick={() => handleImageClick(image)}>
-                <img
-                  src={image}
-                  alt={`Car Image ${index + 1}`}
-                  className="slider-image"
-                />
-              </div>
-            ))}
-          </Slider> */}
         </div>
       </div>
     </>
