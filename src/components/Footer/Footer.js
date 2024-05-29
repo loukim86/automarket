@@ -11,7 +11,7 @@ import "../../styles/footer.css";
 
 const navLinks = [
   { path: "/home", display: "Home" },
-  { path: "/catalog", display: "Catalog" },
+  { path: "/catalog/all", display: "Catalog" },
   { path: "/application", display: "Application" },
   { path: "/about", display: "About us" },
   { path: "/contacts", display: "Contacts" },

@@ -1,13 +1,15 @@
 .categories-container {
-  width: 72.5rem;
+  max-width: 72.5rem;
+  width: 100%;
   margin: 0 auto;
   display: flex;
-  flex-wrap: wrap;
 }
 
 .category-section {
-  width: 18.0981rem;
+  max-width: 18.0981rem;
+  width: 100%;
   margin-bottom: 1rem;
+  flex: 1 1 18.0981rem;
 }
 
 .categories-content {
@@ -28,6 +30,9 @@
   list-style-type: none;
   padding: 0.5rem;
   border-radius: 0 0 0.5325rem 0.5325rem;
+  width: 100%;
+  box-sizing: border-box;
+  height: auto;
 }
 
 .checkmark input[type="checkbox"] {
@@ -70,6 +75,7 @@
   font-weight: 400;
   line-height: 1rem;
   flex-grow: 1;
+  flex-wrap: wrap;
 }
 
 @media (max-width: 800px) {
@@ -115,10 +121,76 @@
   }
 }
 
+@media (max-width: 600px) {
+  .categories-container {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .category-section {
+    width: 100%;
+  }
+
+  .categories-content,
+  .features-content {
+    font-size: 0.8rem;
+    width: 100%;
+    height: auto;
+    text-align: left;
+  }
+
+  .checkmark input[type="checkbox"] {
+    width: 1rem;
+    height: 1rem;
+    margin-right: 0.25rem;
+  }
+
+  .checkmark input[type="checkbox"]:checked::after {
+    content: "";
+    position: absolute;
+    top: 0.125rem;
+    left: 0.1rem;
+    width: 0.7rem;
+    height: 0.4rem;
+    border: solid red;
+    border-width: 0 0.125rem 0.125rem 0;
+    transform: rotate(45deg);
+  }
+
+  .checkmark label {
+    font-size: 0.53rem;
+  }
+}
+
 @media (max-width: 400px) {
   .categories-container {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .category-section {
     width: 100%;
-    display: grid;
+  }
+
+  .categories-content,
+  .features-content {
+    font-size: 0.8rem;
+    width: 100%;
+    height: auto;
+    text-align: left;
+  }
+
+  .checkmark input[type="checkbox"] {
+    width: 1rem;
+    height: 1rem;
+    margin-right: 0.25rem;
+  }
+
+  .checkmark label {
+    font-size: 0.5rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .categories-container {
     grid-template-columns: 1fr;
   }
 
@@ -141,6 +213,6 @@
   }
 
   .checkmark label {
-    font-size: 0.875rem;
+    font-size: 0.8rem;
   }
 }

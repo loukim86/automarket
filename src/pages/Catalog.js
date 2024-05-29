@@ -20,11 +20,18 @@ const Catalog = () => {
   const carsPerPage = 12;
 
   useEffect(() => {
-    const pathCategory = location.pathname.split('/').pop();
-    if (pathCategory) {
-      setCategory(pathCategory);
+    const pathParts = location.pathname.split("/");
+    const pathCategory = pathParts[pathParts.length - 1] || "all";
+    const pageParam = new URLSearchParams(location.search).get("page");
+
+    setCategory(pathCategory);
+
+    if (pageParam) {
+      setPageNumber(parseInt(pageParam, 10));
+    } else {
+      setPageNumber(0);
     }
-  }, [location.pathname]);
+  }, [location.pathname, location.search]);
 
   useEffect(() => {
     const cars = fetchCarsByCategory(category);
@@ -40,12 +47,13 @@ const Catalog = () => {
 
   const changePage = ({ selected }) => {
     setPageNumber(selected);
+    navigate(`${location.pathname}?page=${selected}`);
   };
 
   const handleCategoryChange = (newCategory) => {
     setCategory(newCategory);
     setPageNumber(0);
-    navigate(`/catalog/all/${newCategory}`);
+    navigate(`/catalog/all/${newCategory}?page=0`);
   };
 
   return (
@@ -90,6 +98,7 @@ const Catalog = () => {
             nextLinkClassName={"next-button"}
             disabledClassName={"pagination-disabled"}
             activeClassName={"pagination-active"}
+            forcePage={pageNumber}
           />
         </div>
       </div>
@@ -99,6 +108,5 @@ const Catalog = () => {
     </>
   );
 };
-
 
 export default Catalog;

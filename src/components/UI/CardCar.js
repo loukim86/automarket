@@ -1,9 +1,17 @@
+import { useState } from "react";
 import { FaRegHeart } from "react-icons/fa";
+import { IoIosHeart } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
 import cardImg from "../../assets/img/new-arrival.png";
 import "../../styles/card-car.css";
 
 const CardCar = () => {
+  const [isLiked, setIsLiked] = useState(false);
+
+  const toggleLike = () => {
+    setIsLiked(!isLiked);
+  };
+
   return (
     <div className="card-car">
       <div className="card-car__header">
@@ -24,9 +32,11 @@ const CardCar = () => {
       </div>
       <div className="card-car__actions">
         <button className="card-car__details-button">
-          View details <IoIosArrowForward className="card-car__icon"/>
+          View details <IoIosArrowForward className="card-car__icon" />
         </button>
-        <FaRegHeart className="card-car__like-icon" />
+        <span onClick={toggleLike} className="card-car__like-icon">
+          {isLiked ? <IoIosHeart /> : <FaRegHeart />}
+        </span>
       </div>
     </div>
   );

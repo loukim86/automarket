@@ -6,7 +6,7 @@ import {
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
 
-import '../styles/car-slider.css'
+import "../styles/car-slider.css";
 
 const CarSlider = ({ car, activeImage, setActiveImage }) => {
   const settingsCars = {
@@ -34,7 +34,7 @@ const CarSlider = ({ car, activeImage, setActiveImage }) => {
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 2.2,
+          slidesToShow: 3,
           slidesToScroll: 1,
           vertical: false,
           verticalSwiping: false,
@@ -45,7 +45,7 @@ const CarSlider = ({ car, activeImage, setActiveImage }) => {
       {
         breakpoint: 400,
         settings: {
-          slidesToShow: 1.6,
+          slidesToShow: 3,
           slidesToScroll: 1,
           vertical: false,
           verticalSwiping: false,
@@ -65,11 +65,17 @@ const CarSlider = ({ car, activeImage, setActiveImage }) => {
       <div className="car-slider slider-desktop">
         <Slider {...settingsCars}>
           {car.images.map((image, index) => (
-            <div key={index} onClick={() => handleImageClick(image)}>
+            <div
+              key={index}
+              onClick={() => handleImageClick(image)}
+              className={`slider-image-wrapper ${
+                activeImage === image ? "active" : ""
+              }`}
+            >
               <img
                 src={image}
                 alt={`Car Image ${index + 1}`}
-                style={{ width: "11.3012rem", height: "9.02rem" }}
+                className="slider-image"
               />
             </div>
           ))}
@@ -94,19 +100,32 @@ const CarSlider = ({ car, activeImage, setActiveImage }) => {
         <div className="car-slider">
           <Slider {...settingsCars}>
             {car.images.map((image, index) => (
-              <div key={index} onClick={() => handleImageClick(image)}>
+              <div
+                key={index}
+                onClick={() => handleImageClick(image)}
+                className={`slider-image-wrapper ${
+                  activeImage === image ? "active" : ""
+                }`}
+              >
                 <img
                   src={image}
                   alt={`Car Image ${index + 1}`}
-                  style={{
-                    width: "11.3012rem",
-                    height: "9.02rem",
-                    borderRadius: "0.3125rem",
-                  }}
+                  className="slider-image"
                 />
               </div>
             ))}
           </Slider>
+          {/* <Slider {...settingsCars}>
+            {car.images.map((image, index) => (
+              <div key={index} onClick={() => handleImageClick(image)}>
+                <img
+                  src={image}
+                  alt={`Car Image ${index + 1}`}
+                  className="slider-image"
+                />
+              </div>
+            ))}
+          </Slider> */}
         </div>
       </div>
     </>

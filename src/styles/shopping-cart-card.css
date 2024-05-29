@@ -13,7 +13,7 @@
 }
 
 .cart-img img {
-  width: 8.8219rem;
+  max-width: 8.8219rem;
   height: auto;
 }
 
@@ -184,16 +184,12 @@
   }
 
   .cart-img__mobile img {
-    width: 100%;
     height: 9.75rem;
   }
 
   .cart-details__mobile {
     margin-left: 2rem;
-  }
-
-  .cart-details__mobile {
-    width: 100%;
     max-width: 13rem;
+    width: 100%;
   }
 }

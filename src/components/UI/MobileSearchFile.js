@@ -1,5 +1,6 @@
 import { useState } from "react";
 import useSearchOptions from "../hooks/useSearchOptions";
+import CustomSelect from "./CustomSelect";
 import "../../styles/mobile-search-file.css";
 
 const MobileSearchFile = ({ isAbsolute }) => {
@@ -40,42 +41,30 @@ const MobileSearchFile = ({ isAbsolute }) => {
       onSubmit={handleSubmit}
     >
       <div className="selectors">
-        <select
-          className="dropdown"
-          value={brand}
-          onChange={(e) => setBrand(e.target.value)}
-        >
-          <option value="">Brand</option>
-          {findBrand.map((option, index) => (
-            <option key={index} value={option}>
-              {option}
-            </option>
-          ))}
-        </select>
-        <select
-          className="dropdown"
-          value={model}
-          onChange={(e) => setModel(e.target.value)}
-        >
-          <option value="">Model</option>
-          {modelOptions.map((option, index) => (
-            <option key={index} value={option}>
-              {option}
-            </option>
-          ))}
-        </select>
-        <select
-          className="dropdown"
-          value={price}
-          onChange={(e) => setPrice(e.target.value)}
-        >
-          <option value="">Price</option>
-          {priceOptions.map((option, index) => (
-            <option key={index} value={option}>
-              {option}
-            </option>
-          ))}
-        </select>
+        <div className="select-wrapper">
+          <CustomSelect
+            options={findBrand}
+            placeholder="Brand"
+            value={brand}
+            onChange={setBrand}
+          />
+        </div>
+        <div className="select-wrapper">
+          <CustomSelect
+            options={modelOptions}
+            placeholder="Model"
+            value={model}
+            onChange={setModel}
+          />
+        </div>
+        <div className="select-wrapper">
+          <CustomSelect
+            options={priceOptions}
+            placeholder="Price"
+            value={price}
+            onChange={setPrice}
+          />
+        </div>
       </div>
       <button className="search-button-mobile" type="submit">
         Search

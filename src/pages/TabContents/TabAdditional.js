@@ -13,7 +13,11 @@ const TabAdditional = ({ options }) => {
     <div className="categories-container">
       {Object.keys(categories).map((category, index) => (
         <div key={index} className="category-section">
-          <div className={`categories-content ${index === 0 ? 'first' : ''} ${index === Object.keys(categories).length - 1 ? 'last' : ''}`}>
+          <div
+            className={`categories-content ${index === 0 ? "first" : ""} ${
+              index === Object.keys(categories).length - 1 ? "last" : ""
+            }`}
+          >
             {category}
           </div>
           <ul className="features-content">
